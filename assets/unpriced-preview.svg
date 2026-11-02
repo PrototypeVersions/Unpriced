@@ -1,126 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#050b18"/>
-      <stop offset="0.34" stop-color="#111a31"/>
-      <stop offset="0.58" stop-color="#3a2340"/>
-      <stop offset="0.73" stop-color="#8d4337"/>
-      <stop offset="0.84" stop-color="#e37a34"/>
-      <stop offset="1" stop-color="#160e16"/>
-    </linearGradient>
-    <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#fffbe8" stop-opacity="1"/>
-      <stop offset="0.14" stop-color="#ffe295" stop-opacity="0.98"/>
-      <stop offset="0.34" stop-color="#ffb24f" stop-opacity="0.85"/>
-      <stop offset="0.64" stop-color="#ef6f32" stop-opacity="0.32"/>
-      <stop offset="1" stop-color="#ef6f32" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="farMount" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#45506b"/>
-      <stop offset="1" stop-color="#222a3f"/>
-    </linearGradient>
-    <linearGradient id="midMount" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#30394f"/>
-      <stop offset="1" stop-color="#151b2b"/>
-    </linearGradient>
-    <linearGradient id="nearMount" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1d2435"/>
-      <stop offset="1" stop-color="#080b12"/>
-    </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#080b12" stop-opacity="0.84"/>
-      <stop offset="1" stop-color="#05070b" stop-opacity="0.98"/>
-    </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffc54f"/>
-      <stop offset="0.5" stop-color="#ffb231"/>
-      <stop offset="1" stop-color="#e58a20"/>
-    </linearGradient>
-    <filter id="blur22" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="22"/></filter>
-    <filter id="blur9" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="9"/></filter>
-    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#02070d"/><stop offset="0.55" stop-color="#06111d"/><stop offset="1" stop-color="#02060b"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#63d7ff" stop-opacity="0.12"/><stop offset="0.48" stop-color="#7fdfff" stop-opacity="0.95"/><stop offset="1" stop-color="#2f9fe8" stop-opacity="0.16"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8f5c13" stop-opacity="0.15"/><stop offset="0.5" stop-color="#ffd36f" stop-opacity="1"/><stop offset="1" stop-color="#be7e1f" stop-opacity="0.16"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#4aa7d8" stroke-opacity="0.08" stroke-width="1"/></pattern>
   </defs>
-
-  <rect width="1200" height="630" fill="url(#sky)"/>
-
-  <!-- faint atmospheric stars and market-like light traces -->
-  <g fill="#d8e7ff" opacity="0.32">
-    <circle cx="118" cy="73" r="1.1"/><circle cx="181" cy="109" r="1"/><circle cx="248" cy="62" r="1.2"/>
-    <circle cx="920" cy="86" r="1.1"/><circle cx="1007" cy="54" r="1"/><circle cx="1088" cy="119" r="1.2"/>
-    <circle cx="760" cy="72" r="0.9"/><circle cx="829" cy="119" r="0.8"/><circle cx="386" cy="99" r="0.9"/>
-  </g>
-  <path d="M0 275 C150 245 240 292 365 260 S610 215 744 250 S1015 210 1200 230" fill="none" stroke="#ffb84a" stroke-opacity="0.08" stroke-width="2"/>
-  <path d="M0 292 C135 270 260 310 385 278 S650 242 785 270 S1030 247 1200 260" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
-
-  <!-- richer sunset glow -->
-  <ellipse cx="600" cy="340" rx="245" ry="118" fill="url(#horizonGlow)" filter="url(#blur22)"/>
-  <ellipse cx="600" cy="337" rx="125" ry="36" fill="#ffb13a" opacity="0.34" filter="url(#blur9)"/>
-  <circle cx="600" cy="337" r="31" fill="#ffe39a"/>
-  <circle cx="600" cy="337" r="19" fill="#fff7d6"/>
-
-  <!-- layered mountain silhouettes -->
-  <path d="M0 373 L70 346 L140 361 L215 330 L282 349 L349 307 L420 342 L494 319 L557 350 L620 317 L688 349 L756 302 L833 339 L900 315 L968 346 L1043 321 L1115 351 L1200 330 L1200 630 L0 630 Z" fill="url(#farMount)" opacity="0.72"/>
-  <path d="M0 415 L92 365 L174 395 L267 346 L358 390 L451 333 L543 384 L622 344 L707 398 L800 338 L890 387 L970 349 L1062 392 L1135 361 L1200 385 L1200 630 L0 630 Z" fill="url(#midMount)" opacity="0.94"/>
-  <path d="M0 458 L96 414 L183 447 L282 391 L381 452 L483 399 L583 454 L690 400 L785 453 L882 392 L983 447 L1081 408 L1200 454 L1200 630 L0 630 Z" fill="url(#nearMount)"/>
-  <path d="M0 475 C140 448 245 480 350 456 S560 446 670 463 S910 442 1200 466" fill="none" stroke="#ef9c35" stroke-opacity="0.16" stroke-width="2"/>
-
-  <!-- title and subtitle -->
-  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <text x="600" y="108" fill="#ffffff" font-size="79" font-style="italic" font-weight="800" letter-spacing="4.5">UNPRICED</text>
-    <rect x="176" y="145" width="92" height="3" rx="1.5" fill="url(#gold)"/>
-    <rect x="932" y="145" width="92" height="3" rx="1.5" fill="url(#gold)"/>
-    <text x="600" y="156" fill="#ffffff" font-size="23" font-weight="700" letter-spacing="5.5">A FORWARD MARKET MODEL</text>
-  </g>
-
-  <!-- bottom feature strip -->
-  <rect x="0" y="460" width="1200" height="170" fill="url(#panel)"/>
-  <line x1="0" y1="460" x2="1200" y2="460" stroke="#f0a734" stroke-opacity="0.18"/>
-
-  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <!-- centered dividers -->
-    <g stroke="#9b6925" stroke-opacity="0.62" stroke-width="1.2">
-      <line x1="200" y1="490" x2="200" y2="604"/>
-      <line x1="400" y1="490" x2="400" y2="604"/>
-      <line x1="600" y1="490" x2="600" y2="604"/>
-      <line x1="800" y1="490" x2="800" y2="604"/>
-      <line x1="1000" y1="490" x2="1000" y2="604"/>
-    </g>
-
-    <!-- market state -->
-    <g transform="translate(100 500)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
-      <path d="M-28 45V27M-14 45V17M0 45V7M14 45V-4"/>
-    </g>
-    <text x="100" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="100">MARKET</tspan><tspan x="100" dy="17">STATE</tspan></text>
-
-    <!-- forecasts -->
-    <g transform="translate(300 515)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
-      <circle cx="-8" cy="0" r="19"/><path d="M6 14l16 16"/>
-    </g>
-    <text x="300" y="581" fill="#ffffff" font-size="14" font-weight="700">FORECASTS</text>
-
-    <!-- propagation -->
-    <g transform="translate(500 500)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
-      <circle cx="0" cy="0" r="5"/><circle cx="-24" cy="40" r="5"/><circle cx="24" cy="40" r="5"/>
-      <path d="M0 5L-21 35M3 5L21 35M-19 40h38"/>
-    </g>
-    <text x="500" y="581" fill="#ffffff" font-size="14" font-weight="700">PROPAGATION</text>
-
-    <!-- models -->
-    <g transform="translate(700 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linejoin="round" filter="url(#goldGlow)">
-      <path d="M0 0l30 15L0 30l-30-15zM-30 25L0 40l30-15M-30 38L0 53l30-15"/>
-    </g>
-    <text x="700" y="581" fill="#ffffff" font-size="14" font-weight="700">MODELS</text>
-
-    <!-- track record -->
-    <g transform="translate(900 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
-      <path d="M-28 47V31h13v16M-7 47V22H6v25M15 47V11h13v36M-31 24L-9 4L4 12L28-8"/>
-    </g>
-    <text x="900" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="900">TRACK</tspan><tspan x="900" dy="17">RECORD</tspan></text>
-
-    <!-- live portfolio -->
-    <g transform="translate(1100 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
-      <ellipse cx="0" cy="6" rx="24" ry="10"/><path d="M-24 6v39c0 6 11 10 24 10s24-4 24-10V6M-24 24c0 6 11 10 24 10s24-4 24-10"/>
-    </g>
-    <text x="1100" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="1100">LIVE</tspan><tspan x="1100" dy="17">PORTFOLIO</tspan></text>
+  <rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle"><text x="600" y="85" fill="#fff" font-size="72" font-style="italic" font-weight="800" letter-spacing="4">UNPRICED</text><rect x="255" y="116" width="66" height="3" rx="1.5" fill="#e4ad39"/><rect x="879" y="116" width="66" height="3" rx="1.5" fill="#e4ad39"/><text x="600" y="128" fill="#fff" font-size="21" font-weight="700" letter-spacing="5.2">A FORWARD MARKET MODEL</text></g>
+  <g fill="#eef7ff" font-family="Georgia, serif" font-size="24" font-style="italic" opacity="0.9"><text x="45" y="190">Pₜ₊₁ = F(Sₜ, θ)</text><text x="48" y="255">E[Rₜ₊ₕ]</text><text x="55" y="320">σ²ₜ</text><text x="50" y="385">Π(Ω)</text><text x="1020" y="190">∇θ L(θ)</text><text x="1012" y="255">K(Sₜ,Sₜ′)</text><text x="1095" y="320">Dₜ</text><text x="1095" y="385">ℋ</text></g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M145 250 C235 208 305 298 395 250 S565 206 650 247 S835 302 930 244 S1010 205 1055 228" stroke="url(#blue)" stroke-width="7"/><path d="M138 283 C225 240 315 334 410 283 S590 238 680 279 S842 334 940 280 S1020 245 1068 265" stroke="url(#blue)" stroke-width="5" opacity="0.82"/><path d="M132 316 C230 269 323 364 421 315 S590 272 692 314 S850 365 948 315 S1019 279 1074 299" stroke="url(#blue)" stroke-width="4" opacity="0.62"/><path d="M164 332 C245 290 335 377 426 335 S592 287 676 329 S844 374 936 333 S1010 298 1048 314" stroke="url(#gold)" stroke-width="7" filter="url(#glow)"/><path d="M185 356 C270 316 345 397 435 357 S594 309 678 350 S835 398 925 356 S990 322 1030 340" stroke="url(#gold)" stroke-width="4" opacity="0.7"/></g>
+  <g stroke="#70cfff" stroke-opacity="0.34" fill="none" stroke-width="1"><path d="M160 210L1045 210M148 245L1058 245M137 280L1070 280M128 315L1076 315M145 350L1058 350M170 385L1032 385"/><path d="M220 185L220 402M310 170L310 414M400 175L400 414M490 165L490 420M580 170L580 420M670 165L670 420M760 175L760 414M850 170L850 414M940 185L940 402"/></g>
+  <g fill="#8de4ff" opacity="0.9" filter="url(#glow)"><circle cx="220" cy="250" r="3"/><circle cx="310" cy="284" r="3"/><circle cx="400" cy="249" r="3"/><circle cx="490" cy="281" r="3"/><circle cx="580" cy="246" r="3"/><circle cx="670" cy="280" r="3"/><circle cx="760" cy="252" r="3"/><circle cx="850" cy="281" r="3"/><circle cx="940" cy="248" r="3"/></g>
+  <g fill="#ffd36f" opacity="0.95" filter="url(#glow)"><circle cx="250" cy="336" r="3"/><circle cx="350" cy="360" r="3"/><circle cx="455" cy="332" r="3"/><circle cx="560" cy="353" r="3"/><circle cx="670" cy="330" r="3"/><circle cx="780" cy="355" r="3"/><circle cx="890" cy="334" r="3"/></g>
+  <rect x="0" y="438" width="1200" height="192" fill="#03080e" fill-opacity="0.97"/><line x1="0" y1="438" x2="1200" y2="438" stroke="#5fbdf3" stroke-opacity="0.18"/>
+  <g stroke="#426173" stroke-width="1"><line x1="200" y1="465" x2="200" y2="605"/><line x1="400" y1="465" x2="400" y2="605"/><line x1="600" y1="465" x2="600" y2="605"/><line x1="800" y1="465" x2="800" y2="605"/><line x1="1000" y1="465" x2="1000" y2="605"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">
+    <g transform="translate(100 472)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linecap="round"><path d="M-26 54V36M-12 54V24M2 54V12M16 54V0"/></g><text x="100" y="565"><tspan x="100">MARKET</tspan><tspan x="100" dy="17">STATE</tspan></text>
+    <g transform="translate(300 494)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linecap="round"><circle cx="-7" cy="0" r="19"/><path d="M7 14l17 17"/></g><text x="300" y="574">FORECASTS</text>
+    <g transform="translate(500 478)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="5"/><circle cx="-24" cy="41" r="5"/><circle cx="24" cy="41" r="5"/><path d="M0 5L-21 36M3 5L21 36M-19 41h38"/></g><text x="500" y="574">PROPAGATION</text>
+    <g transform="translate(700 478)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linejoin="round"><path d="M0 0l30 15L0 30l-30-15zM-30 25L0 40l30-15M-30 38L0 53l30-15"/></g><text x="700" y="574">MODELS</text>
+    <g transform="translate(900 475)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M-28 51V34h13v17M-7 51V25H6v26M15 51V13h13v38M-31 28L-9 7L4 15L28-8"/></g><text x="900" y="565"><tspan x="900">TRACK</tspan><tspan x="900" dy="17">RECORD</tspan></text>
+    <g transform="translate(1100 478)" stroke="#a8eaff" fill="none" stroke-width="5" stroke-linecap="round"><ellipse cx="0" cy="8" rx="24" ry="10"/><path d="M-24 8v39c0 6 11 10 24 10s24-4 24-10V8M-24 26c0 6 11 10 24 10s24-4 24-10"/></g><text x="1100" y="565"><tspan x="1100">LIVE</tspan><tspan x="1100" dy="17">PORTFOLIO</tspan></text>
   </g>
 </svg>
