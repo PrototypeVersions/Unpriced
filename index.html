@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050b14" />
+  <meta name="description" content="UNPRICED — forward-only probabilistic market forecasting and paper-trading experiment." />
+  <title>UNPRICED</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <button class="brand" data-view="market" aria-label="UNPRICED home">
+        <span class="mark"><i></i><i></i><i></i></span>
+        <span><strong>UNPRICED</strong><small>FORWARD MARKET MODEL</small></span>
+      </button>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="active" data-view="market">Market State</button>
+        <button data-view="forecasts">Forecasts</button>
+        <button data-view="propagation">Propagation</button>
+        <button data-view="models">Models</button>
+        <button data-view="record">Track Record</button>
+        <button data-view="portfolio">Live Portfolio</button>
+      </nav>
+      <div class="status-pill"><span id="status-dot"></span><b id="system-status">PRE-LIVE</b><small id="last-update">awaiting first cycle</small></div>
+    </header>
+
+    <main>
+      <section class="view active" data-panel="market">
+        <div class="view-head">
+          <div><span class="eyebrow">MARKET STATE</span><h1>Measured conditions, not a headline.</h1></div>
+          <div class="cycle-clock"><span>NEXT FORMAL UPDATE</span><strong id="next-cycle">08:45 ET · PREMARKET</strong><small>official probabilities freeze after close</small></div>
+        </div>
+
+        <div class="market-layout">
+          <article class="panel regime-panel">
+            <div class="panel-title"><span>REGIME</span><b id="regime">PRE-LIVE</b></div>
+            <div class="orb-wrap"><div class="orb" id="regime-orb"><span>—</span></div></div>
+            <div class="metric-stack" id="market-metrics"></div>
+          </article>
+
+          <article class="panel signal-field">
+            <div class="panel-title"><span>SIGNAL FIELD</span><small>normalized market diagnostics</small></div>
+            <svg id="signal-svg" viewBox="0 0 820 300" role="img" aria-label="Market signal field"></svg>
+            <div class="signal-legend" id="signal-legend"></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel span-2">
+            <div class="panel-title"><span>MOST LIKELY · 5D</span><button data-view="forecasts">ALL FORECASTS →</button></div>
+            <div id="forecast-preview" class="table-wrap"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-title"><span>MODEL AGREEMENT</span><button data-view="models">OPEN MODELS →</button></div>
+            <div id="agreement-preview" class="agreement-preview"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-title"><span>PROPAGATION GAPS</span><button data-view="propagation">OPEN MAP →</button></div>
+            <div id="gap-preview" class="gap-list"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-title"><span>$1,000 EXPERIMENT</span><button data-view="portfolio">OPEN PORTFOLIO →</button></div>
+            <div id="portfolio-preview"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" data-panel="forecasts">
+        <div class="view-head"><div><span class="eyebrow">FORECASTS</span><h1>Likely outcomes first.</h1><p>Relative performance versus SPY. Exact price targets are intentionally secondary.</p></div></div>
+        <div class="toolbar"><div class="segmented" id="horizon-tabs"><button data-h="1">1D</button><button class="active" data-h="5">5D</button><button data-h="20">20D</button></div><label class="threshold">Minimum displayed probability <strong id="threshold-label">55%</strong></label></div>
+        <article class="panel"><div id="forecast-table" class="table-wrap"></div></article>
+        <aside id="forecast-detail" class="detail-drawer"><div class="empty-detail">Select a forecast to inspect model votes and the frozen prediction record.</div></aside>
+      </section>
+
+      <section class="view" data-panel="propagation">
+        <div class="view-head"><div><span class="eyebrow">PROPAGATION</span><h1>Where information may be moving next.</h1><p>V1 uses empirical one-session lead/lag relationships. Association is not causation.</p></div></div>
+        <div class="prop-layout"><article class="panel"><svg id="prop-svg" viewBox="0 0 980 570" role="img" aria-label="Empirical lead lag network"></svg></article><aside class="panel"><div class="panel-title"><span>CANDIDATE GAPS</span><small>leader moved · lagger has not</small></div><div id="prop-gap-list" class="gap-list"></div></aside></div>
+      </section>
+
+      <section class="view" data-panel="models">
+        <div class="view-head"><div><span class="eyebrow">MODELS</span><h1>Independent forecasters, visible disagreement.</h1><p>The ensemble can learn from live performance without rewriting its architecture.</p></div></div>
+        <div id="model-grid" class="model-grid"></div>
+        <article class="panel model-rule"><div class="panel-title"><span>LEARNING RULE</span><b id="weight-source">FROZEN INITIAL</b></div><div id="learning-rule"></div></article>
+      </section>
+
+      <section class="view" data-panel="record">
+        <div class="view-head"><div><span class="eyebrow">TRACK RECORD</span><h1>Forecast skill and trading results stay separate.</h1></div></div>
+        <div id="score-grid" class="score-grid"></div>
+        <div class="record-layout"><article class="panel"><div class="panel-title"><span>CALIBRATION</span><small>forecast probability vs observed frequency</small></div><div id="calibration"></div></article><article class="panel"><div class="panel-title"><span>MODEL FAMILY SCORE</span><small>live Brier score only</small></div><div id="model-score-list"></div></article></div>
+      </section>
+
+      <section class="view" data-panel="portfolio">
+        <div class="view-head"><div><span class="eyebrow">LIVE PORTFOLIO</span><h1>$1,000. No leverage. No hindsight.</h1><p>Paper trading only. The system is allowed to do nothing.</p></div></div>
+        <div class="portfolio-top" id="portfolio-top"></div>
+        <div class="portfolio-layout"><article class="panel"><div class="panel-title"><span>POSITIONS</span><small>marked from the latest automated cycle</small></div><div id="positions" class="table-wrap"></div></article><article class="panel"><div class="panel-title"><span>TRADE LEDGER</span><small>every simulated execution preserved</small></div><div id="trades" class="trade-list"></div></article></div>
+        <article class="panel rules-panel"><div class="panel-title"><span>FIXED V1 RULES</span><b>PAPER ONLY</b></div><div class="rules-grid"><span>Entry ≥ 60% 5D outperform</span><span>Exit ≤ 52%</span><span>Max 4 positions</span><span>Max 22.5% each</span><span>10 bp cost / side</span><span>±4% overnight gap veto</span></div></article>
+      </section>
+    </main>
+  </div>
+
+  <footer><span>UNPRICED · EXPERIMENTAL</span><p>Probabilities are model outputs, not investment advice. Public prototype data adapter is research-grade and may be stale or unavailable.</p></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
