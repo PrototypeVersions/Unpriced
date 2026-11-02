@@ -1,0 +1,19 @@
+{
+  "status": "pre-live",
+  "resolved": [],
+  "metrics": {
+    "resolvedCount": 0,
+    "brier": null,
+    "logLoss": null,
+    "rankIC": null,
+    "calibration": []
+  },
+  "modelMetrics": {},
+  "portfolio": {
+    "return": 0.0,
+    "spyReturn": 0.0,
+    "excessReturn": 0.0,
+    "tradeCount": 0
+  },
+  "updatedAt": null
+}
