@@ -47,7 +47,7 @@
 
   <text x="600" y="240" text-anchor="middle" fill="#f7fbff" font-family="Arial, Helvetica, sans-serif" font-size="112" font-weight="700" letter-spacing="8">UNPRICED</text>
   <rect x="261" y="273" width="678" height="2" fill="#17d6d0" opacity="0.8"/>
-  <text x="600" y="322" text-anchor="middle" fill="#d8e7ef" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="9">AN AI MARKET RESEARCH EXPERIMENT</text>
+  <text x="600" y="322" text-anchor="middle" fill="#d8e7ef" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="9">A FORWARD MARKET MODEL</text>
 
   <g transform="translate(95 530)" fill="#8debf0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
     <g transform="translate(0 0)"><circle cx="0" cy="-28" r="16" fill="none" stroke="#23ded7" stroke-width="4"/><text y="12">MARKET STATE</text></g>
