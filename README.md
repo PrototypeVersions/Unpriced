@@ -71,6 +71,20 @@ The first autonomous prototype uses `yfinance` as a research-grade adapter so it
 - **Track Record** — calibration, Brier score, log score, rank information coefficient, and benchmark comparisons.
 - **Live Portfolio** — the autonomous $1,000 paper experiment and complete trade history.
 
+## Future AI / developer handoff
+
+Before modifying forecasting logic, model architecture, scoring, trading rules, data sources, or historical records, read:
+
+1. [`docs/AI_HANDOFF.md`](docs/AI_HANDOFF.md) — read first; project invariants and safe change workflow.
+2. [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) — scientific definitions and evaluation.
+3. [`docs/OPERATIONS.md`](docs/OPERATIONS.md) — operating/failure policy.
+4. [`docs/DECISIONS.md`](docs/DECISIONS.md) — architectural decisions and rationale.
+5. [`docs/MODEL_CARD_V1.md`](docs/MODEL_CARD_V1.md) — V1 model specification and limitations.
+6. [`docs/ROADMAP.md`](docs/ROADMAP.md) — V2 challenger timeline and longer-term possibilities.
+7. [`docs/CHANGELOG.md`](docs/CHANGELOG.md) — substantive methodological changes.
+
+The repo also contains `scripts/sync_docs.py` and `.github/workflows/docs-sync.yml`. They automatically refresh machine-owned status blocks in the handoff/model-card/roadmap from canonical configuration and live state. Future substantive methodological changes should still update `DECISIONS.md`, `ROADMAP.md`, and `CHANGELOG.md` intentionally; code should not invent design rationale after the fact.
+
 ## Status
 
 The infrastructure is designed to begin prospectively. Until the first valid scheduled post-close cycle completes, the public interface remains clearly labeled **PRE-LIVE** rather than displaying invented forecasts.
