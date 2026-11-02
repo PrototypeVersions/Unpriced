@@ -1,0 +1,59 @@
+name: Sync UNPRICED documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config.json'
+      - 'engine.py'
+      - 'data/system.json'
+      - 'forecasts/**'
+      - '.github/workflows/market-cycle.yml'
+      - 'scripts/sync_docs.py'
+      - '.github/workflows/docs-sync.yml'
+  schedule:
+    - cron: '23 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: unpriced-docs-sync-main
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh generated documentation blocks
+        run: python scripts/sync_docs.py
+
+      - name: Verify generated blocks
+        run: python scripts/sync_docs.py --check
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit refreshed documentation when needed
+        shell: bash
+        run: |
+          if git diff --quiet -- docs/AI_HANDOFF.md docs/MODEL_CARD_V1.md docs/ROADMAP.md; then
+            echo "Documentation already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/AI_HANDOFF.md docs/MODEL_CARD_V1.md docs/ROADMAP.md
+          git commit -m "Sync UNPRICED documentation snapshot"
+          git push
