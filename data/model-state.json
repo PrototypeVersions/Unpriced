@@ -1,0 +1,19 @@
+{
+  "modelVersion": "v1.0.0",
+  "status": "pre-live",
+  "architecture": {
+    "broad_logit": "Logistic regression over full price/volume/regime feature set",
+    "boosted": "Histogram gradient boosting over full feature set",
+    "momentum_logit": "Logistic regression over relative momentum features only"
+  },
+  "weights": {
+    "broad_logit": 0.45,
+    "boosted": 0.35,
+    "momentum_logit": 0.20
+  },
+  "weightSource": "frozen-initial",
+  "liveResolvedPredictionCountUsedForWeights": 0,
+  "lastTrainedAt": null,
+  "trainingWindow": null,
+  "note": "Parameters retrain automatically; architecture does not self-modify."
+}
