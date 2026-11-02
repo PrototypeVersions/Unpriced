@@ -1,0 +1,18 @@
+{
+  "status": "pre-live",
+  "startingCash": 1000.0,
+  "cash": 1000.0,
+  "equity": 1000.0,
+  "positions": [],
+  "pendingEntries": [],
+  "trades": [],
+  "benchmark": {
+    "symbol": "SPY",
+    "startedAt": null,
+    "startingValue": 1000.0,
+    "currentValue": 1000.0,
+    "entryPrice": null
+  },
+  "lastMarkedAt": null,
+  "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
+}
