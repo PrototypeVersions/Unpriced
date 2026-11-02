@@ -1,0 +1,8 @@
+{
+  "status": "pre-live",
+  "asOf": null,
+  "method": "empirical-lead-lag-v1",
+  "edges": [],
+  "gaps": [],
+  "note": "V1 propagation relationships are empirical lead/lag associations from returns and are not causal claims."
+}
