@@ -1,71 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="0.46" stop-color="#182139"/>
-      <stop offset="0.68" stop-color="#7b3b2f"/>
-      <stop offset="0.82" stop-color="#d36a32"/>
-      <stop offset="1" stop-color="#120d13"/>
+      <stop offset="0" stop-color="#050b18"/>
+      <stop offset="0.34" stop-color="#111a31"/>
+      <stop offset="0.58" stop-color="#3a2340"/>
+      <stop offset="0.73" stop-color="#8d4337"/>
+      <stop offset="0.84" stop-color="#e37a34"/>
+      <stop offset="1" stop-color="#160e16"/>
     </linearGradient>
-    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#fff6cf" stop-opacity="1"/>
-      <stop offset="0.28" stop-color="#ffd06a" stop-opacity="0.95"/>
-      <stop offset="0.64" stop-color="#f28a31" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#f28a31" stop-opacity="0"/>
+    <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fffbe8" stop-opacity="1"/>
+      <stop offset="0.14" stop-color="#ffe295" stop-opacity="0.98"/>
+      <stop offset="0.34" stop-color="#ffb24f" stop-opacity="0.85"/>
+      <stop offset="0.64" stop-color="#ef6f32" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#ef6f32" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="mount1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#243049"/>
-      <stop offset="1" stop-color="#101522"/>
+    <linearGradient id="farMount" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#45506b"/>
+      <stop offset="1" stop-color="#222a3f"/>
     </linearGradient>
-    <linearGradient id="mount2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#171d2c"/>
+    <linearGradient id="midMount" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#30394f"/>
+      <stop offset="1" stop-color="#151b2b"/>
+    </linearGradient>
+    <linearGradient id="nearMount" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2435"/>
       <stop offset="1" stop-color="#080b12"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffcf62"/>
-      <stop offset="1" stop-color="#f29e2e"/>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#080b12" stop-opacity="0.84"/>
+      <stop offset="1" stop-color="#05070b" stop-opacity="0.98"/>
     </linearGradient>
-    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="12"/>
-    </filter>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffc54f"/>
+      <stop offset="0.5" stop-color="#ffb231"/>
+      <stop offset="1" stop-color="#e58a20"/>
+    </linearGradient>
+    <filter id="blur22" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="blur9" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
   <rect width="1200" height="630" fill="url(#sky)"/>
-  <ellipse cx="600" cy="334" rx="190" ry="92" fill="url(#sun)" filter="url(#soft)"/>
-  <circle cx="600" cy="333" r="28" fill="#ffd86f"/>
 
-  <path d="M0 382 L105 326 L205 358 L325 300 L445 351 L555 312 L670 357 L785 295 L915 347 L1035 310 L1200 372 L1200 630 L0 630 Z" fill="url(#mount1)" opacity="0.92"/>
-  <path d="M0 432 L122 385 L250 423 L382 358 L510 420 L646 372 L760 423 L892 364 L1002 410 L1114 378 L1200 408 L1200 630 L0 630 Z" fill="url(#mount2)"/>
-  <rect y="451" width="1200" height="179" fill="#070a10" opacity="0.76"/>
+  <!-- faint atmospheric stars and market-like light traces -->
+  <g fill="#d8e7ff" opacity="0.32">
+    <circle cx="118" cy="73" r="1.1"/><circle cx="181" cy="109" r="1"/><circle cx="248" cy="62" r="1.2"/>
+    <circle cx="920" cy="86" r="1.1"/><circle cx="1007" cy="54" r="1"/><circle cx="1088" cy="119" r="1.2"/>
+    <circle cx="760" cy="72" r="0.9"/><circle cx="829" cy="119" r="0.8"/><circle cx="386" cy="99" r="0.9"/>
+  </g>
+  <path d="M0 275 C150 245 240 292 365 260 S610 215 744 250 S1015 210 1200 230" fill="none" stroke="#ffb84a" stroke-opacity="0.08" stroke-width="2"/>
+  <path d="M0 292 C135 270 260 310 385 278 S650 242 785 270 S1030 247 1200 260" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
 
+  <!-- richer sunset glow -->
+  <ellipse cx="600" cy="340" rx="245" ry="118" fill="url(#horizonGlow)" filter="url(#blur22)"/>
+  <ellipse cx="600" cy="337" rx="125" ry="36" fill="#ffb13a" opacity="0.34" filter="url(#blur9)"/>
+  <circle cx="600" cy="337" r="31" fill="#ffe39a"/>
+  <circle cx="600" cy="337" r="19" fill="#fff7d6"/>
+
+  <!-- layered mountain silhouettes -->
+  <path d="M0 373 L70 346 L140 361 L215 330 L282 349 L349 307 L420 342 L494 319 L557 350 L620 317 L688 349 L756 302 L833 339 L900 315 L968 346 L1043 321 L1115 351 L1200 330 L1200 630 L0 630 Z" fill="url(#farMount)" opacity="0.72"/>
+  <path d="M0 415 L92 365 L174 395 L267 346 L358 390 L451 333 L543 384 L622 344 L707 398 L800 338 L890 387 L970 349 L1062 392 L1135 361 L1200 385 L1200 630 L0 630 Z" fill="url(#midMount)" opacity="0.94"/>
+  <path d="M0 458 L96 414 L183 447 L282 391 L381 452 L483 399 L583 454 L690 400 L785 453 L882 392 L983 447 L1081 408 L1200 454 L1200 630 L0 630 Z" fill="url(#nearMount)"/>
+  <path d="M0 475 C140 448 245 480 350 456 S560 446 670 463 S910 442 1200 466" fill="none" stroke="#ef9c35" stroke-opacity="0.16" stroke-width="2"/>
+
+  <!-- title and subtitle -->
   <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <text x="600" y="105" fill="#ffffff" font-size="76" font-style="italic" font-weight="800" letter-spacing="4">UNPRICED</text>
-    <rect x="206" y="143" width="86" height="3" fill="url(#gold)"/>
-    <rect x="908" y="143" width="86" height="3" fill="url(#gold)"/>
-    <text x="600" y="153" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="5">A FORWARD MARKET MODEL</text>
+    <text x="600" y="108" fill="#ffffff" font-size="79" font-style="italic" font-weight="800" letter-spacing="4.5">UNPRICED</text>
+    <rect x="176" y="145" width="92" height="3" rx="1.5" fill="url(#gold)"/>
+    <rect x="932" y="145" width="92" height="3" rx="1.5" fill="url(#gold)"/>
+    <text x="600" y="156" fill="#ffffff" font-size="23" font-weight="700" letter-spacing="5.5">A FORWARD MARKET MODEL</text>
   </g>
 
-  <g transform="translate(70 470)" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <g stroke="#f3ad36" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M24 55V34M38 55V24M52 55V14M66 55V3"/>
-      <circle cx="214" cy="26" r="18"/><path d="M228 40l14 14"/>
-      <circle cx="388" cy="14" r="5"/><circle cx="367" cy="49" r="5"/><circle cx="409" cy="49" r="5"/><path d="M388 19L370 44M391 19L406 44M372 49h32"/>
-      <path d="M540 11l28 15-28 15-28-15zM512 34l28 15 28-15M512 47l28 15 28-15"/>
-      <path d="M687 53V36h12v17M706 53V27h12v26M726 53V16h12v37M684 29l19-17 14 8 22-20"/>
-      <ellipse cx="894" cy="14" rx="22" ry="9"/><path d="M872 14v34c0 5 10 9 22 9s22-4 22-9V14M872 31c0 5 10 9 22 9s22-4 22-9"/>
+  <!-- bottom feature strip -->
+  <rect x="0" y="460" width="1200" height="170" fill="url(#panel)"/>
+  <line x1="0" y1="460" x2="1200" y2="460" stroke="#f0a734" stroke-opacity="0.18"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <!-- centered dividers -->
+    <g stroke="#9b6925" stroke-opacity="0.62" stroke-width="1.2">
+      <line x1="200" y1="490" x2="200" y2="604"/>
+      <line x1="400" y1="490" x2="400" y2="604"/>
+      <line x1="600" y1="490" x2="600" y2="604"/>
+      <line x1="800" y1="490" x2="800" y2="604"/>
+      <line x1="1000" y1="490" x2="1000" y2="604"/>
     </g>
 
-    <g fill="#ffffff" font-size="14" font-weight="700" letter-spacing="0.6">
-      <text x="45" y="94"><tspan x="45">MARKET</tspan><tspan x="45" dy="17">STATE</tspan></text>
-      <text x="214" y="102">FORECASTS</text>
-      <text x="388" y="102">PROPAGATION</text>
-      <text x="540" y="102">MODELS</text>
-      <text x="711" y="94"><tspan x="711">TRACK</tspan><tspan x="711" dy="17">RECORD</tspan></text>
-      <text x="894" y="94"><tspan x="894">LIVE</tspan><tspan x="894" dy="17">PORTFOLIO</tspan></text>
+    <!-- market state -->
+    <g transform="translate(100 500)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
+      <path d="M-28 45V27M-14 45V17M0 45V7M14 45V-4"/>
     </g>
+    <text x="100" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="100">MARKET</tspan><tspan x="100" dy="17">STATE</tspan></text>
 
-    <g stroke="#a46d23" stroke-width="1">
-      <path d="M126 2V112M300 2V112M464 2V112M623 2V112M801 2V112"/>
+    <!-- forecasts -->
+    <g transform="translate(300 515)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
+      <circle cx="-8" cy="0" r="19"/><path d="M6 14l16 16"/>
     </g>
+    <text x="300" y="581" fill="#ffffff" font-size="14" font-weight="700">FORECASTS</text>
+
+    <!-- propagation -->
+    <g transform="translate(500 500)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
+      <circle cx="0" cy="0" r="5"/><circle cx="-24" cy="40" r="5"/><circle cx="24" cy="40" r="5"/>
+      <path d="M0 5L-21 35M3 5L21 35M-19 40h38"/>
+    </g>
+    <text x="500" y="581" fill="#ffffff" font-size="14" font-weight="700">PROPAGATION</text>
+
+    <!-- models -->
+    <g transform="translate(700 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linejoin="round" filter="url(#goldGlow)">
+      <path d="M0 0l30 15L0 30l-30-15zM-30 25L0 40l30-15M-30 38L0 53l30-15"/>
+    </g>
+    <text x="700" y="581" fill="#ffffff" font-size="14" font-weight="700">MODELS</text>
+
+    <!-- track record -->
+    <g transform="translate(900 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#goldGlow)">
+      <path d="M-28 47V31h13v16M-7 47V22H6v25M15 47V11h13v36M-31 24L-9 4L4 12L28-8"/>
+    </g>
+    <text x="900" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="900">TRACK</tspan><tspan x="900" dy="17">RECORD</tspan></text>
+
+    <!-- live portfolio -->
+    <g transform="translate(1100 501)" stroke="#f1ad39" fill="none" stroke-width="5" stroke-linecap="round" filter="url(#goldGlow)">
+      <ellipse cx="0" cy="6" rx="24" ry="10"/><path d="M-24 6v39c0 6 11 10 24 10s24-4 24-10V6M-24 24c0 6 11 10 24 10s24-4 24-10"/>
+    </g>
+    <text x="1100" y="572" fill="#ffffff" font-size="14" font-weight="700"><tspan x="1100">LIVE</tspan><tspan x="1100" dy="17">PORTFOLIO</tspan></text>
   </g>
 </svg>
