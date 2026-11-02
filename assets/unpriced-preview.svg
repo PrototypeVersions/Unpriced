@@ -1,91 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#020813"/>
-      <stop offset="0.55" stop-color="#06131f"/>
-      <stop offset="1" stop-color="#02070d"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.46" stop-color="#182139"/>
+      <stop offset="0.68" stop-color="#7b3b2f"/>
+      <stop offset="0.82" stop-color="#d36a32"/>
+      <stop offset="1" stop-color="#120d13"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#25d9ff" stop-opacity="0.28"/>
-      <stop offset="0.55" stop-color="#1597c4" stop-opacity="0.10"/>
-      <stop offset="1" stop-color="#0b1b2a" stop-opacity="0"/>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff6cf" stop-opacity="1"/>
+      <stop offset="0.28" stop-color="#ffd06a" stop-opacity="0.95"/>
+      <stop offset="0.64" stop-color="#f28a31" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f28a31" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7be8ff"/>
-      <stop offset="1" stop-color="#2ab9ea"/>
+    <linearGradient id="mount1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#243049"/>
+      <stop offset="1" stop-color="#101522"/>
     </linearGradient>
-    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <linearGradient id="mount2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171d2c"/>
+      <stop offset="1" stop-color="#080b12"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffcf62"/>
+      <stop offset="1" stop-color="#f29e2e"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
     </filter>
-    <clipPath id="globeClip"><circle cx="855" cy="300" r="165"/></clipPath>
   </defs>
 
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <g opacity="0.11" stroke="#7bdfff" stroke-width="1">
-    <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200"/>
-    <path d="M150 0V630M300 0V630M450 0V630M600 0V630M750 0V630M900 0V630M1050 0V630"/>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <ellipse cx="600" cy="334" rx="190" ry="92" fill="url(#sun)" filter="url(#soft)"/>
+  <circle cx="600" cy="333" r="28" fill="#ffd86f"/>
+
+  <path d="M0 382 L105 326 L205 358 L325 300 L445 351 L555 312 L670 357 L785 295 L915 347 L1035 310 L1200 372 L1200 630 L0 630 Z" fill="url(#mount1)" opacity="0.92"/>
+  <path d="M0 432 L122 385 L250 423 L382 358 L510 420 L646 372 L760 423 L892 364 L1002 410 L1114 378 L1200 408 L1200 630 L0 630 Z" fill="url(#mount2)"/>
+  <rect y="451" width="1200" height="179" fill="#070a10" opacity="0.76"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="600" y="105" fill="#ffffff" font-size="76" font-style="italic" font-weight="800" letter-spacing="4">UNPRICED</text>
+    <rect x="206" y="143" width="86" height="3" fill="url(#gold)"/>
+    <rect x="908" y="143" width="86" height="3" fill="url(#gold)"/>
+    <text x="600" y="153" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="5">A FORWARD MARKET MODEL</text>
   </g>
 
-  <circle cx="855" cy="300" r="265" fill="url(#glow)"/>
-
-  <g font-family="Arial, Helvetica, sans-serif">
-    <text x="70" y="108" fill="#ffffff" font-size="70" font-weight="800" letter-spacing="7">UNPRICED</text>
-    <text x="73" y="149" fill="#72dcf6" font-size="18" font-weight="700" letter-spacing="4">A FORWARD MARKET MODEL</text>
-    <rect x="72" y="178" width="330" height="2" fill="url(#cyan)" opacity="0.9"/>
-
-    <text x="72" y="228" fill="#d8e4ec" font-size="25" font-weight="600">Forward-only AI market research.</text>
-    <text x="72" y="264" fill="#8fa7b8" font-size="20">Immutable forecasts. Visible model disagreement.</text>
-    <text x="72" y="294" fill="#8fa7b8" font-size="20">No hindsight. No retroactive rewriting.</text>
-
-    <g transform="translate(72 337)">
-      <rect width="432" height="58" rx="12" fill="#081824" stroke="#15394b"/>
-      <circle cx="28" cy="29" r="9" fill="#32d3f5" filter="url(#softGlow)"/>
-      <text x="50" y="24" fill="#dce9ef" font-size="14" font-weight="700" letter-spacing="1.4">LIVE EXPERIMENT</text>
-      <text x="50" y="43" fill="#7995a7" font-size="13">Probabilistic forecasts + $1,000 paper portfolio</text>
+  <g transform="translate(70 470)" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g stroke="#f3ad36" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 55V34M38 55V24M52 55V14M66 55V3"/>
+      <circle cx="214" cy="26" r="18"/><path d="M228 40l14 14"/>
+      <circle cx="388" cy="14" r="5"/><circle cx="367" cy="49" r="5"/><circle cx="409" cy="49" r="5"/><path d="M388 19L370 44M391 19L406 44M372 49h32"/>
+      <path d="M540 11l28 15-28 15-28-15zM512 34l28 15 28-15M512 47l28 15 28-15"/>
+      <path d="M687 53V36h12v17M706 53V27h12v26M726 53V16h12v37M684 29l19-17 14 8 22-20"/>
+      <ellipse cx="894" cy="14" rx="22" ry="9"/><path d="M872 14v34c0 5 10 9 22 9s22-4 22-9V14M872 31c0 5 10 9 22 9s22-4 22-9"/>
     </g>
-  </g>
 
-  <g clip-path="url(#globeClip)">
-    <circle cx="855" cy="300" r="165" fill="#04111c" stroke="#2ac7ee" stroke-width="2"/>
-    <ellipse cx="855" cy="300" rx="108" ry="165" fill="none" stroke="#38c9ec" stroke-opacity="0.46" stroke-width="1.5"/>
-    <ellipse cx="855" cy="300" rx="48" ry="165" fill="none" stroke="#38c9ec" stroke-opacity="0.30" stroke-width="1"/>
-    <ellipse cx="855" cy="300" rx="165" ry="112" fill="none" stroke="#38c9ec" stroke-opacity="0.36" stroke-width="1.4"/>
-    <ellipse cx="855" cy="300" rx="165" ry="56" fill="none" stroke="#38c9ec" stroke-opacity="0.28" stroke-width="1"/>
-    <path d="M690 300H1020M700 245H1010M700 355H1010" stroke="#36c9ee" stroke-opacity="0.32"/>
-
-    <g stroke="#55ddff" stroke-opacity="0.58" fill="none" stroke-width="1.4">
-      <path d="M724 242L790 280L838 224L908 273L980 238"/>
-      <path d="M735 348L804 313L870 365L929 319L992 345"/>
-      <path d="M770 201L815 332L920 220L955 373"/>
+    <g fill="#ffffff" font-size="14" font-weight="700" letter-spacing="0.6">
+      <text x="45" y="94"><tspan x="45">MARKET</tspan><tspan x="45" dy="17">STATE</tspan></text>
+      <text x="214" y="102">FORECASTS</text>
+      <text x="388" y="102">PROPAGATION</text>
+      <text x="540" y="102">MODELS</text>
+      <text x="711" y="94"><tspan x="711">TRACK</tspan><tspan x="711" dy="17">RECORD</tspan></text>
+      <text x="894" y="94"><tspan x="894">LIVE</tspan><tspan x="894" dy="17">PORTFOLIO</tspan></text>
     </g>
-    <g fill="#7ee8ff" filter="url(#softGlow)">
-      <circle cx="724" cy="242" r="4"/><circle cx="790" cy="280" r="4"/><circle cx="838" cy="224" r="4"/>
-      <circle cx="908" cy="273" r="4"/><circle cx="980" cy="238" r="4"/><circle cx="735" cy="348" r="4"/>
-      <circle cx="804" cy="313" r="4"/><circle cx="870" cy="365" r="4"/><circle cx="929" cy="319" r="4"/>
-      <circle cx="992" cy="345" r="4"/><circle cx="770" cy="201" r="4"/><circle cx="920" cy="220" r="4"/>
-    </g>
-  </g>
-  <circle cx="855" cy="300" r="165" fill="none" stroke="#64ddf7" stroke-opacity="0.78" stroke-width="2"/>
 
-  <g opacity="0.55" fill="none" stroke-width="2">
-    <path d="M615 435C665 410 692 455 735 421C780 386 816 451 858 414C897 379 932 438 969 401C1004 369 1034 403 1091 362" stroke="#2bd3f6"/>
-    <path d="M615 469C660 447 710 481 748 453C795 419 839 473 884 444C927 416 978 459 1090 421" stroke="#536779"/>
-  </g>
-
-  <g font-family="Arial, Helvetica, sans-serif" transform="translate(70 527)">
-    <rect width="1060" height="66" rx="14" fill="#06131e" stroke="#173546"/>
-    <g fill="#d9e7ee" font-size="12" font-weight="700" letter-spacing="1.1" text-anchor="middle">
-      <text x="88" y="28">MARKET STATE</text>
-      <text x="266" y="28">FORECASTS</text>
-      <text x="443" y="28">PROPAGATION</text>
-      <text x="620" y="28">MODELS</text>
-      <text x="797" y="28">TRACK RECORD</text>
-      <text x="972" y="28">LIVE PORTFOLIO</text>
-    </g>
-    <g fill="#35d2f4">
-      <circle cx="88" cy="47" r="3"/><circle cx="266" cy="47" r="3"/><circle cx="443" cy="47" r="3"/>
-      <circle cx="620" cy="47" r="3"/><circle cx="797" cy="47" r="3"/><circle cx="972" cy="47" r="3"/>
+    <g stroke="#a46d23" stroke-width="1">
+      <path d="M126 2V112M300 2V112M464 2V112M623 2V112M801 2V112"/>
     </g>
   </g>
 </svg>
