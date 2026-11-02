@@ -26,12 +26,22 @@ jobs:
       - name: Install renderer
         run: pip install cairosvg
 
-      - name: Render PNG
+      - name: Render PNG without cropping approved artwork
         run: |
           python - <<'PY'
+          from pathlib import Path
           import cairosvg
+
+          src = Path('assets/unpriced-preview.svg').read_text()
+          # Preserve the entire approved artwork inside the standard 1200x630
+          # Open Graph canvas instead of cropping it to fill the frame.
+          src = src.replace('preserveAspectRatio="xMidYMid slice"',
+                            'preserveAspectRatio="xMidYMid meet"')
+          # Give any narrow side gutters a dark background rather than transparency.
+          src = src.replace('>', '><rect width="1200" height="630" fill="#020d16"/>', 1)
+
           cairosvg.svg2png(
-              url='assets/unpriced-preview.svg',
+              bytestring=src.encode('utf-8'),
               write_to='assets/unpriced-preview.png',
               output_width=1200,
               output_height=630,
@@ -46,6 +56,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Preview already current."
           else
-            git commit -m "assets: render social preview PNG"
+            git commit -m "assets: render uncropped social preview PNG"
             git push
           fi
