@@ -6,8 +6,8 @@
   "schedule": {
     "premarketRefresh": "08:45",
     "paperExecution": "09:35",
-    "postCloseForecast": "16:20",
-    "earlyCloseForecast": "13:20",
+    "postCloseForecast": "16:35",
+    "earlyCloseForecast": "13:35",
     "officialForecastFrequency": "once per trading day after close"
   },
   "forecast": {
