@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "project": "UNPRICED",
+  "timezone": "America/New_York",
+  "status": "pre-live",
+  "schedule": {
+    "premarketRefresh": "08:45",
+    "paperExecution": "09:35",
+    "postCloseForecast": "16:20",
+    "earlyCloseForecast": "13:20",
+    "officialForecastFrequency": "once per trading day after close"
+  },
+  "forecast": {
+    "horizons": [1, 5, 20],
+    "benchmark": "SPY",
+    "displayMinimumProbability": 0.55,
+    "portfolioHorizon": 5,
+    "entryProbability": 0.60,
+    "exitProbability": 0.52,
+    "entryExpectedExcessReturn": 0.004
+  },
+  "portfolio": {
+    "startingCash": 1000.0,
+    "maxPositions": 4,
+    "maxPositionWeight": 0.225,
+    "minimumCashWeightWhenFull": 0.10,
+    "slippagePerSide": 0.001,
+    "allowLeverage": false,
+    "allowShorting": false,
+    "allowOptions": false,
+    "fractionalShares": true,
+    "premarketAbsoluteGapVeto": 0.04,
+    "executionMethod": "typical price of completed 09:30-09:35 ET five-minute bar"
+  },
+  "learning": {
+    "rollingTrainingYears": 3,
+    "initialModelWeights": {
+      "broad_logit": 0.45,
+      "boosted": 0.35,
+      "momentum_logit": 0.20
+    },
+    "adaptiveWeightingStartsAfterResolvedPredictions": 100,
+    "adaptiveLookbackResolvedPredictions": 250,
+    "weightFloor": 0.10,
+    "weightCap": 0.70,
+    "brierTemperature": 8.0,
+    "architectureSelfModification": false
+  },
+  "universe": [
+    "AAPL","MSFT","NVDA","AMZN","GOOGL","META","AVGO","AMD","TSLA","JPM",
+    "BAC","GS","V","MA","XOM","CVX","LLY","UNH","JNJ","COST","WMT","HD",
+    "CAT","GE","ORCL","CRM","NOW","NFLX","MU","ANET","TSM","ASML","QCOM",
+    "AMAT","IBM","PLTR","UBER","PANW","CRWD","INTC"
+  ],
+  "contextSymbols": ["SPY","QQQ","SMH","XLF","XLE","XLV","XLI","XLU","^VIX","^TNX"],
+  "data": {
+    "adapter": "yfinance-research-prototype",
+    "failClosed": true,
+    "note": "No forecast or trade is fabricated when required market data are unavailable. Replace with a licensed market-data feed before production use."
+  }
+}
