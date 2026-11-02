@@ -1,0 +1,9 @@
+{
+  "status": "pre-live",
+  "asOf": null,
+  "sessionDate": null,
+  "marketOpen": null,
+  "plannedEntries": [],
+  "vetoes": [],
+  "note": "Premarket refresh never rewrites the prior close's published forecast probabilities."
+}
