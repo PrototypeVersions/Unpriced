@@ -1,0 +1,11 @@
+{
+  "status": "pre-live",
+  "phase": "awaiting-first-valid-close-cycle",
+  "lastSuccessfulCycle": null,
+  "lastAttemptedCycle": null,
+  "lastError": null,
+  "dataProvider": "yfinance-research-prototype",
+  "officialForecastCount": 0,
+  "resolvedForecastCount": 0,
+  "liveSince": null
+}
