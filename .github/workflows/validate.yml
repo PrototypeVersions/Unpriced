@@ -1,0 +1,76 @@
+name: Validate UNPRICED
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python syntax
+        run: python -m py_compile engine.py
+
+      - name: JavaScript syntax
+        run: node --check app.js
+
+      - name: Validate config and initial state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          cfg=json.loads(Path('config.json').read_text())
+          assert cfg['project']=='UNPRICED'
+          assert cfg['timezone']=='America/New_York'
+          assert cfg['forecast']['horizons']==[1,5,20]
+          assert cfg['portfolio']['startingCash']==1000.0
+          assert not cfg['portfolio']['allowLeverage']
+          assert not cfg['portfolio']['allowShorting']
+          assert not cfg['portfolio']['allowOptions']
+          assert abs(sum(cfg['learning']['initialModelWeights'].values())-1)<1e-9
+          assert cfg['learning']['architectureSelfModification'] is False
+          assert len(cfg['universe'])>=30
+
+          required=[
+            'data/system.json','data/market-state.json','data/current-forecasts.json',
+            'data/portfolio.json','data/track-record.json','data/model-state.json',
+            'data/premarket.json','data/propagation.json'
+          ]
+          for p in required:
+            data=json.loads(Path(p).read_text())
+            print('valid',p)
+          port=json.loads(Path('data/portfolio.json').read_text())
+          assert port['startingCash']==port['cash']==port['equity']==1000.0
+          assert port['positions']==[] and port['trades']==[]
+
+          for p in Path('forecasts').glob('*.json') if Path('forecasts').exists() else []:
+            snap=json.loads(p.read_text())
+            assert snap['status']=='published-live'
+            assert snap['snapshotId'].endswith('-close-v1')
+            for f in snap['forecasts']:
+              assert f['ticker'] in cfg['universe']
+              assert f['horizon'] in cfg['forecast']['horizons']
+              assert 0<=f['pOutperform']<=1
+              assert 0.5<=f['directionProbability']<=1
+              assert set(f['modelProbabilities'])==set(cfg['learning']['initialModelWeights'])
+
+          print('UNPRICED invariants valid')
+          PY
+
+      - name: Required site assets
+        run: |
+          test -s index.html
+          test -s styles.css
+          test -s app.js
+          test -s README.md
+          test -s docs/METHODOLOGY.md
+          test -s requirements.txt
+          test -s config.json
