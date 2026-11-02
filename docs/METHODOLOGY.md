@@ -16,11 +16,11 @@ The premarket cycle may update operational state and apply precommitted risk gat
 
 Paper trades use only decisions available before execution. The simulated fill is derived from the completed 09:30–09:35 ET five-minute bar. This deliberately avoids claiming an ideal 09:30 opening-auction fill that the system did not observe in real time.
 
-### 16:20 America/New_York — official close cycle
+### 16:35 America/New_York — official close cycle
 
-The close cycle uses data through the completed trading session. It resolves outcomes whose horizons have closed, updates allowed ensemble weights using only already-resolved live forecasts, retrains model parameters on historical data available at that time, and freezes a new dated forecast snapshot.
+The close cycle uses data through the completed trading session. The 35-minute buffer is deliberate: the prototype refuses to publish if the research-grade data adapter has not yet exposed the current session's completed daily bar. It resolves outcomes whose horizons have closed, updates allowed ensemble weights using only already-resolved live forecasts, retrains model parameters on historical data available at that time, and freezes a new dated forecast snapshot.
 
-NYSE early-close days use the same logic at 13:20 ET.
+NYSE early-close days use the same logic at 13:35 ET. A later 16:35 trigger safely no-ops if the immutable early-close snapshot already exists.
 
 ## 3. No hindsight
 
