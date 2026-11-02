@@ -1,3 +1,0 @@
-# UNPRICED
-
-Repository initialization marker.
