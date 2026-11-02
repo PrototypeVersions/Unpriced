@@ -14,8 +14,8 @@ All times use `America/New_York` and the NYSE trading calendar.
 
 - **08:45 ET — Premarket refresh.** Overnight state and risk gates update. Published forecasts are not rewritten.
 - **09:35 ET — Paper execution.** The $1,000 experiment may rebalance using only the prior close's frozen 5-day forecasts plus precommitted overnight veto rules. Execution uses the completed 09:30–09:35 five-minute bar, not a perfect opening print.
-- **16:20 ET — Official post-close cycle.** Mature forecasts resolve, model weights update under fixed rules, the rolling models retrain, new 1D/5D/20D forecasts are frozen, and the site refreshes.
-- **Early-close sessions — 13:20 ET.** The same post-close logic runs after the exchange's early close. A redundant 16:20 trigger safely no-ops.
+- **16:35 ET — Official post-close cycle.** Mature forecasts resolve, model weights update under fixed rules, the rolling models retrain, new 1D/5D/20D forecasts are frozen, and the site refreshes. The 35-minute buffer reduces the chance that an incomplete free-data daily bar is mistaken for the final session.
+- **Early-close sessions — 13:35 ET.** The same post-close logic runs after the exchange's early close. A redundant 16:35 trigger safely no-ops if the early-close snapshot already exists.
 
 The site therefore receives **two intelligence updates per normal trading day** (premarket and post-close), plus a portfolio-state update after the 09:35 simulated execution.
 
