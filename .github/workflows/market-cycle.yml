@@ -6,9 +6,9 @@ on:
       timezone: 'America/New_York'
     - cron: '35 9 * * 1-5'
       timezone: 'America/New_York'
-    - cron: '20 13 * * 1-5'
+    - cron: '35 13 * * 1-5'
       timezone: 'America/New_York'
-    - cron: '20 16 * * 1-5'
+    - cron: '35 16 * * 1-5'
       timezone: 'America/New_York'
   workflow_dispatch:
     inputs:
@@ -56,12 +56,37 @@ jobs:
             case "${{ github.event.schedule }}" in
               "45 8 * * 1-5") MODE="premarket" ;;
               "35 9 * * 1-5") MODE="execute" ;;
-              "20 13 * * 1-5"|"20 16 * * 1-5") MODE="close" ;;
+              "35 13 * * 1-5"|"35 16 * * 1-5") MODE="close" ;;
               *) echo "Unknown schedule"; exit 1 ;;
             esac
           fi
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
           echo "Running $MODE cycle"
+
+      - name: Require completed current-session daily bar before close publication
+        if: steps.mode.outputs.mode == 'close'
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import pandas as pd
+          import pandas_market_calendars as mcal
+          import yfinance as yf
+
+          tz=ZoneInfo('America/New_York')
+          today=datetime.now(tz).date()
+          sched=mcal.get_calendar('NYSE').schedule(start_date=today.isoformat(), end_date=today.isoformat())
+          if sched.empty:
+              print('No NYSE session today; engine will safely no-op.')
+              raise SystemExit(0)
+          raw=yf.download('SPY',period='10d',interval='1d',auto_adjust=True,progress=False)
+          if raw.empty:
+              raise SystemExit('SPY daily data unavailable; refusing to publish.')
+          latest=pd.Timestamp(raw.dropna(how='all').index[-1]).date()
+          if latest != today:
+              raise SystemExit(f'Latest completed SPY daily bar is {latest}, not {today}; refusing to publish stale close data.')
+          print('Current-session SPY daily bar confirmed:', latest)
+          PY
 
       - name: Run market engine
         run: python engine.py "${{ steps.mode.outputs.mode }}"
@@ -93,18 +118,21 @@ jobs:
             git push
           fi
 
-      - name: Configure Pages
+      - name: Configure Pages when enabled
+        id: pages_config
+        continue-on-error: true
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
       - name: Upload Pages artifact
+        if: steps.pages_config.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
       - name: Deploy Pages
-        id: deployment
+        if: steps.pages_config.outcome == 'success'
         uses: actions/deploy-pages@v4
         with:
           token: ${{ github.token }}
