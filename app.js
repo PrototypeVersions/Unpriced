@@ -36,6 +36,30 @@ function renderPortfolio(){const p=U.portfolio||{};$('#portfolio-preview').inner
 
 function initHorizon(){$$('#horizon-tabs button').forEach(b=>b.addEventListener('click',()=>{$$('#horizon-tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');U.horizon=Number(b.dataset.h);renderForecasts()}))}
 
-async function boot(){initNav();initHorizon();try{const [system,state,forecasts,prop,models,record,portfolio,premarket]=await Promise.all(['data/system.json','data/market-state.json','data/current-forecasts.json','data/propagation.json','data/model-state.json','data/track-record.json','data/portfolio.json','data/premarket.json'].map(j));Object.assign(U,{system,state,forecasts,prop,models,record,portfolio,premarket});renderStatus();renderMarket();renderForecasts();renderPropagation();renderModels();renderRecord();renderPortfolio()}catch(err){console.error(err);$('#system-status').textContent='DATA ERROR';$('#last-update').textContent=err.message;$('#status-dot').style.background='var(--red)'}}
-
+let dataRefreshPending=false;
+async function refreshData(){
+  if(dataRefreshPending)return;
+  dataRefreshPending=true;
+  try{
+    const [system,state,forecasts,prop,models,record,portfolio,premarket]=await Promise.all([
+      'data/system.json','data/market-state.json','data/current-forecasts.json',
+      'data/propagation.json','data/model-state.json','data/track-record.json',
+      'data/portfolio.json','data/premarket.json'
+    ].map(j));
+    Object.assign(U,{system,state,forecasts,prop,models,record,portfolio,premarket});
+    renderStatus();renderMarket();renderForecasts();renderPropagation();
+    renderModels();renderRecord();renderPortfolio();
+  }catch(err){
+    console.error(err);
+    $('#system-status').textContent='DATA ERROR';
+    $('#last-update').textContent=err.message;
+    $('#status-dot').style.background='var(--red)';
+  }finally{dataRefreshPending=false;}
+}
+function boot(){
+  initNav();initHorizon();refreshData();
+  // Fetch newly published GitHub Pages data without duplicating click handlers.
+  setInterval(()=>{if(!document.hidden)refreshData()},120000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshData()});
+}
 boot();
