@@ -69,6 +69,14 @@ def main():
             assert (Path(temporary)/'2026-11-04-execution-missed.json').exists()
             assert not (Path(temporary)/'2026-11-04-execution.json').exists()
 
+    # A code-push recovery may not publish during the 35-minute settlement buffer.
+    with TemporaryDirectory() as temporary:
+        with patch.object(engine,'FORECASTS',Path(temporary)), patch.object(
+            engine,'now_et',return_value=datetime(2026,11,4,16,20,tzinfo=engine.TZ)
+        ):
+            engine.postclose_mode()
+            assert not list(Path(temporary).glob('*.json'))
+
     # Never substitute an unfinished 09:35 candle for the completed 09:30 bar.
     incomplete=pd.DataFrame({'High':[101.0],'Low':[99.0],'Close':[100.0]},
         index=pd.DatetimeIndex(['2026-11-04 09:35'],tz=engine.TZ))
