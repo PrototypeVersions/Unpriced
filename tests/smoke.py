@@ -1,5 +1,8 @@
 from pathlib import Path
 import sys
+from datetime import datetime
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -55,7 +58,22 @@ def main():
     prop=engine.compute_propagation(close,'2026-11-02')
     assert prop['status']=='live'
     assert prop['method']=='empirical-lead-lag-v1'
-    print('UNPRICED model smoke test passed')
+
+    # A delayed scheduler must never backdate a premarket gate or a paper fill.
+    with TemporaryDirectory() as temporary:
+        late=datetime(2026,11,4,15,36,tzinfo=engine.TZ)
+        with patch.object(engine,'STATES',Path(temporary)), patch.object(engine,'now_et',return_value=late):
+            engine.premarket_mode()
+            engine.execute_mode()
+            assert (Path(temporary)/'2026-11-04-premarket-missed.json').exists()
+            assert (Path(temporary)/'2026-11-04-execution-missed.json').exists()
+            assert not (Path(temporary)/'2026-11-04-execution.json').exists()
+
+    # Never substitute an unfinished 09:35 candle for the completed 09:30 bar.
+    incomplete=pd.DataFrame({'High':[101.0],'Low':[99.0],'Close':[100.0]},
+        index=pd.DatetimeIndex(['2026-11-04 09:35'],tz=engine.TZ))
+    assert engine.first_bar_typical_price(incomplete,'2026-11-04') is None
+    print('UNPRICED model and schedule guard smoke tests passed')
 
 
 if __name__=='__main__':
