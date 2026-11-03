@@ -1,55 +1,82 @@
 {
   "status": "live",
-  "asOf": "2026-11-02T20:11:58.091145-05:00",
-  "sessionDate": "2026-11-02",
+  "asOf": "2026-11-03T18:36:44.156611-05:00",
+  "sessionDate": "2026-11-03",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.2517
+      "lag1Correlation": 0.2573
     },
     {
       "from": "AMAT",
       "to": "META",
-      "lag1Correlation": 0.2428
+      "lag1Correlation": 0.2419
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2406
+      "lag1Correlation": 0.2282
     },
     {
       "from": "GOOGL",
       "to": "INTC",
-      "lag1Correlation": 0.2047
+      "lag1Correlation": 0.2084
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.2001
+      "lag1Correlation": 0.205
     },
     {
       "from": "ANET",
       "to": "META",
-      "lag1Correlation": 0.1923
+      "lag1Correlation": 0.196
     },
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.1866
+      "lag1Correlation": 0.1919
     },
     {
       "from": "AVGO",
       "to": "META",
-      "lag1Correlation": 0.1837
+      "lag1Correlation": 0.1864
+    },
+    {
+      "from": "INTC",
+      "to": "BAC",
+      "lag1Correlation": 0.1863
+    },
+    {
+      "from": "V",
+      "to": "GOOGL",
+      "lag1Correlation": 0.1836
     },
     {
       "from": "MSFT",
-      "to": "ANET",
-      "lag1Correlation": 0.1816
+      "to": "PLTR",
+      "lag1Correlation": 0.1826
     }
   ],
-  "gaps": [],
+  "gaps": [
+    {
+      "leader": "ORCL",
+      "lagger": "IBM",
+      "leaderMoveZ": 1.609,
+      "laggerMoveZ": -0.588,
+      "lag1Correlation": 0.2573,
+      "direction": "positive-follow-through"
+    },
+    {
+      "leader": "MSFT",
+      "lagger": "PLTR",
+      "leaderMoveZ": 1.875,
+      "laggerMoveZ": -0.594,
+      "lag1Correlation": 0.1826,
+      "direction": "positive-follow-through"
+    }
+  ],
   "note": "Empirical lagged return associations only; not causal relationships."
 }

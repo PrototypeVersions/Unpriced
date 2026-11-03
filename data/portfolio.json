@@ -10,9 +10,9 @@
     "symbol": "SPY",
     "startedAt": "2026-11-03T15:36:39.352806-05:00",
     "startingValue": 1000.0,
-    "currentValue": 1000.0,
+    "currentValue": 1001.602145,
     "entryPrice": 753.143331
   },
-  "lastMarkedAt": "2026-11-03T15:36:39.352806-05:00",
+  "lastMarkedAt": "2026-11-03T18:36:42.886572-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }

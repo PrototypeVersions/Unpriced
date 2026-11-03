@@ -12,26 +12,26 @@
     "momentum_logit": 0.2
   },
   "weightSource": "frozen-initial",
-  "liveResolvedPredictionCountUsedForWeights": 0,
-  "lastTrainedAt": "2026-11-02T20:11:56.438996-05:00",
+  "liveResolvedPredictionCountUsedForWeights": 40,
+  "lastTrainedAt": "2026-11-03T18:36:42.886572-05:00",
   "trainingWindow": [
     {
       "horizon": 1,
-      "rows": 30000,
-      "start": "2023-11-02",
-      "end": "2026-10-29"
+      "rows": 30040,
+      "start": "2023-11-03",
+      "end": "2026-11-02"
     },
     {
       "horizon": 5,
-      "rows": 29840,
-      "start": "2023-11-02",
-      "end": "2026-10-23"
+      "rows": 29880,
+      "start": "2023-11-03",
+      "end": "2026-10-27"
     },
     {
       "horizon": 20,
-      "rows": 29240,
-      "start": "2023-11-02",
-      "end": "2026-10-02"
+      "rows": 29280,
+      "start": "2023-11-03",
+      "end": "2026-10-06"
     }
   ],
   "note": "Parameters retrain automatically; architecture does not self-modify."
