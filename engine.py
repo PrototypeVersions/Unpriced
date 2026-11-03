@@ -470,8 +470,7 @@ def build_forecast_snapshot(frames: dict[str, pd.DataFrame], session_date: str, 
         models = fit_models(train)
         current = panel[panel["date"].dt.date == cutoff.date()].copy()
         if current.empty:
-            latest = panel["date"].max()
-            current = panel[panel["date"] == latest].copy()
+            raise RuntimeError(f"No current-session features for {session_date}; refusing stale forecast")
         preds = predict_current(models, current, weights)
         for p in preds:
             p["horizon"] = int(horizon)
@@ -539,6 +538,9 @@ def postclose_mode() -> None:
     try:
         frames = download_daily("5y")
         close, _ = align_panel(frames, ALL_SYMBOLS)
+        latest_spy = pd.Timestamp(close[BENCHMARK].dropna().index[-1]).date()
+        if latest_spy != now.date():
+            raise RuntimeError(f"SPY daily data stale: latest {latest_spy}, expected {date_str}")
         track = resolve_forecasts(close)
         weights, weight_source, n_resolved = adaptive_weights(track)
         snapshot = build_forecast_snapshot(frames, date_str, weights)
@@ -635,7 +637,8 @@ def premarket_mode() -> None:
         print("No NYSE session today; premarket no-op.")
         return
     if now >= session["open"]:
-        raise RuntimeError("premarket refresh occurred after market open")
+        print(f"Missed premarket cutoff at {iso(session['open'])}; skipped without rewriting gates.")
+        return
     portfolio = read_json(DATA / "portfolio.json")
     pending = portfolio.get("pendingEntries", [])
     symbols = [x["ticker"] for x in pending]
@@ -689,10 +692,7 @@ def first_bar_typical_price(df: pd.DataFrame | None, session_date: str) -> float
     mask = (idx.date == target) & (times >= datetime.strptime("09:30", "%H:%M").time()) & (times < datetime.strptime("09:35", "%H:%M").time())
     candidates = df.loc[mask]
     if candidates.empty:
-        mask = (idx.date == target) & (times == datetime.strptime("09:35", "%H:%M").time())
-        candidates = df.loc[mask]
-    if candidates.empty:
-        return None
+        return None  # A 09:35-labelled bar may be unfinished; never substitute it.
     row = candidates.iloc[0]
     vals = [float(row.get(k, np.nan)) for k in ["High", "Low", "Close"]]
     vals = [v for v in vals if np.isfinite(v) and v > 0]
@@ -706,14 +706,43 @@ def execute_mode() -> None:
     if session is None:
         print("No NYSE session today; execution no-op.")
         return
+    if (STATES / f"{date_str}-execution.json").exists():
+        print("Execution already recorded for this session; no duplicate execution.")
+        return
     if now < session["open"] + timedelta(minutes=5):
         raise RuntimeError("first five-minute execution bar is not complete")
+    if now > session["open"] + timedelta(minutes=15):
+        missed = STATES / f"{date_str}-execution-missed.json"
+        if not missed.exists():
+            write_json(missed, {
+                "cycle": "paper-execution-missed", "at": iso(now), "sessionDate": date_str,
+                "reason": "GitHub scheduled run arrived after the 09:45 ET safety cutoff; no retrospective fills.",
+            })
+        print("Execution window missed; no trade or benchmark backfill.")
+        return
     portfolio = read_json(DATA / "portfolio.json")
     current = read_json(DATA / "current-forecasts.json")
     if current.get("status") != "live":
         print("No prior official forecast; execution no-op.")
         return
-    pending = portfolio.get("pendingEntries", [])
+    recent = mcal.get_calendar("NYSE").schedule(
+        start_date=(now.date() - timedelta(days=10)).isoformat(),
+        end_date=(now.date() - timedelta(days=1)).isoformat(),
+    )
+    previous_session = recent.index[-1].date().isoformat() if not recent.empty else None
+    if current.get("sessionDate") != previous_session:
+        print(f"No forecast from previous NYSE session ({previous_session}); execution no-op.")
+        return
+    premarket = read_json(DATA / "premarket.json")
+    valid_premarket = (
+        premarket.get("sessionDate") == date_str
+        and premarket.get("status") == "live"
+        and bool(premarket.get("asOf"))
+        and pd.Timestamp(premarket["asOf"]).to_pydatetime() < session["open"]
+    )
+    pending = portfolio.get("pendingEntries", []) if valid_premarket else []
+    if not valid_premarket:
+        print("No valid same-session premarket risk check; new entries vetoed.")
     held = {p["ticker"]: p for p in portfolio.get("positions", [])}
     symbols = sorted(set(list(held) + [x["ticker"] for x in pending] + [BENCHMARK]))
     intraday = fetch_intraday(symbols, prepost=False)
