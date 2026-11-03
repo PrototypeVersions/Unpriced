@@ -636,7 +636,16 @@ def premarket_mode() -> None:
     if session is None:
         print("No NYSE session today; premarket no-op.")
         return
+    if (STATES / f"{date_str}-premarket.json").exists():
+        print("Valid premarket refresh already recorded for this session; no duplicate.")
+        return
     if now >= session["open"]:
+        missed = STATES / f"{date_str}-premarket-missed.json"
+        if not missed.exists():
+            write_json(missed, {
+                "cycle": "premarket-missed", "at": iso(now), "sessionDate": date_str,
+                "reason": "Scheduler arrived after market open; no retrospective premarket gate.",
+            })
         print(f"Missed premarket cutoff at {iso(session['open'])}; skipped without rewriting gates.")
         return
     portfolio = read_json(DATA / "portfolio.json")
