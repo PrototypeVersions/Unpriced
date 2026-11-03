@@ -525,7 +525,7 @@ def postclose_mode() -> None:
     if session is None:
         print("No NYSE session today; close cycle no-op.")
         return
-    if now < session["close"] + timedelta(minutes=15):
+    if now < session["close"] + timedelta(minutes=35):
         print("Market not closed long enough; close cycle no-op.")
         return
     snapshot_path = FORECASTS / f"{date_str}-close.json"
