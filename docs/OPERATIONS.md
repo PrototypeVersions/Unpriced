@@ -9,6 +9,37 @@ UNPRICED is designed to run without routine human intervention. This file define
 - 16:35 — official close cycle; resolves matured forecasts, retrains model parameters, freezes new 1D/5D/20D forecasts, updates market state and propagation, and writes the forward record.
 - Early-close sessions use 13:35 for the official close cycle.
 
+## Scheduler reliability and late-run safety (repaired 2026-11-03)
+
+GitHub Actions weekday cron schedules remain the primary autonomous updater, with redundant
+premarket (08:45, 08:53 ET), execution (09:35, 09:42 ET), early-close (13:35, 13:49 ET),
+and normal-close/recovery (16:35, 16:47, 17:07, 17:37, 18:07 ET) triggers.
+They are not guaranteed to start exactly on time. The actual NYSE calendar and engine
+clock, not the scheduled cron text, decide which work is allowed.
+
+- A premarket job that arrives after the 09:30 open records a missed-run audit and
+  does not create retrospective risk eligibility.
+- A paper-execution job may execute only from 09:35 through 09:45 ET. Missed windows
+  are recorded separately, without simulated fills, benchmark starts, or backdating.
+  An existing dated execution prevents a second run for the session.
+- A timely execution requires a previous-session official forecast and a same-session
+  premarket risk check for any **new entry**. No unfinished 09:35 candle may substitute
+  for the completed 09:30–09:35 bar.
+- Official close publication requires a genuinely current-session SPY daily bar;
+  missing current-session feature rows are rejected instead of silently replaced with
+  a prior session. Subsequent close retries no-op after the first immutable snapshot.
+- Code-repair pushes to the market-cycle workflow can initiate a current-day close
+  recovery **only** after the session closes, preserving the actual publication time.
+- Each successful market-cycle run synchronizes generated documentation before
+  pushing state, and the public page polls for published data while visible.
+- A skipped late cycle is an operational miss, not a successful timely cycle.
+  Inspect `states/*-missed.json` even if GitHub marks the job green.
+
+The 2026-11-03 execution was hours late and placed zero trades. Its unchanged original
+state is accompanied by `states/2026-11-03-execution-audit.json`; the mutable SPY
+benchmark start was reset, pending the next valid forward-time execution. No trade
+or forecast history was rewritten.
+
 ## What counts as healthy
 
 A healthy trading day should normally produce:
