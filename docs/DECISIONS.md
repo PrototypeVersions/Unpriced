@@ -92,6 +92,31 @@ Replacing the research-grade free adapter with a licensed point-in-time feed may
 
 **Reason:** experimental integrity does not require knowingly retaining unreliable plumbing.
 
+## D-016 — Strict clock windows for simulated execution (2026-11-03)
+
+A scheduled run arriving hours late may not claim the first five-minute bar as a
+prospective simulated execution. Premarket eligibility must be established before
+the opening bell. Paper execution is now valid only 09:35–09:45 ET, at most once per
+trading session, using only the completed 09:30 first bar and the immediately prior
+NYSE session's official forecast.
+
+**Reason:** A backdated fill or a morning benchmark price assigned in the afternoon
+would create look-ahead bias even when the GitHub job itself succeeded.
+
+**Historical handling:** The November 3 late run made zero trades, so the immutable
+record is retained with an additive operations audit; only the mutable benchmark
+initialization was reset for a valid prospective start.
+
+## D-017 — Redundant schedules without backfilling (2026-11-03)
+
+GitHub's scheduler can delay or drop runs. Short, idempotent retries are permitted
+for all cycles. Close-cycle recovery can publish a genuinely new current-session
+forecast later in the evening only when the current completed NYSE bar exists, with
+its **actual** timestamp. A missed premarket or execution window cannot be replayed.
+
+**Reason:** Preserve availability without improving the apparent forward record by
+hindsight. A missing cycle remains an explicitly detectable miss.
+
 ## Adding future decisions
 
 Add a new numbered entry whenever a change materially affects what information the system sees, what it predicts, how it learns, how it trades, how it is scored, or how a version is promoted. Do not rewrite old decisions to make later choices look inevitable; append superseding decisions instead.
