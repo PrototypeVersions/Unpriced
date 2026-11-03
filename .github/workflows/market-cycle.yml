@@ -104,7 +104,7 @@ jobs:
               print('No NYSE session today; engine will safely no-op.')
               raise SystemExit(0)
           close_et=sched.iloc[0]['market_close'].tz_convert(tz).to_pydatetime()
-          if datetime.now(tz) < close_et + timedelta(minutes=15):
+          if datetime.now(tz) < close_et + timedelta(minutes=35):
               print('Exchange has not closed and settled yet; early-close fallback safely no-ops.')
               raise SystemExit(0)
           raw=yf.download('SPY',period='10d',interval='1d',auto_adjust=True,progress=False)
