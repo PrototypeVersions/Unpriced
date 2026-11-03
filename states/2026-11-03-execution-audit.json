@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "append-only-operations-audit",
+  "sessionDate": "2026-11-03",
+  "sourceExecutionState": "states/2026-11-03-execution.json",
+  "sourceWorkflowRun": "https://github.com/PrototypeVersions/Unpriced/actions/runs/41714074196",
+  "recordedExecutionAt": "2026-11-03T15:36:39.352806-05:00",
+  "expectedExecutionWindow": "09:35–09:45 America/New_York",
+  "observedTrades": 0,
+  "observedPositions": 0,
+  "finding": "The scheduled paper-execution job ran in the afternoon and initialized the SPY benchmark from the morning first-five-minute bar, hours after that bar had formed.",
+  "correction": "Retain the original dated execution state unchanged for audit. Reset only the mutable current benchmark start to null and reinitialize prospectively at the next valid timely execution. No trades or forecasts are backfilled, and no historical performance is rewritten.",
+  "modelOrTradingRuleChanges": false
+}
