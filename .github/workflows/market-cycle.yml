@@ -91,7 +91,7 @@ jobs:
         if: steps.mode.outputs.mode == 'close' && github.event_name != 'push'
         run: |
           python - <<'PY'
-          from datetime import datetime
+          from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
           import pandas as pd
           import pandas_market_calendars as mcal
@@ -102,6 +102,10 @@ jobs:
           sched=mcal.get_calendar('NYSE').schedule(start_date=today.isoformat(), end_date=today.isoformat())
           if sched.empty:
               print('No NYSE session today; engine will safely no-op.')
+              raise SystemExit(0)
+          close_et=sched.iloc[0]['market_close'].tz_convert(tz).to_pydatetime()
+          if datetime.now(tz) < close_et + timedelta(minutes=15):
+              print('Exchange has not closed and settled yet; early-close fallback safely no-ops.')
               raise SystemExit(0)
           raw=yf.download('SPY',period='10d',interval='1d',auto_adjust=True,progress=False)
           if raw.empty:
