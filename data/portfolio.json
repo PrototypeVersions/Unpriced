@@ -13,6 +13,6 @@
     "currentValue": 1000.0,
     "entryPrice": null
   },
-  "lastMarkedAt": null,
+  "lastMarkedAt": "2026-11-02T20:11:56.438996-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }

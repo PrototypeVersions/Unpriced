@@ -1,0 +1,36 @@
+{
+  "cycle": "post-close",
+  "at": "2026-11-02T20:11:56.438996-05:00",
+  "marketState": {
+    "status": "live",
+    "asOf": "2026-11-02T20:11:56.461413-05:00",
+    "sessionDate": "2026-11-02",
+    "regime": "mixed",
+    "metrics": {
+      "spy5dReturn": -0.005592,
+      "spy20dReturn": -0.018086,
+      "breadthAbove20dMA": 0.0,
+      "crossSectionDispersion20d": 0.025137,
+      "spyRealizedVol20d": 0.115942,
+      "vix": 21.15,
+      "tenYearYield": 4.894,
+      "tenYear20dChange": -0.417,
+      "sectorRelative20d": {
+        "QQQ": -0.060744,
+        "SMH": -0.153353,
+        "XLF": 0.074546,
+        "XLE": 0.1327,
+        "XLV": 0.130555,
+        "XLI": 0.003082,
+        "XLU": 0.108471
+      }
+    },
+    "interpretation": {
+      "breadth": "narrow",
+      "dispersion": "moderate",
+      "volatility": "low"
+    }
+  },
+  "forecastSnapshotId": "2026-11-02-close-v1",
+  "plannedEntries": []
+}

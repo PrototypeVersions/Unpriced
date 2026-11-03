@@ -1,6 +1,6 @@
 {
   "modelVersion": "v1.0.0",
-  "status": "pre-live",
+  "status": "live",
   "architecture": {
     "broad_logit": "Logistic regression over full price/volume/regime feature set",
     "boosted": "Histogram gradient boosting over full feature set",
@@ -9,11 +9,30 @@
   "weights": {
     "broad_logit": 0.45,
     "boosted": 0.35,
-    "momentum_logit": 0.20
+    "momentum_logit": 0.2
   },
   "weightSource": "frozen-initial",
   "liveResolvedPredictionCountUsedForWeights": 0,
-  "lastTrainedAt": null,
-  "trainingWindow": null,
+  "lastTrainedAt": "2026-11-02T20:11:56.438996-05:00",
+  "trainingWindow": [
+    {
+      "horizon": 1,
+      "rows": 30000,
+      "start": "2023-11-02",
+      "end": "2026-10-29"
+    },
+    {
+      "horizon": 5,
+      "rows": 29840,
+      "start": "2023-11-02",
+      "end": "2026-10-23"
+    },
+    {
+      "horizon": 20,
+      "rows": 29240,
+      "start": "2023-11-02",
+      "end": "2026-10-02"
+    }
+  ],
   "note": "Parameters retrain automatically; architecture does not self-modify."
 }
