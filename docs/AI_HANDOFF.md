@@ -80,10 +80,10 @@ Likely V2 directions include better point-in-time/licensed data, analyst estimat
 
 _Generated from `config.json`, `data/system.json`, and immutable files under `forecasts/`. Do not hand-edit this block._
 
-- **System status:** `pre-live`; phase `awaiting-first-valid-close-cycle`; live since: not yet live.
-- **Last successful cycle:** none yet; **last recorded error:** none.
-- **Forward record:** 0 immutable close snapshots; 0 official forecast observations; 0 resolved live observations.
-- **V2 development checkpoint:** not yet reached (0/20 immutable close snapshots).
+- **System status:** `live`; phase `live-forward-experiment`; live since: 2026-11-02T20:11:56.438996-05:00.
+- **Last successful cycle:** 2026-11-02T20:11:56.438996-05:00; **last recorded error:** none.
+- **Forward record:** 1 immutable close snapshots; 120 official forecast observations; 0 resolved live observations.
+- **V2 development checkpoint:** not yet reached (1/20 immutable close snapshots).
 - **Adaptive ensemble status:** frozen initial weights (0/100 resolved live predictions).
 - **Official schedule (America/New_York):** premarket 08:45; paper execution 09:35; normal close 16:35; early close 13:35.
 - **Forecast target:** relative to `SPY` at 1, 5, 20 trading-session horizons; website display minimum 55.0%.
