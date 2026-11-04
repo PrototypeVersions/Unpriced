@@ -1,29 +1,29 @@
 {
   "status": "live",
-  "asOf": "2026-11-03T18:36:42.902926-05:00",
-  "sessionDate": "2026-11-03",
+  "asOf": "2026-11-04T18:53:44.173400-05:00",
+  "sessionDate": "2026-11-04",
   "regime": "mixed",
   "metrics": {
-    "spy5dReturn": -0.019892,
-    "spy20dReturn": -0.031755,
-    "breadthAbove20dMA": 0.375,
-    "crossSectionDispersion20d": 0.026344,
-    "spyRealizedVol20d": 0.111358,
-    "vix": 20.83,
-    "tenYearYield": 4.952,
-    "tenYear20dChange": -0.317,
+    "spy5dReturn": -0.007121,
+    "spy20dReturn": -0.013394,
+    "breadthAbove20dMA": 0.45,
+    "crossSectionDispersion20d": 0.027649,
+    "spyRealizedVol20d": 0.128463,
+    "vix": 16.61,
+    "tenYearYield": 4.894,
+    "tenYear20dChange": -0.383,
     "sectorRelative20d": {
-      "QQQ": -0.066157,
-      "SMH": -0.14845,
-      "XLF": 0.090633,
-      "XLE": 0.077716,
-      "XLV": 0.133078,
-      "XLI": 0.03024,
-      "XLU": 0.086663
+      "QQQ": -0.073418,
+      "SMH": -0.179813,
+      "XLF": 0.114789,
+      "XLE": 0.015919,
+      "XLV": 0.136906,
+      "XLI": 0.023046,
+      "XLU": 0.073175
     }
   },
   "interpretation": {
-    "breadth": "narrow",
+    "breadth": "mixed",
     "dispersion": "moderate",
     "volatility": "low"
   }
