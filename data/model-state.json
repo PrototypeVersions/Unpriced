@@ -7,31 +7,31 @@
     "momentum_logit": "Logistic regression over relative momentum features only"
   },
   "weights": {
-    "broad_logit": 0.45,
-    "boosted": 0.35,
-    "momentum_logit": 0.2
+    "broad_logit": 0.34705988,
+    "boosted": 0.30335944,
+    "momentum_logit": 0.34958067
   },
-  "weightSource": "frozen-initial",
-  "liveResolvedPredictionCountUsedForWeights": 80,
-  "lastTrainedAt": "2026-11-04T18:53:44.157561-05:00",
+  "weightSource": "adaptive-live-brier",
+  "liveResolvedPredictionCountUsedForWeights": 120,
+  "lastTrainedAt": "2026-11-05T18:49:10.394293-05:00",
   "trainingWindow": [
     {
       "horizon": 1,
-      "rows": 30040,
+      "rows": 30080,
       "start": "2023-11-06",
-      "end": "2026-11-03"
+      "end": "2026-11-04"
     },
     {
       "horizon": 5,
-      "rows": 29880,
+      "rows": 29920,
       "start": "2023-11-06",
-      "end": "2026-10-28"
+      "end": "2026-10-29"
     },
     {
       "horizon": 20,
-      "rows": 29280,
+      "rows": 29320,
       "start": "2023-11-06",
-      "end": "2026-10-07"
+      "end": "2026-10-08"
     }
   ],
   "note": "Parameters retrain automatically; architecture does not self-modify."

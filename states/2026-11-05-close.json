@@ -1,0 +1,45 @@
+{
+  "cycle": "post-close",
+  "at": "2026-11-05T18:49:10.394293-05:00",
+  "marketState": {
+    "status": "live",
+    "asOf": "2026-11-05T18:49:10.418131-05:00",
+    "sessionDate": "2026-11-05",
+    "regime": "risk-off",
+    "metrics": {
+      "spy5dReturn": -0.04726,
+      "spy20dReturn": -0.052886,
+      "breadthAbove20dMA": 0.35,
+      "crossSectionDispersion20d": 0.030852,
+      "spyRealizedVol20d": 0.20079,
+      "vix": 28.18,
+      "tenYearYield": 4.837,
+      "tenYear20dChange": -0.394,
+      "sectorRelative20d": {
+        "QQQ": -0.081588,
+        "SMH": -0.209831,
+        "XLF": 0.113185,
+        "XLE": -0.002448,
+        "XLV": 0.152493,
+        "XLI": 0.017672,
+        "XLU": 0.107183
+      }
+    },
+    "interpretation": {
+      "breadth": "narrow",
+      "dispersion": "moderate",
+      "volatility": "moderate"
+    }
+  },
+  "forecastSnapshotId": "2026-11-05-close-v1",
+  "plannedEntries": [
+    {
+      "ticker": "PANW",
+      "sourceSnapshotId": "2026-11-05-close-v1",
+      "pOutperform": 0.60166,
+      "expectedExcessReturn": 0.010605,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ]
+}
