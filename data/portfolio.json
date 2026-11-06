@@ -6,10 +6,10 @@
   "positions": [],
   "pendingEntries": [
     {
-      "ticker": "PANW",
-      "sourceSnapshotId": "2026-11-05-close-v1",
-      "pOutperform": 0.60166,
-      "expectedExcessReturn": 0.010605,
+      "ticker": "ASML",
+      "sourceSnapshotId": "2026-11-06-close-v1",
+      "pOutperform": 0.618378,
+      "expectedExcessReturn": 0.004957,
       "status": "planned",
       "reason": "Meets precommitted 5D entry threshold."
     }
@@ -23,6 +23,6 @@
     "entryPrice": null,
     "auditNote": "The Nov 3 benchmark was first initialized by an hours-late execution run; see states/2026-11-03-execution-audit.json. Awaiting a timely forward start."
   },
-  "lastMarkedAt": "2026-11-05T18:49:10.394293-05:00",
+  "lastMarkedAt": "2026-11-06T18:27:23.784937-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }

@@ -1,0 +1,45 @@
+{
+  "cycle": "post-close",
+  "at": "2026-11-06T18:27:23.784937-05:00",
+  "marketState": {
+    "status": "live",
+    "asOf": "2026-11-06T18:27:23.794974-05:00",
+    "sessionDate": "2026-11-06",
+    "regime": "risk-off",
+    "metrics": {
+      "spy5dReturn": -0.027034,
+      "spy20dReturn": -0.055589,
+      "breadthAbove20dMA": 0.25,
+      "crossSectionDispersion20d": 0.031435,
+      "spyRealizedVol20d": 0.199407,
+      "vix": 25.64,
+      "tenYearYield": 4.859,
+      "tenYear20dChange": -0.385,
+      "sectorRelative20d": {
+        "QQQ": -0.07109,
+        "SMH": -0.175412,
+        "XLF": 0.099989,
+        "XLE": 0.002424,
+        "XLV": 0.137493,
+        "XLI": 0.016712,
+        "XLU": 0.097125
+      }
+    },
+    "interpretation": {
+      "breadth": "narrow",
+      "dispersion": "moderate",
+      "volatility": "moderate"
+    }
+  },
+  "forecastSnapshotId": "2026-11-06-close-v1",
+  "plannedEntries": [
+    {
+      "ticker": "ASML",
+      "sourceSnapshotId": "2026-11-06-close-v1",
+      "pOutperform": 0.618378,
+      "expectedExcessReturn": 0.004957,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ]
+}

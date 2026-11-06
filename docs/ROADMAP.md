@@ -89,10 +89,10 @@ Potential later versions/challengers include:
 _Generated from `config.json`, `data/system.json`, and immutable files under `forecasts/`. Do not hand-edit this block._
 
 - **System status:** `live`; phase `live-forward-experiment`; live since: 2026-11-02T20:11:56.438996-05:00.
-- **Last successful cycle:** 2026-11-05T18:49:10.394293-05:00; **last recorded error:** none.
-- **Forward record:** 4 immutable close snapshots; 480 official forecast observations; 120 resolved live observations.
-- **V2 development checkpoint:** not yet reached (4/20 immutable close snapshots).
-- **Adaptive ensemble status:** eligible (120/100 resolved live predictions).
+- **Last successful cycle:** 2026-11-06T18:27:23.784937-05:00; **last recorded error:** none.
+- **Forward record:** 5 immutable close snapshots; 600 official forecast observations; 160 resolved live observations.
+- **V2 development checkpoint:** not yet reached (5/20 immutable close snapshots).
+- **Adaptive ensemble status:** eligible (160/100 resolved live predictions).
 - **Official schedule (America/New_York):** premarket 08:45; paper execution 09:35; normal close 16:35; early close 13:35.
 - **Forecast target:** relative to `SPY` at 1, 5, 20 trading-session horizons; website display minimum 55.0%.
 - **Portfolio gates:** entry probability ≥ 60.0%; exit probability ≤ 52.0%; expected excess-return entry floor 0.4%.

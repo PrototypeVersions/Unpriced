@@ -1,70 +1,95 @@
 {
   "status": "live",
-  "asOf": "2026-11-05T18:49:11.931296-05:00",
-  "sessionDate": "2026-11-05",
+  "asOf": "2026-11-06T18:27:24.410657-05:00",
+  "sessionDate": "2026-11-06",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
-      "from": "AMAT",
-      "to": "META",
-      "lag1Correlation": 0.2504
-    },
-    {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.2493
+      "lag1Correlation": 0.2459
+    },
+    {
+      "from": "AMAT",
+      "to": "META",
+      "lag1Correlation": 0.237
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.224
+      "lag1Correlation": 0.2254
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2236
+      "lag1Correlation": 0.2231
     },
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.2056
+      "lag1Correlation": 0.2074
     },
     {
       "from": "ASML",
       "to": "BAC",
-      "lag1Correlation": 0.2016
+      "lag1Correlation": 0.204
     },
     {
       "from": "GOOGL",
       "to": "INTC",
-      "lag1Correlation": 0.1967
+      "lag1Correlation": 0.1881
+    },
+    {
+      "from": "AVGO",
+      "to": "BAC",
+      "lag1Correlation": 0.187
     },
     {
       "from": "TSM",
       "to": "BAC",
-      "lag1Correlation": 0.1964
-    },
-    {
-      "from": "AVGO",
-      "to": "META",
-      "lag1Correlation": 0.193
+      "lag1Correlation": 0.1859
     },
     {
       "from": "INTC",
       "to": "BAC",
-      "lag1Correlation": 0.1898
+      "lag1Correlation": 0.1853
     },
     {
-      "from": "CAT",
+      "from": "AVGO",
       "to": "META",
-      "lag1Correlation": 0.1827
+      "lag1Correlation": 0.1829
     },
     {
-      "from": "ANET",
-      "to": "META",
-      "lag1Correlation": 0.1823
+      "from": "UNH",
+      "to": "WMT",
+      "lag1Correlation": 0.1816
     }
   ],
-  "gaps": [],
+  "gaps": [
+    {
+      "leader": "TSM",
+      "lagger": "BAC",
+      "leaderMoveZ": 2.516,
+      "laggerMoveZ": -0.175,
+      "lag1Correlation": 0.1859,
+      "direction": "positive-follow-through"
+    },
+    {
+      "leader": "ASML",
+      "lagger": "BAC",
+      "leaderMoveZ": 1.936,
+      "laggerMoveZ": -0.175,
+      "lag1Correlation": 0.204,
+      "direction": "positive-follow-through"
+    },
+    {
+      "leader": "INTC",
+      "lagger": "BAC",
+      "leaderMoveZ": 1.519,
+      "laggerMoveZ": -0.175,
+      "lag1Correlation": 0.1853,
+      "direction": "positive-follow-through"
+    }
+  ],
   "note": "Empirical lagged return associations only; not causal relationships."
 }

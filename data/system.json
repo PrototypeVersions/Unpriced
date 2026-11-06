@@ -1,11 +1,11 @@
 {
   "status": "live",
   "phase": "live-forward-experiment",
-  "lastSuccessfulCycle": "2026-11-05T18:49:10.394293-05:00",
-  "lastAttemptedCycle": "2026-11-05T18:48:54.417467-05:00",
+  "lastSuccessfulCycle": "2026-11-06T18:27:23.784937-05:00",
+  "lastAttemptedCycle": "2026-11-06T18:27:09.079772-05:00",
   "lastError": null,
   "dataProvider": "yfinance-research-prototype",
-  "officialForecastCount": 480,
-  "resolvedForecastCount": 120,
+  "officialForecastCount": 600,
+  "resolvedForecastCount": 160,
   "liveSince": "2026-11-02T20:11:56.438996-05:00"
 }
