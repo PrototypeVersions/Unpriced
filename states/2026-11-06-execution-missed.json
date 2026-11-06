@@ -1,0 +1,6 @@
+{
+  "cycle": "paper-execution-missed",
+  "at": "2026-11-06T15:31:25.358678-05:00",
+  "sessionDate": "2026-11-06",
+  "reason": "GitHub scheduled run arrived after the 09:45 ET safety cutoff; no retrospective fills."
+}
