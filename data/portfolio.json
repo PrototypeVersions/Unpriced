@@ -14,6 +14,6 @@
     "entryPrice": null,
     "auditNote": "The Nov 3 benchmark was first initialized by an hours-late execution run; see states/2026-11-03-execution-audit.json. Awaiting a timely forward start."
   },
-  "lastMarkedAt": "2026-11-09T22:46:48.861031-05:00",
+  "lastMarkedAt": "2026-11-10T18:40:17.005359-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }
