@@ -1,0 +1,6 @@
+{
+  "cycle": "premarket-missed",
+  "at": "2026-11-11T20:38:45.565719-05:00",
+  "sessionDate": "2026-11-11",
+  "reason": "No valid premarket refresh was recorded by the NYSE open; no retrospective eligibility."
+}
