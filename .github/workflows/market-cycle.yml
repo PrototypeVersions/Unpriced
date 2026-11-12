@@ -119,6 +119,11 @@ jobs:
       - name: Run market engine
         run: python engine.py "${{ steps.mode.outputs.mode }}"
 
+      - name: Audit actual NYSE session outcome
+        # An Actions success does not imply the exchange-time deadline was met.
+        # Also preserves a missed-run record when GitHub dropped a trigger entirely.
+        run: python scripts/audit_session.py
+
       - name: Validate generated JSON
         run: |
           python - <<'PY'
