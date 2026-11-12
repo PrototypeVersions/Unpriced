@@ -1,23 +1,23 @@
 {
   "status": "live",
-  "asOf": "2026-11-10T18:40:18.511059-05:00",
-  "sessionDate": "2026-11-10",
+  "asOf": "2026-11-11T19:58:02.229548-05:00",
+  "sessionDate": "2026-11-11",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.2445
+      "lag1Correlation": 0.2442
     },
     {
       "from": "AMAT",
       "to": "META",
-      "lag1Correlation": 0.237
+      "lag1Correlation": 0.2367
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2267
+      "lag1Correlation": 0.229
     },
     {
       "from": "AMAT",
@@ -27,12 +27,17 @@
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.2083
+      "lag1Correlation": 0.2076
     },
     {
       "from": "ASML",
       "to": "BAC",
       "lag1Correlation": 0.1957
+    },
+    {
+      "from": "UNH",
+      "to": "WMT",
+      "lag1Correlation": 0.1919
     },
     {
       "from": "INTC",
@@ -42,24 +47,36 @@
     {
       "from": "TSM",
       "to": "BAC",
-      "lag1Correlation": 0.1897
+      "lag1Correlation": 0.1893
     },
     {
       "from": "GOOGL",
       "to": "INTC",
-      "lag1Correlation": 0.1895
-    },
-    {
-      "from": "UNH",
-      "to": "WMT",
-      "lag1Correlation": 0.1886
+      "lag1Correlation": 0.1884
     },
     {
       "from": "ANET",
       "to": "META",
-      "lag1Correlation": 0.1833
+      "lag1Correlation": 0.1832
     }
   ],
-  "gaps": [],
+  "gaps": [
+    {
+      "leader": "AMAT",
+      "lagger": "BAC",
+      "leaderMoveZ": 1.605,
+      "laggerMoveZ": 0.217,
+      "lag1Correlation": 0.2126,
+      "direction": "positive-follow-through"
+    },
+    {
+      "leader": "TSM",
+      "lagger": "BAC",
+      "leaderMoveZ": 1.593,
+      "laggerMoveZ": 0.217,
+      "lag1Correlation": 0.1893,
+      "direction": "positive-follow-through"
+    }
+  ],
   "note": "Empirical lagged return associations only; not causal relationships."
 }
