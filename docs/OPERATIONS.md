@@ -35,6 +35,37 @@ clock, not the scheduled cron text, decide which work is allowed.
 - A skipped late cycle is an operational miss, not a successful timely cycle.
   Inspect `states/*-missed.json` even if GitHub marks the job green.
 
+### November 11, 2026: confirmed schedule-latency incident
+
+The Actions API and job logs show that a successful workflow run did **not**
+constitute timely market execution. On November 11, the scheduled paper-execution
+job in [run 43103719295](https://github.com/PrototypeVersions/Unpriced/actions/runs/43103719295)
+started at **16:31:01 ET** (21:31:01 UTC), outside the permitted 09:35–09:45 ET
+window. The job recorded an execution miss, not a fill. The scheduled close cycle in
+[run 43131061398](https://github.com/PrototypeVersions/Unpriced/actions/runs/43131061398)
+was created at **19:57:21 ET** (00:57:21 UTC November 12) and published the
+November 11 immutable snapshot at **19:58:01 ET**, well after the 16:35 target.
+The Pages deployment succeeded in that run. Delays occurred before run creation,
+not primarily during the engine itself; GitHub documents that cron events are
+best effort and may be delayed or dropped. Redundant cron triggers cannot
+guarantee exchange-time deadlines.
+
+The operational-only `scripts/audit_session.py` now runs after the engine and before
+state validation/commit. It reports actual NYSE-relative outcomes as Actions
+step summaries and warnings. If no valid same-session premarket or execution
+record exists after its cutoff, it creates a timestamped
+`states/YYYY-MM-DD-*-missed.json` without changing any existing record.
+Regression checks in `tests/smoke.py` cover idempotency, avoiding a fabricated
+premature miss, and preserving the close+35-minute settlement boundary.
+This audit does not make delayed GitHub schedule events punctual.
+
+Reliable 08:45/09:35/16:35 ET timing requires an independent authenticated
+scheduler to dispatch this existing workflow with `mode=premarket`,
+`mode=execute`, or `mode=close` (13:35 for NYSE early closes), retaining native
+GitHub cron as a fail-closed fallback. The `workflow_dispatch` inputs already
+support those modes. An external scheduler requires one-time owner authorization;
+no external service or token has been configured without that action.
+
 The 2026-11-03 execution was hours late and placed zero trades. Its unchanged original
 state is accompanied by `states/2026-11-03-execution-audit.json`; the mutable SPY
 benchmark start was reset, pending the next valid forward-time execution. No trade
