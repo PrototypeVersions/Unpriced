@@ -1,82 +1,60 @@
 {
   "status": "live",
-  "asOf": "2026-11-11T19:58:02.229548-05:00",
-  "sessionDate": "2026-11-11",
+  "asOf": "2026-11-12T18:49:34.522342-05:00",
+  "sessionDate": "2026-11-12",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
-      "from": "ORCL",
-      "to": "IBM",
-      "lag1Correlation": 0.2442
-    },
-    {
       "from": "AMAT",
       "to": "META",
-      "lag1Correlation": 0.2367
+      "lag1Correlation": 0.2331
+    },
+    {
+      "from": "ORCL",
+      "to": "IBM",
+      "lag1Correlation": 0.2323
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.229
+      "lag1Correlation": 0.2275
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.2126
+      "lag1Correlation": 0.2096
     },
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.2076
+      "lag1Correlation": 0.2089
     },
     {
       "from": "ASML",
       "to": "BAC",
-      "lag1Correlation": 0.1957
+      "lag1Correlation": 0.1958
     },
     {
       "from": "UNH",
       "to": "WMT",
-      "lag1Correlation": 0.1919
+      "lag1Correlation": 0.1909
     },
     {
       "from": "INTC",
       "to": "BAC",
-      "lag1Correlation": 0.1899
+      "lag1Correlation": 0.1873
     },
     {
       "from": "TSM",
       "to": "BAC",
-      "lag1Correlation": 0.1893
+      "lag1Correlation": 0.1869
     },
     {
       "from": "GOOGL",
       "to": "INTC",
-      "lag1Correlation": 0.1884
-    },
-    {
-      "from": "ANET",
-      "to": "META",
-      "lag1Correlation": 0.1832
+      "lag1Correlation": 0.1822
     }
   ],
-  "gaps": [
-    {
-      "leader": "AMAT",
-      "lagger": "BAC",
-      "leaderMoveZ": 1.605,
-      "laggerMoveZ": 0.217,
-      "lag1Correlation": 0.2126,
-      "direction": "positive-follow-through"
-    },
-    {
-      "leader": "TSM",
-      "lagger": "BAC",
-      "leaderMoveZ": 1.593,
-      "laggerMoveZ": 0.217,
-      "lag1Correlation": 0.1893,
-      "direction": "positive-follow-through"
-    }
-  ],
+  "gaps": [],
   "note": "Empirical lagged return associations only; not causal relationships."
 }
