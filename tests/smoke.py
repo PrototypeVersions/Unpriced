@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
@@ -9,6 +9,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import engine
+from scripts.audit_session import audit_missing, status_lines
 
 
 def synthetic_market():
@@ -81,6 +82,62 @@ def main():
     incomplete=pd.DataFrame({'High':[101.0],'Low':[99.0],'Close':[100.0]},
         index=pd.DatetimeIndex(['2026-11-04 09:35'],tz=engine.TZ))
     assert engine.first_bar_typical_price(incomplete,'2026-11-04') is None
+    # A delayed or dropped GitHub schedule must leave an honest observed miss,
+    # even when no original schedule job existed to write its own miss file.
+    session = {
+        'open': datetime(2026, 11, 11, 9, 30, tzinfo=engine.TZ),
+        'close': datetime(2026, 11, 11, 16, 0, tzinfo=engine.TZ),
+    }
+    observed = datetime(2026, 11, 11, 16, 36, tzinfo=engine.TZ)
+    with TemporaryDirectory() as temporary:
+        root = Path(temporary)
+        states, forecasts = root / 'states', root / 'forecasts'
+        created = audit_missing(observed, session, states)
+        assert {p.name for p in created} == {
+            '2026-11-11-premarket-missed.json',
+            '2026-11-11-execution-missed.json',
+        }
+        first_record = (states / '2026-11-11-execution-missed.json').read_bytes()
+        assert __import__('json').loads(first_record)['at'] == observed.isoformat()
+        assert not audit_missing(observed + timedelta(hours=1), session, states)
+        assert (states / '2026-11-11-execution-missed.json').read_bytes() == first_record
+        lines, warnings = status_lines(observed, session, states, forecasts)
+        assert len(warnings) == 3  # both missed windows and missing close
+        assert any('35-minute settlement' in line for line in lines)
+
+    with TemporaryDirectory() as temporary:
+        root = Path(temporary)
+        states, forecasts = root / 'states', root / 'forecasts'
+        states.mkdir()
+        forecasts.mkdir()
+        import json
+        (states / '2026-11-11-premarket.json').write_text(json.dumps({
+            'asOf': '2026-11-11T08:46:00-05:00'
+        }))
+        (states / '2026-11-11-execution.json').write_text(json.dumps({
+            'at': '2026-11-11T09:36:00-05:00'
+        }))
+        (forecasts / '2026-11-11-close.json').write_text(json.dumps({
+            'publishedAt': '2026-11-11T16:35:21-05:00'
+        }))
+        assert not audit_missing(observed, session, states)
+        lines, warnings = status_lines(observed, session, states, forecasts)
+        assert not warnings
+        assert any('0m 21s after 16:35 ET target' in line for line in lines)
+        (forecasts / '2026-11-11-close.json').write_text(json.dumps({
+            'publishedAt': '2026-11-11T16:34:59-05:00'
+        }))
+        _, warnings = status_lines(observed, session, states, forecasts)
+        assert any('precedes the settlement boundary' in s for s in warnings)
+
+    # Before the 09:45 hard cutoff, no execution miss may be invented.
+    with TemporaryDirectory() as temporary:
+        states = Path(temporary)
+        early = datetime(2026, 11, 11, 9, 40, tzinfo=engine.TZ)
+        created = audit_missing(early, session, states)
+        assert [p.name for p in created] == ['2026-11-11-premarket-missed.json']
+        assert not (states / '2026-11-11-execution-missed.json').exists()
+
     print('UNPRICED model and schedule guard smoke tests passed')
 
 
