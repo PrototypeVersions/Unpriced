@@ -1,0 +1,6 @@
+{
+  "cycle": "premarket-missed",
+  "at": "2026-11-16T18:03:32.606079-05:00",
+  "sessionDate": "2026-11-16",
+  "reason": "Scheduler arrived after market open; no retrospective premarket gate."
+}
