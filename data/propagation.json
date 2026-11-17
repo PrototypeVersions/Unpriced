@@ -1,72 +1,87 @@
 {
   "status": "live",
-  "asOf": "2026-11-13T18:49:28.552791-05:00",
-  "sessionDate": "2026-11-13",
+  "asOf": "2026-11-16T23:09:22.568314-05:00",
+  "sessionDate": "2026-11-16",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
       "from": "AMAT",
       "to": "META",
-      "lag1Correlation": 0.2335
+      "lag1Correlation": 0.237
     },
     {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.2321
+      "lag1Correlation": 0.231
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2244
+      "lag1Correlation": 0.2229
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.21
+      "lag1Correlation": 0.2157
     },
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.2087
-    },
-    {
-      "from": "ASML",
-      "to": "BAC",
-      "lag1Correlation": 0.1968
-    },
-    {
-      "from": "UNH",
-      "to": "WMT",
-      "lag1Correlation": 0.1918
+      "lag1Correlation": 0.2066
     },
     {
       "from": "ANET",
       "to": "META",
-      "lag1Correlation": 0.1907
+      "lag1Correlation": 0.2026
     },
     {
-      "from": "TSM",
+      "from": "ASML",
       "to": "BAC",
-      "lag1Correlation": 0.189
+      "lag1Correlation": 0.2005
+    },
+    {
+      "from": "UNH",
+      "to": "WMT",
+      "lag1Correlation": 0.1995
     },
     {
       "from": "INTC",
       "to": "BAC",
-      "lag1Correlation": 0.1885
+      "lag1Correlation": 0.1959
+    },
+    {
+      "from": "TSM",
+      "to": "BAC",
+      "lag1Correlation": 0.1946
     },
     {
       "from": "CAT",
       "to": "UNH",
-      "lag1Correlation": 0.1843
-    },
-    {
-      "from": "GOOGL",
-      "to": "INTC",
-      "lag1Correlation": 0.1824
+      "lag1Correlation": 0.1859
     },
     {
       "from": "AMAT",
       "to": "AMZN",
+      "lag1Correlation": 0.1855
+    },
+    {
+      "from": "AVGO",
+      "to": "META",
+      "lag1Correlation": 0.1855
+    },
+    {
+      "from": "AVGO",
+      "to": "BAC",
+      "lag1Correlation": 0.1848
+    },
+    {
+      "from": "GOOGL",
+      "to": "INTC",
+      "lag1Correlation": 0.1847
+    },
+    {
+      "from": "CAT",
+      "to": "META",
       "lag1Correlation": 0.1819
     }
   ],
