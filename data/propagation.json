@@ -1,88 +1,98 @@
 {
   "status": "live",
-  "asOf": "2026-11-16T23:09:22.568314-05:00",
-  "sessionDate": "2026-11-16",
+  "asOf": "2026-11-17T22:06:31.379701-05:00",
+  "sessionDate": "2026-11-17",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
-      "from": "AMAT",
-      "to": "META",
-      "lag1Correlation": 0.237
-    },
-    {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.231
+      "lag1Correlation": 0.2386
+    },
+    {
+      "from": "AMAT",
+      "to": "META",
+      "lag1Correlation": 0.2362
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2229
+      "lag1Correlation": 0.2275
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.2157
-    },
-    {
-      "from": "META",
-      "to": "AAPL",
-      "lag1Correlation": 0.2066
+      "lag1Correlation": 0.2168
     },
     {
       "from": "ANET",
       "to": "META",
-      "lag1Correlation": 0.2026
-    },
-    {
-      "from": "ASML",
-      "to": "BAC",
-      "lag1Correlation": 0.2005
-    },
-    {
-      "from": "UNH",
-      "to": "WMT",
-      "lag1Correlation": 0.1995
-    },
-    {
-      "from": "INTC",
-      "to": "BAC",
-      "lag1Correlation": 0.1959
-    },
-    {
-      "from": "TSM",
-      "to": "BAC",
-      "lag1Correlation": 0.1946
+      "lag1Correlation": 0.2096
     },
     {
       "from": "CAT",
       "to": "UNH",
-      "lag1Correlation": 0.1859
+      "lag1Correlation": 0.2071
     },
     {
-      "from": "AMAT",
-      "to": "AMZN",
-      "lag1Correlation": 0.1855
+      "from": "META",
+      "to": "AAPL",
+      "lag1Correlation": 0.2062
     },
     {
-      "from": "AVGO",
-      "to": "META",
-      "lag1Correlation": 0.1855
+      "from": "ASML",
+      "to": "BAC",
+      "lag1Correlation": 0.2039
     },
     {
       "from": "AVGO",
       "to": "BAC",
-      "lag1Correlation": 0.1848
+      "lag1Correlation": 0.2038
+    },
+    {
+      "from": "INTC",
+      "to": "BAC",
+      "lag1Correlation": 0.203
+    },
+    {
+      "from": "TSM",
+      "to": "BAC",
+      "lag1Correlation": 0.2014
+    },
+    {
+      "from": "UNH",
+      "to": "WMT",
+      "lag1Correlation": 0.1992
+    },
+    {
+      "from": "AVGO",
+      "to": "META",
+      "lag1Correlation": 0.1966
+    },
+    {
+      "from": "ANET",
+      "to": "BAC",
+      "lag1Correlation": 0.1907
+    },
+    {
+      "from": "AVGO",
+      "to": "JPM",
+      "lag1Correlation": 0.1873
     },
     {
       "from": "GOOGL",
       "to": "INTC",
-      "lag1Correlation": 0.1847
+      "lag1Correlation": 0.1832
     },
     {
-      "from": "CAT",
-      "to": "META",
-      "lag1Correlation": 0.1819
+      "from": "ANET",
+      "to": "JPM",
+      "lag1Correlation": 0.182
+    },
+    {
+      "from": "AMAT",
+      "to": "AMZN",
+      "lag1Correlation": 0.1808
     }
   ],
   "gaps": [],
