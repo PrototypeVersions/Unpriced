@@ -1,0 +1,1717 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "2026-11-18-close-v1",
+  "status": "published-live",
+  "publishedAt": "2026-11-18T19:42:27.709139-05:00",
+  "sessionDate": "2026-11-18",
+  "informationCutoff": "2026-11-18 official NYSE close",
+  "modelVersion": "v1.0.0",
+  "ensembleWeights": {
+    "broad_logit": 0.34854043,
+    "boosted": 0.30018756,
+    "momentum_logit": 0.35127201
+  },
+  "trainingRanges": [
+    {
+      "horizon": 1,
+      "rows": 30040,
+      "start": "2023-11-20",
+      "end": "2026-11-17"
+    },
+    {
+      "horizon": 5,
+      "rows": 29880,
+      "start": "2023-11-20",
+      "end": "2026-11-11"
+    },
+    {
+      "horizon": 20,
+      "rows": 29280,
+      "start": "2023-11-20",
+      "end": "2026-10-21"
+    }
+  ],
+  "forecastDefinition": "Relative performance versus SPY from publication close to future close.",
+  "forecasts": [
+    {
+      "ticker": "NOW",
+      "pOutperform": 0.532711,
+      "direction": "outperform",
+      "directionProbability": 0.532711,
+      "expectedExcessReturn": 0.00269,
+      "modelProbabilities": {
+        "broad_logit": 0.520576,
+        "boosted": 0.561344,
+        "momentum_logit": 0.520282
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "CRWD",
+      "pOutperform": 0.527722,
+      "direction": "outperform",
+      "directionProbability": 0.527722,
+      "expectedExcessReturn": 0.002155,
+      "modelProbabilities": {
+        "broad_logit": 0.509943,
+        "boosted": 0.589368,
+        "momentum_logit": 0.492681
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "IBM",
+      "pOutperform": 0.523795,
+      "direction": "outperform",
+      "directionProbability": 0.523795,
+      "expectedExcessReturn": 0.000964,
+      "modelProbabilities": {
+        "broad_logit": 0.515414,
+        "boosted": 0.549443,
+        "momentum_logit": 0.510193
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "TSM",
+      "pOutperform": 0.523157,
+      "direction": "outperform",
+      "directionProbability": 0.523157,
+      "expectedExcessReturn": 0.00252,
+      "modelProbabilities": {
+        "broad_logit": 0.52688,
+        "boosted": 0.525613,
+        "momentum_logit": 0.517365
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "CRM",
+      "pOutperform": 0.522292,
+      "direction": "outperform",
+      "directionProbability": 0.522292,
+      "expectedExcessReturn": 0.001849,
+      "modelProbabilities": {
+        "broad_logit": 0.525718,
+        "boosted": 0.519001,
+        "momentum_logit": 0.521705
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "NVDA",
+      "pOutperform": 0.522271,
+      "direction": "outperform",
+      "directionProbability": 0.522271,
+      "expectedExcessReturn": 0.001615,
+      "modelProbabilities": {
+        "broad_logit": 0.520665,
+        "boosted": 0.52702,
+        "momentum_logit": 0.519807
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "PLTR",
+      "pOutperform": 0.519592,
+      "direction": "outperform",
+      "directionProbability": 0.519592,
+      "expectedExcessReturn": 0.001417,
+      "modelProbabilities": {
+        "broad_logit": 0.520437,
+        "boosted": 0.525613,
+        "momentum_logit": 0.513606
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "TSLA",
+      "pOutperform": 0.519055,
+      "direction": "outperform",
+      "directionProbability": 0.519055,
+      "expectedExcessReturn": 0.001504,
+      "modelProbabilities": {
+        "broad_logit": 0.505516,
+        "boosted": 0.558579,
+        "momentum_logit": 0.498713
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "AAPL",
+      "pOutperform": 0.518196,
+      "direction": "outperform",
+      "directionProbability": 0.518196,
+      "expectedExcessReturn": 0.000446,
+      "modelProbabilities": {
+        "broad_logit": 0.501577,
+        "boosted": 0.563363,
+        "momentum_logit": 0.496088
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "V",
+      "pOutperform": 0.516893,
+      "direction": "outperform",
+      "directionProbability": 0.516893,
+      "expectedExcessReturn": 0.0008,
+      "modelProbabilities": {
+        "broad_logit": 0.502569,
+        "boosted": 0.555412,
+        "momentum_logit": 0.498187
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "ASML",
+      "pOutperform": 0.516545,
+      "direction": "outperform",
+      "directionProbability": 0.516545,
+      "expectedExcessReturn": 0.00208,
+      "modelProbabilities": {
+        "broad_logit": 0.516345,
+        "boosted": 0.525613,
+        "momentum_logit": 0.508995
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "ORCL",
+      "pOutperform": 0.516055,
+      "direction": "outperform",
+      "directionProbability": 0.516055,
+      "expectedExcessReturn": 0.00257,
+      "modelProbabilities": {
+        "broad_logit": 0.515898,
+        "boosted": 0.522445,
+        "momentum_logit": 0.510749
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "UNH",
+      "pOutperform": 0.515814,
+      "direction": "outperform",
+      "directionProbability": 0.515814,
+      "expectedExcessReturn": 0.001675,
+      "modelProbabilities": {
+        "broad_logit": 0.507171,
+        "boosted": 0.521669,
+        "momentum_logit": 0.519386
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "MSFT",
+      "pOutperform": 0.515449,
+      "direction": "outperform",
+      "directionProbability": 0.515449,
+      "expectedExcessReturn": 0.000839,
+      "modelProbabilities": {
+        "broad_logit": 0.504119,
+        "boosted": 0.548248,
+        "momentum_logit": 0.498663
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "MA",
+      "pOutperform": 0.51476,
+      "direction": "outperform",
+      "directionProbability": 0.51476,
+      "expectedExcessReturn": 0.000732,
+      "modelProbabilities": {
+        "broad_logit": 0.502896,
+        "boosted": 0.548248,
+        "momentum_logit": 0.497913
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "NFLX",
+      "pOutperform": 0.514251,
+      "direction": "outperform",
+      "directionProbability": 0.514251,
+      "expectedExcessReturn": 0.000938,
+      "modelProbabilities": {
+        "broad_logit": 0.506186,
+        "boosted": 0.539738,
+        "momentum_logit": 0.500473
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "QCOM",
+      "pOutperform": 0.51343,
+      "direction": "outperform",
+      "directionProbability": 0.51343,
+      "expectedExcessReturn": 0.001894,
+      "modelProbabilities": {
+        "broad_logit": 0.513272,
+        "boosted": 0.513789,
+        "momentum_logit": 0.513279
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "HD",
+      "pOutperform": 0.512943,
+      "direction": "outperform",
+      "directionProbability": 0.512943,
+      "expectedExcessReturn": 0.00152,
+      "modelProbabilities": {
+        "broad_logit": 0.501492,
+        "boosted": 0.544754,
+        "momentum_logit": 0.49712
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "BAC",
+      "pOutperform": 0.487924,
+      "direction": "underperform",
+      "directionProbability": 0.512076,
+      "expectedExcessReturn": 0.00076,
+      "modelProbabilities": {
+        "broad_logit": 0.493638,
+        "boosted": 0.475289,
+        "momentum_logit": 0.493052
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 1
+    },
+    {
+      "ticker": "INTC",
+      "pOutperform": 0.512014,
+      "direction": "outperform",
+      "directionProbability": 0.512014,
+      "expectedExcessReturn": 0.003475,
+      "modelProbabilities": {
+        "broad_logit": 0.521572,
+        "boosted": 0.493168,
+        "momentum_logit": 0.518635
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "AMZN",
+      "pOutperform": 0.511982,
+      "direction": "outperform",
+      "directionProbability": 0.511982,
+      "expectedExcessReturn": 0.001243,
+      "modelProbabilities": {
+        "broad_logit": 0.500534,
+        "boosted": 0.5505,
+        "momentum_logit": 0.490426
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "META",
+      "pOutperform": 0.511946,
+      "direction": "outperform",
+      "directionProbability": 0.511946,
+      "expectedExcessReturn": 0.000478,
+      "modelProbabilities": {
+        "broad_logit": 0.505746,
+        "boosted": 0.531336,
+        "momentum_logit": 0.501528
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "MU",
+      "pOutperform": 0.511891,
+      "direction": "outperform",
+      "directionProbability": 0.511891,
+      "expectedExcessReturn": 0.003388,
+      "modelProbabilities": {
+        "broad_logit": 0.522303,
+        "boosted": 0.493168,
+        "momentum_logit": 0.517561
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "JNJ",
+      "pOutperform": 0.511059,
+      "direction": "outperform",
+      "directionProbability": 0.511059,
+      "expectedExcessReturn": 0.000819,
+      "modelProbabilities": {
+        "broad_logit": 0.495756,
+        "boosted": 0.547342,
+        "momentum_logit": 0.495238
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "CAT",
+      "pOutperform": 0.510607,
+      "direction": "outperform",
+      "directionProbability": 0.510607,
+      "expectedExcessReturn": 0.001382,
+      "modelProbabilities": {
+        "broad_logit": 0.50312,
+        "boosted": 0.52702,
+        "momentum_logit": 0.504009
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "LLY",
+      "pOutperform": 0.509807,
+      "direction": "outperform",
+      "directionProbability": 0.509807,
+      "expectedExcessReturn": 0.001151,
+      "modelProbabilities": {
+        "broad_logit": 0.503269,
+        "boosted": 0.527917,
+        "momentum_logit": 0.500819
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 1
+    },
+    {
+      "ticker": "XOM",
+      "pOutperform": 0.509584,
+      "direction": "outperform",
+      "directionProbability": 0.509584,
+      "expectedExcessReturn": 0.000552,
+      "modelProbabilities": {
+        "broad_logit": 0.498058,
+        "boosted": 0.532569,
+        "momentum_logit": 0.501378
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "AMD",
+      "pOutperform": 0.507498,
+      "direction": "outperform",
+      "directionProbability": 0.507498,
+      "expectedExcessReturn": 0.004181,
+      "modelProbabilities": {
+        "broad_logit": 0.51904,
+        "boosted": 0.497929,
+        "momentum_logit": 0.504224
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "UBER",
+      "pOutperform": 0.493627,
+      "direction": "underperform",
+      "directionProbability": 0.506373,
+      "expectedExcessReturn": 0.000694,
+      "modelProbabilities": {
+        "broad_logit": 0.496311,
+        "boosted": 0.491954,
+        "momentum_logit": 0.492392
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 1
+    },
+    {
+      "ticker": "CVX",
+      "pOutperform": 0.506102,
+      "direction": "outperform",
+      "directionProbability": 0.506102,
+      "expectedExcessReturn": 0.000455,
+      "modelProbabilities": {
+        "broad_logit": 0.497854,
+        "boosted": 0.52004,
+        "momentum_logit": 0.502375
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "AMAT",
+      "pOutperform": 0.505982,
+      "direction": "outperform",
+      "directionProbability": 0.505982,
+      "expectedExcessReturn": 0.002915,
+      "modelProbabilities": {
+        "broad_logit": 0.517434,
+        "boosted": 0.488584,
+        "momentum_logit": 0.509486
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "GOOGL",
+      "pOutperform": 0.504618,
+      "direction": "outperform",
+      "directionProbability": 0.504618,
+      "expectedExcessReturn": 0.001178,
+      "modelProbabilities": {
+        "broad_logit": 0.503461,
+        "boosted": 0.51274,
+        "momentum_logit": 0.498827
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "PANW",
+      "pOutperform": 0.495601,
+      "direction": "underperform",
+      "directionProbability": 0.504399,
+      "expectedExcessReturn": 0.003078,
+      "modelProbabilities": {
+        "broad_logit": 0.507534,
+        "boosted": 0.489549,
+        "momentum_logit": 0.488931
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "COST",
+      "pOutperform": 0.503993,
+      "direction": "outperform",
+      "directionProbability": 0.503993,
+      "expectedExcessReturn": 0.000384,
+      "modelProbabilities": {
+        "broad_logit": 0.493002,
+        "boosted": 0.531989,
+        "momentum_logit": 0.490973
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "WMT",
+      "pOutperform": 0.503405,
+      "direction": "outperform",
+      "directionProbability": 0.503405,
+      "expectedExcessReturn": 0.000686,
+      "modelProbabilities": {
+        "broad_logit": 0.496582,
+        "boosted": 0.523695,
+        "momentum_logit": 0.492835
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "AVGO",
+      "pOutperform": 0.496795,
+      "direction": "underperform",
+      "directionProbability": 0.503205,
+      "expectedExcessReturn": 0.002061,
+      "modelProbabilities": {
+        "broad_logit": 0.492462,
+        "boosted": 0.51612,
+        "momentum_logit": 0.48458
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "ANET",
+      "pOutperform": 0.497619,
+      "direction": "underperform",
+      "directionProbability": 0.502381,
+      "expectedExcessReturn": 0.002919,
+      "modelProbabilities": {
+        "broad_logit": 0.501615,
+        "boosted": 0.500572,
+        "momentum_logit": 0.491129
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "GE",
+      "pOutperform": 0.498602,
+      "direction": "underperform",
+      "directionProbability": 0.501398,
+      "expectedExcessReturn": 0.001515,
+      "modelProbabilities": {
+        "broad_logit": 0.50034,
+        "boosted": 0.502017,
+        "momentum_logit": 0.493958
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "JPM",
+      "pOutperform": 0.501192,
+      "direction": "outperform",
+      "directionProbability": 0.501192,
+      "expectedExcessReturn": 0.000961,
+      "modelProbabilities": {
+        "broad_logit": 0.502855,
+        "boosted": 0.49941,
+        "momentum_logit": 0.501064
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 1
+    },
+    {
+      "ticker": "GS",
+      "pOutperform": 0.500199,
+      "direction": "outperform",
+      "directionProbability": 0.500199,
+      "expectedExcessReturn": 0.001322,
+      "modelProbabilities": {
+        "broad_logit": 0.502983,
+        "boosted": 0.498049,
+        "momentum_logit": 0.499273
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 1
+    },
+    {
+      "ticker": "AMAT",
+      "pOutperform": 0.592274,
+      "direction": "outperform",
+      "directionProbability": 0.592274,
+      "expectedExcessReturn": 0.010973,
+      "modelProbabilities": {
+        "broad_logit": 0.529703,
+        "boosted": 0.764242,
+        "momentum_logit": 0.507399
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "ORCL",
+      "pOutperform": 0.585422,
+      "direction": "outperform",
+      "directionProbability": 0.585422,
+      "expectedExcessReturn": 0.010309,
+      "modelProbabilities": {
+        "broad_logit": 0.527798,
+        "boosted": 0.74218,
+        "momentum_logit": 0.508637
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "QCOM",
+      "pOutperform": 0.576541,
+      "direction": "outperform",
+      "directionProbability": 0.576541,
+      "expectedExcessReturn": 0.008447,
+      "modelProbabilities": {
+        "broad_logit": 0.520451,
+        "boosted": 0.723769,
+        "momentum_logit": 0.506379
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "MU",
+      "pOutperform": 0.566055,
+      "direction": "outperform",
+      "directionProbability": 0.566055,
+      "expectedExcessReturn": 0.012732,
+      "modelProbabilities": {
+        "broad_logit": 0.532042,
+        "boosted": 0.673828,
+        "momentum_logit": 0.507704
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "CRWD",
+      "pOutperform": 0.564752,
+      "direction": "outperform",
+      "directionProbability": 0.564752,
+      "expectedExcessReturn": 0.004135,
+      "modelProbabilities": {
+        "broad_logit": 0.508517,
+        "boosted": 0.716512,
+        "momentum_logit": 0.490859
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "TSM",
+      "pOutperform": 0.562007,
+      "direction": "outperform",
+      "directionProbability": 0.562007,
+      "expectedExcessReturn": 0.007839,
+      "modelProbabilities": {
+        "broad_logit": 0.524337,
+        "boosted": 0.668283,
+        "momentum_logit": 0.508564
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "AMD",
+      "pOutperform": 0.558557,
+      "direction": "outperform",
+      "directionProbability": 0.558557,
+      "expectedExcessReturn": 0.014096,
+      "modelProbabilities": {
+        "broad_logit": 0.533625,
+        "boosted": 0.655266,
+        "momentum_logit": 0.500651
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "INTC",
+      "pOutperform": 0.555898,
+      "direction": "outperform",
+      "directionProbability": 0.555898,
+      "expectedExcessReturn": 0.012896,
+      "modelProbabilities": {
+        "broad_logit": 0.529431,
+        "boosted": 0.650434,
+        "momentum_logit": 0.50137
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "NOW",
+      "pOutperform": 0.554729,
+      "direction": "outperform",
+      "directionProbability": 0.554729,
+      "expectedExcessReturn": 0.009616,
+      "modelProbabilities": {
+        "broad_logit": 0.520773,
+        "boosted": 0.657722,
+        "momentum_logit": 0.500404
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "ASML",
+      "pOutperform": 0.554132,
+      "direction": "outperform",
+      "directionProbability": 0.554132,
+      "expectedExcessReturn": 0.00678,
+      "modelProbabilities": {
+        "broad_logit": 0.518891,
+        "boosted": 0.65373,
+        "momentum_logit": 0.503986
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "CAT",
+      "pOutperform": 0.552892,
+      "direction": "outperform",
+      "directionProbability": 0.552892,
+      "expectedExcessReturn": 0.005541,
+      "modelProbabilities": {
+        "broad_logit": 0.51044,
+        "boosted": 0.665217,
+        "momentum_logit": 0.499024
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "NFLX",
+      "pOutperform": 0.548319,
+      "direction": "outperform",
+      "directionProbability": 0.548319,
+      "expectedExcessReturn": 0.003402,
+      "modelProbabilities": {
+        "broad_logit": 0.5116,
+        "boosted": 0.642439,
+        "momentum_logit": 0.50432
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "PANW",
+      "pOutperform": 0.54485,
+      "direction": "outperform",
+      "directionProbability": 0.54485,
+      "expectedExcessReturn": 0.007016,
+      "modelProbabilities": {
+        "broad_logit": 0.515188,
+        "boosted": 0.639515,
+        "momentum_logit": 0.493382
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "IBM",
+      "pOutperform": 0.535793,
+      "direction": "outperform",
+      "directionProbability": 0.535793,
+      "expectedExcessReturn": 0.002563,
+      "modelProbabilities": {
+        "broad_logit": 0.509353,
+        "boosted": 0.602857,
+        "momentum_logit": 0.504716
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "ANET",
+      "pOutperform": 0.533821,
+      "direction": "outperform",
+      "directionProbability": 0.533821,
+      "expectedExcessReturn": 0.010836,
+      "modelProbabilities": {
+        "broad_logit": 0.524528,
+        "boosted": 0.584267,
+        "momentum_logit": 0.499933
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "GS",
+      "pOutperform": 0.53214,
+      "direction": "outperform",
+      "directionProbability": 0.53214,
+      "expectedExcessReturn": 0.005171,
+      "modelProbabilities": {
+        "broad_logit": 0.512896,
+        "boosted": 0.588023,
+        "momentum_logit": 0.503478
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "AVGO",
+      "pOutperform": 0.531447,
+      "direction": "outperform",
+      "directionProbability": 0.531447,
+      "expectedExcessReturn": 0.007652,
+      "modelProbabilities": {
+        "broad_logit": 0.513766,
+        "boosted": 0.595496,
+        "momentum_logit": 0.494254
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "JPM",
+      "pOutperform": 0.527518,
+      "direction": "outperform",
+      "directionProbability": 0.527518,
+      "expectedExcessReturn": 0.003906,
+      "modelProbabilities": {
+        "broad_logit": 0.509298,
+        "boosted": 0.577116,
+        "momentum_logit": 0.50321
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "GOOGL",
+      "pOutperform": 0.526731,
+      "direction": "outperform",
+      "directionProbability": 0.526731,
+      "expectedExcessReturn": 0.00376,
+      "modelProbabilities": {
+        "broad_logit": 0.507674,
+        "boosted": 0.583798,
+        "momentum_logit": 0.496872
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "TSLA",
+      "pOutperform": 0.526032,
+      "direction": "outperform",
+      "directionProbability": 0.526032,
+      "expectedExcessReturn": 0.005369,
+      "modelProbabilities": {
+        "broad_logit": 0.512031,
+        "boosted": 0.574507,
+        "momentum_logit": 0.498498
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "LLY",
+      "pOutperform": 0.52206,
+      "direction": "outperform",
+      "directionProbability": 0.52206,
+      "expectedExcessReturn": 0.005421,
+      "modelProbabilities": {
+        "broad_logit": 0.512758,
+        "boosted": 0.553952,
+        "momentum_logit": 0.504034
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "UNH",
+      "pOutperform": 0.48062,
+      "direction": "underperform",
+      "directionProbability": 0.51938,
+      "expectedExcessReturn": 0.008876,
+      "modelProbabilities": {
+        "broad_logit": 0.516753,
+        "boosted": 0.40455,
+        "momentum_logit": 0.509777
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "COST",
+      "pOutperform": 0.518785,
+      "direction": "outperform",
+      "directionProbability": 0.518785,
+      "expectedExcessReturn": 0.002287,
+      "modelProbabilities": {
+        "broad_logit": 0.502811,
+        "boosted": 0.56153,
+        "momentum_logit": 0.498105
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "PLTR",
+      "pOutperform": 0.517805,
+      "direction": "outperform",
+      "directionProbability": 0.517805,
+      "expectedExcessReturn": 0.003741,
+      "modelProbabilities": {
+        "broad_logit": 0.512193,
+        "boosted": 0.542586,
+        "momentum_logit": 0.502197
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "WMT",
+      "pOutperform": 0.516055,
+      "direction": "outperform",
+      "directionProbability": 0.516055,
+      "expectedExcessReturn": 0.002328,
+      "modelProbabilities": {
+        "broad_logit": 0.502337,
+        "boosted": 0.554622,
+        "momentum_logit": 0.496707
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "META",
+      "pOutperform": 0.515202,
+      "direction": "outperform",
+      "directionProbability": 0.515202,
+      "expectedExcessReturn": 0.001182,
+      "modelProbabilities": {
+        "broad_logit": 0.501745,
+        "boosted": 0.554065,
+        "momentum_logit": 0.495342
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "AAPL",
+      "pOutperform": 0.515186,
+      "direction": "outperform",
+      "directionProbability": 0.515186,
+      "expectedExcessReturn": 0.001404,
+      "modelProbabilities": {
+        "broad_logit": 0.50325,
+        "boosted": 0.549045,
+        "momentum_logit": 0.498096
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "NVDA",
+      "pOutperform": 0.515164,
+      "direction": "outperform",
+      "directionProbability": 0.515164,
+      "expectedExcessReturn": 0.004963,
+      "modelProbabilities": {
+        "broad_logit": 0.513405,
+        "boosted": 0.529187,
+        "momentum_logit": 0.504926
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "UBER",
+      "pOutperform": 0.51248,
+      "direction": "outperform",
+      "directionProbability": 0.51248,
+      "expectedExcessReturn": 0.003275,
+      "modelProbabilities": {
+        "broad_logit": 0.507933,
+        "boosted": 0.531456,
+        "momentum_logit": 0.500775
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "V",
+      "pOutperform": 0.510857,
+      "direction": "outperform",
+      "directionProbability": 0.510857,
+      "expectedExcessReturn": 0.002683,
+      "modelProbabilities": {
+        "broad_logit": 0.505978,
+        "boosted": 0.528969,
+        "momentum_logit": 0.500219
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "HD",
+      "pOutperform": 0.508435,
+      "direction": "outperform",
+      "directionProbability": 0.508435,
+      "expectedExcessReturn": 0.00615,
+      "modelProbabilities": {
+        "broad_logit": 0.514594,
+        "boosted": 0.506411,
+        "momentum_logit": 0.504053
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "CVX",
+      "pOutperform": 0.507481,
+      "direction": "outperform",
+      "directionProbability": 0.507481,
+      "expectedExcessReturn": 0.002723,
+      "modelProbabilities": {
+        "broad_logit": 0.501662,
+        "boosted": 0.525056,
+        "momentum_logit": 0.498237
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "XOM",
+      "pOutperform": 0.50662,
+      "direction": "outperform",
+      "directionProbability": 0.50662,
+      "expectedExcessReturn": 0.002862,
+      "modelProbabilities": {
+        "broad_logit": 0.502156,
+        "boosted": 0.522273,
+        "momentum_logit": 0.497672
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "GE",
+      "pOutperform": 0.493574,
+      "direction": "underperform",
+      "directionProbability": 0.506426,
+      "expectedExcessReturn": 0.00661,
+      "modelProbabilities": {
+        "broad_logit": 0.517799,
+        "boosted": 0.451189,
+        "momentum_logit": 0.505758
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "MA",
+      "pOutperform": 0.505997,
+      "direction": "outperform",
+      "directionProbability": 0.505997,
+      "expectedExcessReturn": 0.002811,
+      "modelProbabilities": {
+        "broad_logit": 0.507317,
+        "boosted": 0.510401,
+        "momentum_logit": 0.500923
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "CRM",
+      "pOutperform": 0.49646,
+      "direction": "underperform",
+      "directionProbability": 0.50354,
+      "expectedExcessReturn": 0.005277,
+      "modelProbabilities": {
+        "broad_logit": 0.515881,
+        "boosted": 0.461093,
+        "momentum_logit": 0.507414
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "BAC",
+      "pOutperform": 0.503413,
+      "direction": "outperform",
+      "directionProbability": 0.503413,
+      "expectedExcessReturn": 0.003298,
+      "modelProbabilities": {
+        "broad_logit": 0.505627,
+        "boosted": 0.504536,
+        "momentum_logit": 0.500258
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 5
+    },
+    {
+      "ticker": "MSFT",
+      "pOutperform": 0.496985,
+      "direction": "underperform",
+      "directionProbability": 0.503015,
+      "expectedExcessReturn": 0.002569,
+      "modelProbabilities": {
+        "broad_logit": 0.505865,
+        "boosted": 0.485168,
+        "momentum_logit": 0.498273
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 5
+    },
+    {
+      "ticker": "AMZN",
+      "pOutperform": 0.497366,
+      "direction": "underperform",
+      "directionProbability": 0.502634,
+      "expectedExcessReturn": 0.003261,
+      "modelProbabilities": {
+        "broad_logit": 0.507235,
+        "boosted": 0.487392,
+        "momentum_logit": 0.496096
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 5
+    },
+    {
+      "ticker": "JNJ",
+      "pOutperform": 0.502316,
+      "direction": "outperform",
+      "directionProbability": 0.502316,
+      "expectedExcessReturn": 0.004141,
+      "modelProbabilities": {
+        "broad_logit": 0.507962,
+        "boosted": 0.496199,
+        "momentum_logit": 0.50194
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 5
+    },
+    {
+      "ticker": "AMAT",
+      "pOutperform": 0.586765,
+      "direction": "outperform",
+      "directionProbability": 0.586765,
+      "expectedExcessReturn": 0.045515,
+      "modelProbabilities": {
+        "broad_logit": 0.566791,
+        "boosted": 0.705619,
+        "momentum_logit": 0.505014
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 20
+    },
+    {
+      "ticker": "COST",
+      "pOutperform": 0.420575,
+      "direction": "underperform",
+      "directionProbability": 0.579425,
+      "expectedExcessReturn": -0.005382,
+      "modelProbabilities": {
+        "broad_logit": 0.458859,
+        "boosted": 0.262992,
+        "momentum_logit": 0.517256
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "ORCL",
+      "pOutperform": 0.576844,
+      "direction": "outperform",
+      "directionProbability": 0.576844,
+      "expectedExcessReturn": 0.037298,
+      "modelProbabilities": {
+        "broad_logit": 0.553438,
+        "boosted": 0.684018,
+        "momentum_logit": 0.508479
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 20
+    },
+    {
+      "ticker": "MU",
+      "pOutperform": 0.567853,
+      "direction": "outperform",
+      "directionProbability": 0.567853,
+      "expectedExcessReturn": 0.051649,
+      "modelProbabilities": {
+        "broad_logit": 0.570469,
+        "boosted": 0.659818,
+        "momentum_logit": 0.486666
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "AAPL",
+      "pOutperform": 0.436342,
+      "direction": "underperform",
+      "directionProbability": 0.563658,
+      "expectedExcessReturn": -0.006462,
+      "modelProbabilities": {
+        "broad_logit": 0.451832,
+        "boosted": 0.339325,
+        "momentum_logit": 0.503883
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "INTC",
+      "pOutperform": 0.563201,
+      "direction": "outperform",
+      "directionProbability": 0.563201,
+      "expectedExcessReturn": 0.064835,
+      "modelProbabilities": {
+        "broad_logit": 0.583946,
+        "boosted": 0.670198,
+        "momentum_logit": 0.451183
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "CAT",
+      "pOutperform": 0.556509,
+      "direction": "outperform",
+      "directionProbability": 0.556509,
+      "expectedExcessReturn": 0.013728,
+      "modelProbabilities": {
+        "broad_logit": 0.493116,
+        "boosted": 0.721962,
+        "momentum_logit": 0.478017
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "WMT",
+      "pOutperform": 0.443689,
+      "direction": "underperform",
+      "directionProbability": 0.556311,
+      "expectedExcessReturn": -0.005704,
+      "modelProbabilities": {
+        "broad_logit": 0.448832,
+        "boosted": 0.362792,
+        "momentum_logit": 0.507719
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "NFLX",
+      "pOutperform": 0.553255,
+      "direction": "outperform",
+      "directionProbability": 0.553255,
+      "expectedExcessReturn": -0.00141,
+      "modelProbabilities": {
+        "broad_logit": 0.478391,
+        "boosted": 0.687249,
+        "momentum_logit": 0.51303
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "BAC",
+      "pOutperform": 0.550873,
+      "direction": "outperform",
+      "directionProbability": 0.550873,
+      "expectedExcessReturn": -0.006267,
+      "modelProbabilities": {
+        "broad_logit": 0.463792,
+        "boosted": 0.695417,
+        "momentum_logit": 0.513752
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "ASML",
+      "pOutperform": 0.540882,
+      "direction": "outperform",
+      "directionProbability": 0.540882,
+      "expectedExcessReturn": 0.019937,
+      "modelProbabilities": {
+        "broad_logit": 0.507149,
+        "boosted": 0.637582,
+        "momentum_logit": 0.491716
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "PLTR",
+      "pOutperform": 0.460513,
+      "direction": "underperform",
+      "directionProbability": 0.539487,
+      "expectedExcessReturn": 0.004358,
+      "modelProbabilities": {
+        "broad_logit": 0.468071,
+        "boosted": 0.436278,
+        "momentum_logit": 0.473723
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "META",
+      "pOutperform": 0.464138,
+      "direction": "underperform",
+      "directionProbability": 0.535862,
+      "expectedExcessReturn": -0.002237,
+      "modelProbabilities": {
+        "broad_logit": 0.450423,
+        "boosted": 0.466123,
+        "momentum_logit": 0.47605
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "ANET",
+      "pOutperform": 0.535766,
+      "direction": "outperform",
+      "directionProbability": 0.535766,
+      "expectedExcessReturn": 0.052711,
+      "modelProbabilities": {
+        "broad_logit": 0.57391,
+        "boosted": 0.508758,
+        "momentum_logit": 0.520998
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 20
+    },
+    {
+      "ticker": "GS",
+      "pOutperform": 0.532485,
+      "direction": "outperform",
+      "directionProbability": 0.532485,
+      "expectedExcessReturn": 0.005706,
+      "modelProbabilities": {
+        "broad_logit": 0.487989,
+        "boosted": 0.60504,
+        "momentum_logit": 0.514631
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "TSM",
+      "pOutperform": 0.470308,
+      "direction": "underperform",
+      "directionProbability": 0.529692,
+      "expectedExcessReturn": 0.020144,
+      "modelProbabilities": {
+        "broad_logit": 0.507531,
+        "boosted": 0.399356,
+        "momentum_logit": 0.494008
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "NVDA",
+      "pOutperform": 0.528058,
+      "direction": "outperform",
+      "directionProbability": 0.528058,
+      "expectedExcessReturn": -0.000657,
+      "modelProbabilities": {
+        "broad_logit": 0.460463,
+        "boosted": 0.677665,
+        "momentum_logit": 0.467278
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "GE",
+      "pOutperform": 0.527468,
+      "direction": "outperform",
+      "directionProbability": 0.527468,
+      "expectedExcessReturn": 0.015601,
+      "modelProbabilities": {
+        "broad_logit": 0.517322,
+        "boosted": 0.523944,
+        "momentum_logit": 0.540547
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 20
+    },
+    {
+      "ticker": "UBER",
+      "pOutperform": 0.475616,
+      "direction": "underperform",
+      "directionProbability": 0.524384,
+      "expectedExcessReturn": 0.001073,
+      "modelProbabilities": {
+        "broad_logit": 0.48109,
+        "boosted": 0.417486,
+        "momentum_logit": 0.519861
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "CRWD",
+      "pOutperform": 0.475737,
+      "direction": "underperform",
+      "directionProbability": 0.524263,
+      "expectedExcessReturn": 0.02251,
+      "modelProbabilities": {
+        "broad_logit": 0.482024,
+        "boosted": 0.461903,
+        "momentum_logit": 0.481322
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "AVGO",
+      "pOutperform": 0.522912,
+      "direction": "outperform",
+      "directionProbability": 0.522912,
+      "expectedExcessReturn": 0.038077,
+      "modelProbabilities": {
+        "broad_logit": 0.538895,
+        "boosted": 0.517655,
+        "momentum_logit": 0.511547
+      },
+      "modelVotesOutperform": 3,
+      "horizon": 20
+    },
+    {
+      "ticker": "AMD",
+      "pOutperform": 0.52265,
+      "direction": "outperform",
+      "directionProbability": 0.52265,
+      "expectedExcessReturn": 0.075335,
+      "modelProbabilities": {
+        "broad_logit": 0.6011,
+        "boosted": 0.463864,
+        "momentum_logit": 0.495046
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "MSFT",
+      "pOutperform": 0.477835,
+      "direction": "underperform",
+      "directionProbability": 0.522165,
+      "expectedExcessReturn": -7.5e-05,
+      "modelProbabilities": {
+        "broad_logit": 0.462764,
+        "boosted": 0.474193,
+        "momentum_logit": 0.4959
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "XOM",
+      "pOutperform": 0.478493,
+      "direction": "underperform",
+      "directionProbability": 0.521507,
+      "expectedExcessReturn": -0.006157,
+      "modelProbabilities": {
+        "broad_logit": 0.448692,
+        "boosted": 0.504043,
+        "momentum_logit": 0.486227
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "GOOGL",
+      "pOutperform": 0.479516,
+      "direction": "underperform",
+      "directionProbability": 0.520484,
+      "expectedExcessReturn": 0.009686,
+      "modelProbabilities": {
+        "broad_logit": 0.481354,
+        "boosted": 0.471859,
+        "momentum_logit": 0.484235
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "HD",
+      "pOutperform": 0.519265,
+      "direction": "outperform",
+      "directionProbability": 0.519265,
+      "expectedExcessReturn": 0.009576,
+      "modelProbabilities": {
+        "broad_logit": 0.495168,
+        "boosted": 0.538473,
+        "momentum_logit": 0.52676
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "IBM",
+      "pOutperform": 0.481307,
+      "direction": "underperform",
+      "directionProbability": 0.518693,
+      "expectedExcessReturn": -0.012116,
+      "modelProbabilities": {
+        "broad_logit": 0.442673,
+        "boosted": 0.507932,
+        "momentum_logit": 0.496889
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "TSLA",
+      "pOutperform": 0.482365,
+      "direction": "underperform",
+      "directionProbability": 0.517635,
+      "expectedExcessReturn": 0.019474,
+      "modelProbabilities": {
+        "broad_logit": 0.49982,
+        "boosted": 0.442809,
+        "momentum_logit": 0.498848
+      },
+      "modelVotesOutperform": 0,
+      "horizon": 20
+    },
+    {
+      "ticker": "LLY",
+      "pOutperform": 0.485068,
+      "direction": "underperform",
+      "directionProbability": 0.514932,
+      "expectedExcessReturn": 0.006908,
+      "modelProbabilities": {
+        "broad_logit": 0.487006,
+        "boosted": 0.440849,
+        "momentum_logit": 0.520933
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "PANW",
+      "pOutperform": 0.486924,
+      "direction": "underperform",
+      "directionProbability": 0.513076,
+      "expectedExcessReturn": 0.030991,
+      "modelProbabilities": {
+        "broad_logit": 0.506826,
+        "boosted": 0.452427,
+        "momentum_logit": 0.496657
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "NOW",
+      "pOutperform": 0.511844,
+      "direction": "outperform",
+      "directionProbability": 0.511844,
+      "expectedExcessReturn": 0.03989,
+      "modelProbabilities": {
+        "broad_logit": 0.529967,
+        "boosted": 0.569083,
+        "momentum_logit": 0.444948
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "CRM",
+      "pOutperform": 0.488526,
+      "direction": "underperform",
+      "directionProbability": 0.511474,
+      "expectedExcessReturn": -0.002882,
+      "modelProbabilities": {
+        "broad_logit": 0.454521,
+        "boosted": 0.539059,
+        "momentum_logit": 0.479083
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "AMZN",
+      "pOutperform": 0.489538,
+      "direction": "underperform",
+      "directionProbability": 0.510462,
+      "expectedExcessReturn": 0.00829,
+      "modelProbabilities": {
+        "broad_logit": 0.47842,
+        "boosted": 0.482786,
+        "momentum_logit": 0.50634
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "UNH",
+      "pOutperform": 0.508096,
+      "direction": "outperform",
+      "directionProbability": 0.508096,
+      "expectedExcessReturn": 0.003011,
+      "modelProbabilities": {
+        "broad_logit": 0.479722,
+        "boosted": 0.556553,
+        "momentum_logit": 0.494838
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "JNJ",
+      "pOutperform": 0.491943,
+      "direction": "underperform",
+      "directionProbability": 0.508057,
+      "expectedExcessReturn": -0.002119,
+      "modelProbabilities": {
+        "broad_logit": 0.47147,
+        "boosted": 0.481254,
+        "momentum_logit": 0.521391
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "CVX",
+      "pOutperform": 0.494851,
+      "direction": "underperform",
+      "directionProbability": 0.505149,
+      "expectedExcessReturn": -0.008942,
+      "modelProbabilities": {
+        "broad_logit": 0.443989,
+        "boosted": 0.563612,
+        "momentum_logit": 0.486556
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "QCOM",
+      "pOutperform": 0.503432,
+      "direction": "outperform",
+      "directionProbability": 0.503432,
+      "expectedExcessReturn": 0.024368,
+      "modelProbabilities": {
+        "broad_logit": 0.519178,
+        "boosted": 0.49321,
+        "momentum_logit": 0.496545
+      },
+      "modelVotesOutperform": 1,
+      "horizon": 20
+    },
+    {
+      "ticker": "JPM",
+      "pOutperform": 0.496579,
+      "direction": "underperform",
+      "directionProbability": 0.503421,
+      "expectedExcessReturn": -0.004215,
+      "modelProbabilities": {
+        "broad_logit": 0.465647,
+        "boosted": 0.516142,
+        "momentum_logit": 0.510554
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "MA",
+      "pOutperform": 0.498139,
+      "direction": "underperform",
+      "directionProbability": 0.501861,
+      "expectedExcessReturn": -0.002548,
+      "modelProbabilities": {
+        "broad_logit": 0.464895,
+        "boosted": 0.521109,
+        "momentum_logit": 0.511494
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    },
+    {
+      "ticker": "V",
+      "pOutperform": 0.500253,
+      "direction": "outperform",
+      "directionProbability": 0.500253,
+      "expectedExcessReturn": -0.006006,
+      "modelProbabilities": {
+        "broad_logit": 0.454353,
+        "boosted": 0.544883,
+        "momentum_logit": 0.507656
+      },
+      "modelVotesOutperform": 2,
+      "horizon": 20
+    }
+  ]
+}
