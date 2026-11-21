@@ -1,0 +1,69 @@
+{
+  "cycle": "post-close",
+  "at": "2026-11-20T19:09:21.145546-05:00",
+  "marketState": {
+    "status": "live",
+    "asOf": "2026-11-20T19:09:21.157985-05:00",
+    "sessionDate": "2026-11-20",
+    "regime": "risk-off",
+    "metrics": {
+      "spy5dReturn": -0.085581,
+      "spy20dReturn": -0.092319,
+      "breadthAbove20dMA": 0.05,
+      "crossSectionDispersion20d": 0.034801,
+      "spyRealizedVol20d": 0.262638,
+      "vix": 35.89,
+      "tenYearYield": 4.912,
+      "tenYear20dChange": -0.076,
+      "sectorRelative20d": {
+        "QQQ": -0.043896,
+        "SMH": -0.148841,
+        "XLF": 0.068527,
+        "XLE": -0.034898,
+        "XLV": 0.080941,
+        "XLI": 0.042204,
+        "XLU": 0.095374
+      }
+    },
+    "interpretation": {
+      "breadth": "narrow",
+      "dispersion": "moderate",
+      "volatility": "moderate"
+    }
+  },
+  "forecastSnapshotId": "2026-11-20-close-v1",
+  "plannedEntries": [
+    {
+      "ticker": "NVDA",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.607596,
+      "expectedExcessReturn": 0.011079,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "TSM",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.603793,
+      "expectedExcessReturn": 0.013108,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "QCOM",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.602322,
+      "expectedExcessReturn": 0.011474,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "CAT",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.602234,
+      "expectedExcessReturn": 0.009331,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ]
+}

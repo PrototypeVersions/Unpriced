@@ -18480,27 +18480,1707 @@
       "resolvedAt": "2026-11-19",
       "brier": 0.25019904,
       "logLoss": 0.69354526
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "NVDA",
+      "horizon": 5,
+      "pOutperform": 0.597336,
+      "expectedExcessReturn": 0.006446,
+      "modelProbabilities": {
+        "broad_logit": 0.520804,
+        "boosted": 0.738852,
+        "momentum_logit": 0.516897
+      },
+      "outcome": 0,
+      "assetReturn": -0.22916798,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.14358664,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.3568103,
+      "logLoss": 0.90965281
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "CAT",
+      "horizon": 5,
+      "pOutperform": 0.572238,
+      "expectedExcessReturn": 0.00152,
+      "modelProbabilities": {
+        "broad_logit": 0.493551,
+        "boosted": 0.717138,
+        "momentum_logit": 0.490203
+      },
+      "outcome": 0,
+      "assetReturn": -0.14953349,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.06395214,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.32745633,
+      "logLoss": 0.84918831
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "AMAT",
+      "horizon": 5,
+      "pOutperform": 0.42897,
+      "expectedExcessReturn": 0.007543,
+      "modelProbabilities": {
+        "broad_logit": 0.502822,
+        "boosted": 0.310423,
+        "momentum_logit": 0.48652
+      },
+      "outcome": 0,
+      "assetReturn": -0.18195422,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.09637288,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.18401526,
+      "logLoss": 0.56031353
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "NOW",
+      "horizon": 5,
+      "pOutperform": 0.563931,
+      "expectedExcessReturn": 0.007711,
+      "modelProbabilities": {
+        "broad_logit": 0.520677,
+        "boosted": 0.662463,
+        "momentum_logit": 0.4978
+      },
+      "outcome": 0,
+      "assetReturn": -0.14317848,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.05759713,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.31801817,
+      "logLoss": 0.82995479
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "TSM",
+      "horizon": 5,
+      "pOutperform": 0.45054,
+      "expectedExcessReturn": 0.004071,
+      "modelProbabilities": {
+        "broad_logit": 0.500596,
+        "boosted": 0.365547,
+        "momentum_logit": 0.494721
+      },
+      "outcome": 0,
+      "assetReturn": -0.20068723,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.11510588,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.20298629,
+      "logLoss": 0.5988193
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "MU",
+      "horizon": 5,
+      "pOutperform": 0.452706,
+      "expectedExcessReturn": 0.007655,
+      "modelProbabilities": {
+        "broad_logit": 0.504253,
+        "boosted": 0.377938,
+        "momentum_logit": 0.48399
+      },
+      "outcome": 0,
+      "assetReturn": -0.23615267,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.15057133,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.20494272,
+      "logLoss": 0.60276914
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "LLY",
+      "horizon": 5,
+      "pOutperform": 0.459588,
+      "expectedExcessReturn": 0.00204,
+      "modelProbabilities": {
+        "broad_logit": 0.497373,
+        "boosted": 0.391013,
+        "momentum_logit": 0.49786
+      },
+      "outcome": 1,
+      "assetReturn": -0.06677521,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.01880613,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.29204513,
+      "logLoss": 0.77742484
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "ANET",
+      "horizon": 5,
+      "pOutperform": 0.46497,
+      "expectedExcessReturn": 0.007787,
+      "modelProbabilities": {
+        "broad_logit": 0.500007,
+        "boosted": 0.41536,
+        "momentum_logit": 0.484886
+      },
+      "outcome": 0,
+      "assetReturn": -0.15038775,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.06480641,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.2161971,
+      "logLoss": 0.62543246
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "PANW",
+      "horizon": 5,
+      "pOutperform": 0.46658,
+      "expectedExcessReturn": 0.004477,
+      "modelProbabilities": {
+        "broad_logit": 0.505729,
+        "boosted": 0.401848,
+        "momentum_logit": 0.499192
+      },
+      "outcome": 1,
+      "assetReturn": 0.06541714,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.15099848,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.2845369,
+      "logLoss": 0.76232578
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "INTC",
+      "horizon": 5,
+      "pOutperform": 0.530671,
+      "expectedExcessReturn": 0.010298,
+      "modelProbabilities": {
+        "broad_logit": 0.518561,
+        "boosted": 0.579231,
+        "momentum_logit": 0.488787
+      },
+      "outcome": 0,
+      "assetReturn": -0.14046264,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.0548813,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.28161171,
+      "logLoss": 0.75645126
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "NFLX",
+      "horizon": 5,
+      "pOutperform": 0.529197,
+      "expectedExcessReturn": 0.001899,
+      "modelProbabilities": {
+        "broad_logit": 0.50132,
+        "boosted": 0.576579,
+        "momentum_logit": 0.504538
+      },
+      "outcome": 0,
+      "assetReturn": -0.0872084,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.00162705,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.28004946,
+      "logLoss": 0.75331553
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "PLTR",
+      "horizon": 5,
+      "pOutperform": 0.472414,
+      "expectedExcessReturn": 0.002627,
+      "modelProbabilities": {
+        "broad_logit": 0.49819,
+        "boosted": 0.428448,
+        "momentum_logit": 0.495387
+      },
+      "outcome": 0,
+      "assetReturn": -0.14584201,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.06026067,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.22317499,
+      "logLoss": 0.63944339
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "AVGO",
+      "horizon": 5,
+      "pOutperform": 0.472467,
+      "expectedExcessReturn": 0.004499,
+      "modelProbabilities": {
+        "broad_logit": 0.487498,
+        "boosted": 0.452036,
+        "momentum_logit": 0.48006
+      },
+      "outcome": 0,
+      "assetReturn": -0.12276305,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.0371817,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.22322507,
+      "logLoss": 0.63954386
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "XOM",
+      "horizon": 5,
+      "pOutperform": 0.473694,
+      "expectedExcessReturn": -0.000552,
+      "modelProbabilities": {
+        "broad_logit": 0.492732,
+        "boosted": 0.433757,
+        "momentum_logit": 0.49898
+      },
+      "outcome": 1,
+      "assetReturn": -0.05621746,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.02936388,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.27699801,
+      "logLoss": 0.74719374
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "JNJ",
+      "horizon": 5,
+      "pOutperform": 0.474501,
+      "expectedExcessReturn": 0.001203,
+      "modelProbabilities": {
+        "broad_logit": 0.496401,
+        "boosted": 0.430218,
+        "momentum_logit": 0.50174
+      },
+      "outcome": 1,
+      "assetReturn": -0.05347331,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.03210803,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.2761492,
+      "logLoss": 0.74549155
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "TSLA",
+      "horizon": 5,
+      "pOutperform": 0.474752,
+      "expectedExcessReturn": 0.00479,
+      "modelProbabilities": {
+        "broad_logit": 0.500011,
+        "boosted": 0.434888,
+        "momentum_logit": 0.493676
+      },
+      "outcome": 0,
+      "assetReturn": -0.11378195,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.02820061,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.22538946,
+      "logLoss": 0.64388475
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "HD",
+      "horizon": 5,
+      "pOutperform": 0.478371,
+      "expectedExcessReturn": 0.004378,
+      "modelProbabilities": {
+        "broad_logit": 0.505316,
+        "boosted": 0.430393,
+        "momentum_logit": 0.504634
+      },
+      "outcome": 1,
+      "assetReturn": -0.02767499,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.05790635,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.27209681,
+      "logLoss": 0.7373687
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "UBER",
+      "horizon": 5,
+      "pOutperform": 0.479911,
+      "expectedExcessReturn": 0.000773,
+      "modelProbabilities": {
+        "broad_logit": 0.497732,
+        "boosted": 0.444137,
+        "momentum_logit": 0.501784
+      },
+      "outcome": 0,
+      "assetReturn": -0.08925242,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.00367107,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23031457,
+      "logLoss": 0.65375533
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "GOOGL",
+      "horizon": 5,
+      "pOutperform": 0.519983,
+      "expectedExcessReturn": 0.002005,
+      "modelProbabilities": {
+        "broad_logit": 0.497116,
+        "boosted": 0.562239,
+        "momentum_logit": 0.495979
+      },
+      "outcome": 0,
+      "assetReturn": -0.10305299,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.01747164,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.27038232,
+      "logLoss": 0.73393376
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "COST",
+      "horizon": 5,
+      "pOutperform": 0.480129,
+      "expectedExcessReturn": -0.00016,
+      "modelProbabilities": {
+        "broad_logit": 0.492254,
+        "boosted": 0.451804,
+        "momentum_logit": 0.499451
+      },
+      "outcome": 1,
+      "assetReturn": -0.00367013,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.08191121,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.27026586,
+      "logLoss": 0.73370046
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "ORCL",
+      "horizon": 5,
+      "pOutperform": 0.48016,
+      "expectedExcessReturn": 0.00622,
+      "modelProbabilities": {
+        "broad_logit": 0.505446,
+        "boosted": 0.446033,
+        "momentum_logit": 0.492666
+      },
+      "outcome": 0,
+      "assetReturn": -0.1927403,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.10715895,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23055363,
+      "logLoss": 0.65423421
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "MA",
+      "horizon": 5,
+      "pOutperform": 0.515627,
+      "expectedExcessReturn": 0.000445,
+      "modelProbabilities": {
+        "broad_logit": 0.498397,
+        "boosted": 0.542062,
+        "momentum_logit": 0.503564
+      },
+      "outcome": 1,
+      "assetReturn": -0.05384228,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.03173907,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.2346172,
+      "logLoss": 0.66237164
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "UNH",
+      "horizon": 5,
+      "pOutperform": 0.515492,
+      "expectedExcessReturn": -0.00106,
+      "modelProbabilities": {
+        "broad_logit": 0.491272,
+        "boosted": 0.551712,
+        "momentum_logit": 0.49958
+      },
+      "outcome": 0,
+      "assetReturn": -0.16593037,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.08034902,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.265732,
+      "logLoss": 0.72462134
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "CRM",
+      "horizon": 5,
+      "pOutperform": 0.484989,
+      "expectedExcessReturn": -0.001393,
+      "modelProbabilities": {
+        "broad_logit": 0.491796,
+        "boosted": 0.466129,
+        "momentum_logit": 0.499133
+      },
+      "outcome": 0,
+      "assetReturn": -0.17085935,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.08527801,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23521433,
+      "logLoss": 0.66356702
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "MSFT",
+      "horizon": 5,
+      "pOutperform": 0.514102,
+      "expectedExcessReturn": 0.00246,
+      "modelProbabilities": {
+        "broad_logit": 0.50346,
+        "boosted": 0.531505,
+        "momentum_logit": 0.505453
+      },
+      "outcome": 1,
+      "assetReturn": -0.0733451,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.01223625,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23609687,
+      "logLoss": 0.66533359
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "AMD",
+      "horizon": 5,
+      "pOutperform": 0.513366,
+      "expectedExcessReturn": 0.010764,
+      "modelProbabilities": {
+        "broad_logit": 0.502428,
+        "boosted": 0.55531,
+        "momentum_logit": 0.47767
+      },
+      "outcome": 0,
+      "assetReturn": -0.20535143,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.11977008,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26354465,
+      "logLoss": 0.72024298
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "V",
+      "horizon": 5,
+      "pOutperform": 0.5128,
+      "expectedExcessReturn": 0.000175,
+      "modelProbabilities": {
+        "broad_logit": 0.497516,
+        "boosted": 0.534702,
+        "momentum_logit": 0.503823
+      },
+      "outcome": 1,
+      "assetReturn": -0.05611146,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.02946989,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23736384,
+      "logLoss": 0.66786937
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "BAC",
+      "horizon": 5,
+      "pOutperform": 0.489772,
+      "expectedExcessReturn": -0.000408,
+      "modelProbabilities": {
+        "broad_logit": 0.492594,
+        "boosted": 0.478297,
+        "momentum_logit": 0.49971
+      },
+      "outcome": 1,
+      "assetReturn": -0.07800861,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.00757273,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26033261,
+      "logLoss": 0.7138153
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "JPM",
+      "horizon": 5,
+      "pOutperform": 0.491086,
+      "expectedExcessReturn": -0.000301,
+      "modelProbabilities": {
+        "broad_logit": 0.493242,
+        "boosted": 0.481491,
+        "momentum_logit": 0.4996
+      },
+      "outcome": 0,
+      "assetReturn": -0.10300703,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.01742569,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24116546,
+      "logLoss": 0.67547624
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "WMT",
+      "horizon": 5,
+      "pOutperform": 0.508754,
+      "expectedExcessReturn": 3e-06,
+      "modelProbabilities": {
+        "broad_logit": 0.496212,
+        "boosted": 0.525703,
+        "momentum_logit": 0.502527
+      },
+      "outcome": 1,
+      "assetReturn": -0.00109298,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.08448837,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24132263,
+      "logLoss": 0.67579068
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "GE",
+      "horizon": 5,
+      "pOutperform": 0.508619,
+      "expectedExcessReturn": 0.003036,
+      "modelProbabilities": {
+        "broad_logit": 0.503092,
+        "boosted": 0.519848,
+        "momentum_logit": 0.501685
+      },
+      "outcome": 1,
+      "assetReturn": -0.06687563,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.01870571,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24145529,
+      "logLoss": 0.67605607
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "IBM",
+      "horizon": 5,
+      "pOutperform": 0.508237,
+      "expectedExcessReturn": 0.0006,
+      "modelProbabilities": {
+        "broad_logit": 0.497494,
+        "boosted": 0.522349,
+        "momentum_logit": 0.503354
+      },
+      "outcome": 0,
+      "assetReturn": -0.09181403,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.00623269,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25830485,
+      "logLoss": 0.70975839
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "CRWD",
+      "horizon": 5,
+      "pOutperform": 0.493963,
+      "expectedExcessReturn": 0.003454,
+      "modelProbabilities": {
+        "broad_logit": 0.502248,
+        "boosted": 0.48335,
+        "momentum_logit": 0.497426
+      },
+      "outcome": 1,
+      "assetReturn": 0.01248842,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.09806977,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25607345,
+      "logLoss": 0.70529466
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "CVX",
+      "horizon": 5,
+      "pOutperform": 0.494398,
+      "expectedExcessReturn": -0.001075,
+      "modelProbabilities": {
+        "broad_logit": 0.491433,
+        "boosted": 0.49327,
+        "momentum_logit": 0.498647
+      },
+      "outcome": 1,
+      "assetReturn": -0.0445207,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.04106065,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25563338,
+      "logLoss": 0.70441442
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "ASML",
+      "horizon": 5,
+      "pOutperform": 0.494484,
+      "expectedExcessReturn": 0.003922,
+      "modelProbabilities": {
+        "broad_logit": 0.5023,
+        "boosted": 0.486536,
+        "momentum_logit": 0.49545
+      },
+      "outcome": 0,
+      "assetReturn": -0.15312078,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.06753943,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24451443,
+      "logLoss": 0.68217559
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "AMZN",
+      "horizon": 5,
+      "pOutperform": 0.503852,
+      "expectedExcessReturn": 0.003051,
+      "modelProbabilities": {
+        "broad_logit": 0.501705,
+        "boosted": 0.507904,
+        "momentum_logit": 0.501505
+      },
+      "outcome": 1,
+      "assetReturn": -0.07440185,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.0111795,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24616284,
+      "logLoss": 0.6854727
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "META",
+      "horizon": 5,
+      "pOutperform": 0.502501,
+      "expectedExcessReturn": -0.001441,
+      "modelProbabilities": {
+        "broad_logit": 0.491835,
+        "boosted": 0.51939,
+        "momentum_logit": 0.494448
+      },
+      "outcome": 0,
+      "assetReturn": -0.12599538,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.04041404,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25250726,
+      "logLoss": 0.69816173
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "AAPL",
+      "horizon": 5,
+      "pOutperform": 0.502317,
+      "expectedExcessReturn": -0.000248,
+      "modelProbabilities": {
+        "broad_logit": 0.49221,
+        "boosted": 0.514572,
+        "momentum_logit": 0.498861
+      },
+      "outcome": 1,
+      "assetReturn": -0.03848203,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": 0.04709932,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24768837,
+      "logLoss": 0.68852388
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "QCOM",
+      "horizon": 5,
+      "pOutperform": 0.49898,
+      "expectedExcessReturn": 0.005561,
+      "modelProbabilities": {
+        "broad_logit": 0.505812,
+        "boosted": 0.493666,
+        "momentum_logit": 0.498006
+      },
+      "outcome": 0,
+      "assetReturn": -0.13063141,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.04505006,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24898104,
+      "logLoss": 0.69110926
+    },
+    {
+      "snapshotId": "2026-11-13-close-v1",
+      "publishedAt": "2026-11-13T18:49:27.659658-05:00",
+      "sessionDate": "2026-11-13",
+      "ticker": "GS",
+      "horizon": 5,
+      "pOutperform": 0.499964,
+      "expectedExcessReturn": 0.001499,
+      "modelProbabilities": {
+        "broad_logit": 0.495485,
+        "boosted": 0.506735,
+        "momentum_logit": 0.496941
+      },
+      "outcome": 0,
+      "assetReturn": -0.1373287,
+      "spyReturn": -0.08558134,
+      "realizedExcessReturn": -0.05174736,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.249964,
+      "logLoss": 0.69307518
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "AMD",
+      "horizon": 1,
+      "pOutperform": 0.537255,
+      "expectedExcessReturn": 0.00464,
+      "modelProbabilities": {
+        "broad_logit": 0.516837,
+        "boosted": 0.577135,
+        "momentum_logit": 0.523192
+      },
+      "outcome": 0,
+      "assetReturn": -0.13246384,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.09606059,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.28864294,
+      "logLoss": 0.77057913
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "QCOM",
+      "horizon": 1,
+      "pOutperform": 0.531854,
+      "expectedExcessReturn": 0.002713,
+      "modelProbabilities": {
+        "broad_logit": 0.515388,
+        "boosted": 0.579135,
+        "momentum_logit": 0.507552
+      },
+      "outcome": 0,
+      "assetReturn": -0.07450153,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.03809827,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.28286868,
+      "logLoss": 0.75897507
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "PANW",
+      "horizon": 1,
+      "pOutperform": 0.479362,
+      "expectedExcessReturn": 0.001962,
+      "modelProbabilities": {
+        "broad_logit": 0.467207,
+        "boosted": 0.512423,
+        "momentum_logit": 0.463001
+      },
+      "outcome": 0,
+      "assetReturn": -0.05089432,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.01449107,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.22978793,
+      "logLoss": 0.6527003
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "UNH",
+      "horizon": 1,
+      "pOutperform": 0.519917,
+      "expectedExcessReturn": 0.00256,
+      "modelProbabilities": {
+        "broad_logit": 0.526981,
+        "boosted": 0.502584,
+        "momentum_logit": 0.527812
+      },
+      "outcome": 1,
+      "assetReturn": 0.02835268,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.06475594,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23047969,
+      "logLoss": 0.6540861
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "GE",
+      "horizon": 1,
+      "pOutperform": 0.484255,
+      "expectedExcessReturn": 0.001465,
+      "modelProbabilities": {
+        "broad_logit": 0.488791,
+        "boosted": 0.471439,
+        "momentum_logit": 0.490771
+      },
+      "outcome": 1,
+      "assetReturn": -0.02903917,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00736409,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26599291,
+      "logLoss": 0.72514365
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "UBER",
+      "horizon": 1,
+      "pOutperform": 0.485194,
+      "expectedExcessReturn": 0.00112,
+      "modelProbabilities": {
+        "broad_logit": 0.490528,
+        "boosted": 0.466463,
+        "momentum_logit": 0.495995
+      },
+      "outcome": 1,
+      "assetReturn": -0.03246947,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00393378,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26502522,
+      "logLoss": 0.72320647
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "AVGO",
+      "horizon": 1,
+      "pOutperform": 0.485404,
+      "expectedExcessReturn": 0.002411,
+      "modelProbabilities": {
+        "broad_logit": 0.492831,
+        "boosted": 0.467092,
+        "momentum_logit": 0.493781
+      },
+      "outcome": 0,
+      "assetReturn": -0.12185199,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.08544873,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23561704,
+      "logLoss": 0.66437315
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "BAC",
+      "horizon": 1,
+      "pOutperform": 0.485884,
+      "expectedExcessReturn": 0.000844,
+      "modelProbabilities": {
+        "broad_logit": 0.492855,
+        "boosted": 0.471016,
+        "momentum_logit": 0.49176
+      },
+      "outcome": 1,
+      "assetReturn": -0.0315009,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00490235,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26431526,
+      "logLoss": 0.72178537
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "MU",
+      "horizon": 1,
+      "pOutperform": 0.513194,
+      "expectedExcessReturn": 0.003642,
+      "modelProbabilities": {
+        "broad_logit": 0.514166,
+        "boosted": 0.51123,
+        "momentum_logit": 0.51392
+      },
+      "outcome": 0,
+      "assetReturn": -0.13894037,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.10253712,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26336808,
+      "logLoss": 0.71988959
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "V",
+      "horizon": 1,
+      "pOutperform": 0.487606,
+      "expectedExcessReturn": 0.000878,
+      "modelProbabilities": {
+        "broad_logit": 0.499662,
+        "boosted": 0.458865,
+        "momentum_logit": 0.500361
+      },
+      "outcome": 1,
+      "assetReturn": -0.0009447,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.03545856,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26254761,
+      "logLoss": 0.71824758
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "CRM",
+      "horizon": 1,
+      "pOutperform": 0.511993,
+      "expectedExcessReturn": 0.001734,
+      "modelProbabilities": {
+        "broad_logit": 0.521151,
+        "boosted": 0.491444,
+        "momentum_logit": 0.520582
+      },
+      "outcome": 1,
+      "assetReturn": -0.01467461,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.02172865,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.23815083,
+      "logLoss": 0.66944433
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "MA",
+      "horizon": 1,
+      "pOutperform": 0.489004,
+      "expectedExcessReturn": 0.00099,
+      "modelProbabilities": {
+        "broad_logit": 0.499147,
+        "boosted": 0.465516,
+        "momentum_logit": 0.499141
+      },
+      "outcome": 1,
+      "assetReturn": -0.00145247,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.03495078,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.26111691,
+      "logLoss": 0.71538461
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "CRWD",
+      "horizon": 1,
+      "pOutperform": 0.490208,
+      "expectedExcessReturn": 0.001662,
+      "modelProbabilities": {
+        "broad_logit": 0.48176,
+        "boosted": 0.513162,
+        "momentum_logit": 0.478857
+      },
+      "outcome": 0,
+      "assetReturn": -0.05758648,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.02118322,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24030388,
+      "logLoss": 0.67375248
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "JNJ",
+      "horizon": 1,
+      "pOutperform": 0.490715,
+      "expectedExcessReturn": 0.001257,
+      "modelProbabilities": {
+        "broad_logit": 0.502072,
+        "boosted": 0.466231,
+        "momentum_logit": 0.500509
+      },
+      "outcome": 1,
+      "assetReturn": 0.01246532,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.04886858,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25937121,
+      "logLoss": 0.71189177
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "PLTR",
+      "horizon": 1,
+      "pOutperform": 0.509093,
+      "expectedExcessReturn": 0.001682,
+      "modelProbabilities": {
+        "broad_logit": 0.513239,
+        "boosted": 0.50145,
+        "momentum_logit": 0.511557
+      },
+      "outcome": 0,
+      "assetReturn": -0.06630653,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.02990328,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25917568,
+      "logLoss": 0.71150058
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "COST",
+      "horizon": 1,
+      "pOutperform": 0.491325,
+      "expectedExcessReturn": 0.000558,
+      "modelProbabilities": {
+        "broad_logit": 0.495349,
+        "boosted": 0.486443,
+        "momentum_logit": 0.491545
+      },
+      "outcome": 1,
+      "assetReturn": 0.00760636,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.04400962,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25875026,
+      "logLoss": 0.71064946
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "TSM",
+      "horizon": 1,
+      "pOutperform": 0.508662,
+      "expectedExcessReturn": 0.002561,
+      "modelProbabilities": {
+        "broad_logit": 0.515241,
+        "boosted": 0.494472,
+        "momentum_logit": 0.514343
+      },
+      "outcome": 0,
+      "assetReturn": -0.09480532,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.05840207,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25873703,
+      "logLoss": 0.710623
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "XOM",
+      "horizon": 1,
+      "pOutperform": 0.508312,
+      "expectedExcessReturn": 0.000841,
+      "modelProbabilities": {
+        "broad_logit": 0.508453,
+        "boosted": 0.51232,
+        "momentum_logit": 0.504738
+      },
+      "outcome": 1,
+      "assetReturn": 0.00666968,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.04307294,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24175709,
+      "logLoss": 0.67665985
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "NOW",
+      "horizon": 1,
+      "pOutperform": 0.508192,
+      "expectedExcessReturn": 0.002742,
+      "modelProbabilities": {
+        "broad_logit": 0.514265,
+        "boosted": 0.492199,
+        "momentum_logit": 0.515915
+      },
+      "outcome": 1,
+      "assetReturn": -0.01417804,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.02222522,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24187511,
+      "logLoss": 0.67689595
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "TSLA",
+      "horizon": 1,
+      "pOutperform": 0.507321,
+      "expectedExcessReturn": 0.001704,
+      "modelProbabilities": {
+        "broad_logit": 0.502851,
+        "boosted": 0.518531,
+        "momentum_logit": 0.502116
+      },
+      "outcome": 0,
+      "assetReturn": -0.07636013,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.03995688,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.2573746,
+      "logLoss": 0.70789743
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "AAPL",
+      "horizon": 1,
+      "pOutperform": 0.492881,
+      "expectedExcessReturn": 0.000619,
+      "modelProbabilities": {
+        "broad_logit": 0.498261,
+        "boosted": 0.48355,
+        "momentum_logit": 0.495578
+      },
+      "outcome": 1,
+      "assetReturn": -0.01904297,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.01736029,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25716968,
+      "logLoss": 0.70748751
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "MSFT",
+      "horizon": 1,
+      "pOutperform": 0.493042,
+      "expectedExcessReturn": 0.001149,
+      "modelProbabilities": {
+        "broad_logit": 0.500069,
+        "boosted": 0.477586,
+        "momentum_logit": 0.499365
+      },
+      "outcome": 1,
+      "assetReturn": -0.02765402,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00874923,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25700641,
+      "logLoss": 0.70716092
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "ANET",
+      "horizon": 1,
+      "pOutperform": 0.493061,
+      "expectedExcessReturn": 0.003157,
+      "modelProbabilities": {
+        "broad_logit": 0.499788,
+        "boosted": 0.477985,
+        "momentum_logit": 0.499355
+      },
+      "outcome": 0,
+      "assetReturn": -0.11588165,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.07947839,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24310915,
+      "logLoss": 0.6793646
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "WMT",
+      "horizon": 1,
+      "pOutperform": 0.493094,
+      "expectedExcessReturn": 0.000825,
+      "modelProbabilities": {
+        "broad_logit": 0.497643,
+        "boosted": 0.485477,
+        "momentum_logit": 0.495142
+      },
+      "outcome": 1,
+      "assetReturn": 0.01515389,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.05155714,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25695369,
+      "logLoss": 0.70705545
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "INTC",
+      "horizon": 1,
+      "pOutperform": 0.505426,
+      "expectedExcessReturn": 0.003839,
+      "modelProbabilities": {
+        "broad_logit": 0.508841,
+        "boosted": 0.50052,
+        "momentum_logit": 0.506266
+      },
+      "outcome": 0,
+      "assetReturn": -0.07968418,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.04328092,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25545544,
+      "logLoss": 0.70405849
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "NVDA",
+      "horizon": 1,
+      "pOutperform": 0.505387,
+      "expectedExcessReturn": 0.001556,
+      "modelProbabilities": {
+        "broad_logit": 0.510422,
+        "boosted": 0.491444,
+        "momentum_logit": 0.512377
+      },
+      "outcome": 0,
+      "assetReturn": -0.14008767,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.10368441,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25541602,
+      "logLoss": 0.70397964
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "ORCL",
+      "horizon": 1,
+      "pOutperform": 0.504308,
+      "expectedExcessReturn": 0.002873,
+      "modelProbabilities": {
+        "broad_logit": 0.509557,
+        "boosted": 0.491654,
+        "momentum_logit": 0.509982
+      },
+      "outcome": 0,
+      "assetReturn": -0.08483311,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.04842986,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25432656,
+      "logLoss": 0.70180051
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "GS",
+      "horizon": 1,
+      "pOutperform": 0.496879,
+      "expectedExcessReturn": 0.001596,
+      "modelProbabilities": {
+        "broad_logit": 0.497353,
+        "boosted": 0.493834,
+        "momentum_logit": 0.499021
+      },
+      "outcome": 0,
+      "assetReturn": -0.0670655,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.03066225,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24688874,
+      "logLoss": 0.68692458
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "NFLX",
+      "horizon": 1,
+      "pOutperform": 0.496892,
+      "expectedExcessReturn": 0.000878,
+      "modelProbabilities": {
+        "broad_logit": 0.497096,
+        "boosted": 0.495197,
+        "momentum_logit": 0.498144
+      },
+      "outcome": 1,
+      "assetReturn": -0.02959288,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00681038,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25311766,
+      "logLoss": 0.69938258
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "AMAT",
+      "horizon": 1,
+      "pOutperform": 0.503038,
+      "expectedExcessReturn": 0.002863,
+      "modelProbabilities": {
+        "broad_logit": 0.500771,
+        "boosted": 0.504005,
+        "momentum_logit": 0.504444
+      },
+      "outcome": 0,
+      "assetReturn": -0.10710173,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.07069847,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25304723,
+      "logLoss": 0.69924171
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "HD",
+      "horizon": 1,
+      "pOutperform": 0.49735,
+      "expectedExcessReturn": 0.001306,
+      "modelProbabilities": {
+        "broad_logit": 0.499171,
+        "boosted": 0.497354,
+        "momentum_logit": 0.495551
+      },
+      "outcome": 1,
+      "assetReturn": 0.00700967,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.04341293,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25265702,
+      "logLoss": 0.69846128
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "AMZN",
+      "horizon": 1,
+      "pOutperform": 0.497509,
+      "expectedExcessReturn": 0.0012,
+      "modelProbabilities": {
+        "broad_logit": 0.492278,
+        "boosted": 0.505877,
+        "momentum_logit": 0.495492
+      },
+      "outcome": 0,
+      "assetReturn": -0.04099152,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.00458827,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24751521,
+      "logLoss": 0.68817755
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "META",
+      "horizon": 1,
+      "pOutperform": 0.497701,
+      "expectedExcessReturn": 0.000673,
+      "modelProbabilities": {
+        "broad_logit": 0.500839,
+        "boosted": 0.489146,
+        "momentum_logit": 0.501943
+      },
+      "outcome": 0,
+      "assetReturn": -0.05934042,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.02293717,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24770629,
+      "logLoss": 0.68855972
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "IBM",
+      "horizon": 1,
+      "pOutperform": 0.502154,
+      "expectedExcessReturn": 0.000952,
+      "modelProbabilities": {
+        "broad_logit": 0.510302,
+        "boosted": 0.48645,
+        "momentum_logit": 0.507586
+      },
+      "outcome": 1,
+      "assetReturn": 0.00250133,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.03890458,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24785064,
+      "logLoss": 0.68884843
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "CAT",
+      "horizon": 1,
+      "pOutperform": 0.502069,
+      "expectedExcessReturn": 0.001828,
+      "modelProbabilities": {
+        "broad_logit": 0.504933,
+        "boosted": 0.491444,
+        "momentum_logit": 0.508356
+      },
+      "outcome": 0,
+      "assetReturn": -0.05009581,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.01369255,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25207328,
+      "logLoss": 0.69729377
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "CVX",
+      "horizon": 1,
+      "pOutperform": 0.501858,
+      "expectedExcessReturn": 0.000929,
+      "modelProbabilities": {
+        "broad_logit": 0.505726,
+        "boosted": 0.498831,
+        "momentum_logit": 0.500641
+      },
+      "outcome": 1,
+      "assetReturn": 0.00905567,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.04545892,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24814545,
+      "logLoss": 0.68943807
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "ASML",
+      "horizon": 1,
+      "pOutperform": 0.50148,
+      "expectedExcessReturn": 0.001997,
+      "modelProbabilities": {
+        "broad_logit": 0.503881,
+        "boosted": 0.49458,
+        "momentum_logit": 0.50503
+      },
+      "outcome": 0,
+      "assetReturn": -0.06634713,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": -0.02994388,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25148219,
+      "logLoss": 0.69611157
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "GOOGL",
+      "horizon": 1,
+      "pOutperform": 0.501222,
+      "expectedExcessReturn": 0.001658,
+      "modelProbabilities": {
+        "broad_logit": 0.502845,
+        "boosted": 0.49458,
+        "momentum_logit": 0.505315
+      },
+      "outcome": 1,
+      "assetReturn": -0.02702998,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.00937327,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.24877949,
+      "logLoss": 0.69070616
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "JPM",
+      "horizon": 1,
+      "pOutperform": 0.499048,
+      "expectedExcessReturn": 0.001218,
+      "modelProbabilities": {
+        "broad_logit": 0.503297,
+        "boosted": 0.492279,
+        "momentum_logit": 0.500664
+      },
+      "outcome": 1,
+      "assetReturn": -0.03026045,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.0061428,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.25095291,
+      "logLoss": 0.695053
+    },
+    {
+      "snapshotId": "2026-11-19-close-v1",
+      "publishedAt": "2026-11-19T19:51:47.699243-05:00",
+      "sessionDate": "2026-11-19",
+      "ticker": "LLY",
+      "horizon": 1,
+      "pOutperform": 0.499997,
+      "expectedExcessReturn": 0.001384,
+      "modelProbabilities": {
+        "broad_logit": 0.504892,
+        "boosted": 0.491133,
+        "momentum_logit": 0.502771
+      },
+      "outcome": 1,
+      "assetReturn": -0.00296792,
+      "spyReturn": -0.03640325,
+      "realizedExcessReturn": 0.03343534,
+      "resolvedAt": "2026-11-20",
+      "brier": 0.250003,
+      "logLoss": 0.69315318
     }
   ],
   "metrics": {
-    "resolvedCount": 880,
-    "brier": 0.25017776,
-    "logLoss": 0.69348703,
-    "rankIC": 0.03029,
+    "resolvedCount": 960,
+    "brier": 0.2504742,
+    "logLoss": 0.69408527,
+    "rankIC": -0.01715,
     "calibration": [
       {
         "low": 0.4,
         "high": 0.5,
-        "n": 362,
-        "meanForecast": 0.4809,
-        "observedFrequency": 0.5193
+        "n": 406,
+        "meanForecast": 0.4812,
+        "observedFrequency": 0.5197
       },
       {
         "low": 0.5,
         "high": 0.6,
-        "n": 516,
-        "meanForecast": 0.5262,
-        "observedFrequency": 0.5097
+        "n": 552,
+        "meanForecast": 0.5255,
+        "observedFrequency": 0.5018
       },
       {
         "low": 0.6,
@@ -18513,16 +20193,16 @@
   },
   "modelMetrics": {
     "broad_logit": {
-      "resolvedCount": 880,
-      "brier": 0.24925706
+      "resolvedCount": 960,
+      "brier": 0.24936935
     },
     "boosted": {
-      "resolvedCount": 880,
-      "brier": 0.25600562
+      "resolvedCount": 960,
+      "brier": 0.25672289
     },
     "momentum_logit": {
-      "resolvedCount": 880,
-      "brier": 0.24874509
+      "resolvedCount": 960,
+      "brier": 0.24871993
     }
   },
   "portfolio": {
@@ -18531,5 +20211,5 @@
     "excessReturn": 0.0,
     "tradeCount": 0
   },
-  "updatedAt": "2026-11-19T19:51:46.246047-05:00"
+  "updatedAt": "2026-11-20T19:09:19.535190-05:00"
 }

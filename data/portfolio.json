@@ -4,7 +4,40 @@
   "cash": 1000,
   "equity": 1000.0,
   "positions": [],
-  "pendingEntries": [],
+  "pendingEntries": [
+    {
+      "ticker": "NVDA",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.607596,
+      "expectedExcessReturn": 0.011079,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "TSM",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.603793,
+      "expectedExcessReturn": 0.013108,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "QCOM",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.602322,
+      "expectedExcessReturn": 0.011474,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "CAT",
+      "sourceSnapshotId": "2026-11-20-close-v1",
+      "pOutperform": 0.602234,
+      "expectedExcessReturn": 0.009331,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ],
   "trades": [],
   "benchmark": {
     "symbol": "SPY",
@@ -14,6 +47,6 @@
     "entryPrice": null,
     "auditNote": "The Nov 3 benchmark was first initialized by an hours-late execution run; see states/2026-11-03-execution-audit.json. Awaiting a timely forward start."
   },
-  "lastMarkedAt": "2026-11-19T19:51:47.699243-05:00",
+  "lastMarkedAt": "2026-11-20T19:09:21.145546-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }
