@@ -1,128 +1,68 @@
 {
   "status": "live",
-  "asOf": "2026-11-20T19:09:22.037669-05:00",
-  "sessionDate": "2026-11-20",
+  "asOf": "2026-11-23T23:03:18.078196-05:00",
+  "sessionDate": "2026-11-23",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
-      "from": "AMAT",
-      "to": "META",
-      "lag1Correlation": 0.2422
-    },
-    {
       "from": "ORCL",
       "to": "IBM",
-      "lag1Correlation": 0.2382
-    },
-    {
-      "from": "MSFT",
-      "to": "AMZN",
-      "lag1Correlation": 0.2178
-    },
-    {
-      "from": "META",
-      "to": "AAPL",
-      "lag1Correlation": 0.216
+      "lag1Correlation": 0.226
     },
     {
       "from": "UNH",
       "to": "V",
-      "lag1Correlation": 0.2153
+      "lag1Correlation": 0.2244
     },
     {
       "from": "AMAT",
-      "to": "BAC",
-      "lag1Correlation": 0.2125
-    },
-    {
-      "from": "ANET",
       "to": "META",
-      "lag1Correlation": 0.2076
-    },
-    {
-      "from": "TSM",
-      "to": "BAC",
-      "lag1Correlation": 0.2029
-    },
-    {
-      "from": "ASML",
-      "to": "BAC",
-      "lag1Correlation": 0.1982
-    },
-    {
-      "from": "CAT",
-      "to": "META",
-      "lag1Correlation": 0.1961
-    },
-    {
-      "from": "GOOGL",
-      "to": "INTC",
-      "lag1Correlation": 0.194
-    },
-    {
-      "from": "AVGO",
-      "to": "BAC",
-      "lag1Correlation": 0.1939
-    },
-    {
-      "from": "AVGO",
-      "to": "META",
-      "lag1Correlation": 0.1907
-    },
-    {
-      "from": "CAT",
-      "to": "UNH",
-      "lag1Correlation": 0.189
-    },
-    {
-      "from": "TSM",
-      "to": "JPM",
-      "lag1Correlation": 0.1888
-    },
-    {
-      "from": "INTC",
-      "to": "BAC",
-      "lag1Correlation": 0.1884
+      "lag1Correlation": 0.2055
     },
     {
       "from": "UNH",
       "to": "GOOGL",
-      "lag1Correlation": 0.1871
+      "lag1Correlation": 0.2049
     },
     {
-      "from": "ANET",
-      "to": "JPM",
-      "lag1Correlation": 0.1857
+      "from": "MSFT",
+      "to": "AMZN",
+      "lag1Correlation": 0.2046
+    },
+    {
+      "from": "META",
+      "to": "AAPL",
+      "lag1Correlation": 0.2018
+    },
+    {
+      "from": "CAT",
+      "to": "UNH",
+      "lag1Correlation": 0.1911
     },
     {
       "from": "AMAT",
-      "to": "AMZN",
-      "lag1Correlation": 0.1843
-    },
-    {
-      "from": "ANET",
       "to": "BAC",
-      "lag1Correlation": 0.1831
+      "lag1Correlation": 0.1906
     },
     {
-      "from": "AVGO",
-      "to": "JPM",
-      "lag1Correlation": 0.1824
+      "from": "UNH",
+      "to": "NVDA",
+      "lag1Correlation": 0.1903
     },
     {
-      "from": "TSM",
-      "to": "META",
+      "from": "UNH",
+      "to": "WMT",
       "lag1Correlation": 0.1805
     }
   ],
   "gaps": [
     {
-      "leader": "ORCL",
-      "lagger": "IBM",
-      "leaderMoveZ": -1.946,
-      "laggerMoveZ": 0.164,
-      "lag1Correlation": 0.2382,
-      "direction": "negative-follow-through"
+      "leader": "CAT",
+      "lagger": "UNH",
+      "leaderMoveZ": 2.625,
+      "laggerMoveZ": -0.402,
+      "lag1Correlation": 0.1911,
+      "direction": "positive-follow-through"
     }
   ],
   "note": "Empirical lagged return associations only; not causal relationships."
