@@ -1,0 +1,6 @@
+{
+  "cycle": "paper-execution-missed",
+  "at": "2026-11-23T20:14:47.450854-05:00",
+  "sessionDate": "2026-11-23",
+  "reason": "No valid 09:35\u201309:45 ET paper execution was recorded by the cutoff; no retrospective fills or benchmark start."
+}
