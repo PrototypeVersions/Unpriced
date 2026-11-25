@@ -1,25 +1,25 @@
 {
   "status": "live",
-  "asOf": "2026-11-23T23:03:16.568593-05:00",
-  "sessionDate": "2026-11-23",
+  "asOf": "2026-11-24T21:44:42.147651-05:00",
+  "sessionDate": "2026-11-24",
   "regime": "risk-off",
   "metrics": {
-    "spy5dReturn": -0.023867,
-    "spy20dReturn": -0.056287,
-    "breadthAbove20dMA": 0.15,
-    "crossSectionDispersion20d": 0.038707,
-    "spyRealizedVol20d": 0.318807,
-    "vix": 26.62,
-    "tenYearYield": 4.918,
-    "tenYear20dChange": -0.068,
+    "spy5dReturn": -0.01865,
+    "spy20dReturn": -0.066107,
+    "breadthAbove20dMA": 0.225,
+    "crossSectionDispersion20d": 0.038863,
+    "spyRealizedVol20d": 0.317352,
+    "vix": 26.36,
+    "tenYearYield": 4.904,
+    "tenYear20dChange": -0.089,
     "sectorRelative20d": {
-      "QQQ": -0.029602,
-      "SMH": -0.094077,
-      "XLF": 0.049682,
-      "XLE": -0.084006,
-      "XLV": 0.057067,
-      "XLI": 0.029394,
-      "XLU": 0.074383
+      "QQQ": -0.049179,
+      "SMH": -0.169081,
+      "XLF": 0.070223,
+      "XLE": -0.047659,
+      "XLV": 0.097026,
+      "XLI": 0.02853,
+      "XLU": 0.078943
     }
   },
   "interpretation": {
