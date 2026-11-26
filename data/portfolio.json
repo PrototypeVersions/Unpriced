@@ -4,7 +4,24 @@
   "cash": 1000,
   "equity": 1000.0,
   "positions": [],
-  "pendingEntries": [],
+  "pendingEntries": [
+    {
+      "ticker": "CRWD",
+      "sourceSnapshotId": "2026-11-25-close-v1",
+      "pOutperform": 0.607133,
+      "expectedExcessReturn": 0.006586,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "ASML",
+      "sourceSnapshotId": "2026-11-25-close-v1",
+      "pOutperform": 0.606207,
+      "expectedExcessReturn": 0.006436,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ],
   "trades": [],
   "benchmark": {
     "symbol": "SPY",
@@ -14,6 +31,6 @@
     "entryPrice": null,
     "auditNote": "The Nov 3 benchmark was first initialized by an hours-late execution run; see states/2026-11-03-execution-audit.json. Awaiting a timely forward start."
   },
-  "lastMarkedAt": "2026-11-24T21:44:42.133966-05:00",
+  "lastMarkedAt": "2026-11-25T22:44:36.307514-05:00",
   "note": "Forward-only paper experiment. No trade is backfilled before the first scheduled live execution."
 }

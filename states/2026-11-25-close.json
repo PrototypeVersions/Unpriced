@@ -1,0 +1,53 @@
+{
+  "cycle": "post-close",
+  "at": "2026-11-25T22:44:36.307514-05:00",
+  "marketState": {
+    "status": "live",
+    "asOf": "2026-11-25T22:44:36.319065-05:00",
+    "sessionDate": "2026-11-25",
+    "regime": "risk-off",
+    "metrics": {
+      "spy5dReturn": -0.018488,
+      "spy20dReturn": -0.072005,
+      "breadthAbove20dMA": 0.225,
+      "crossSectionDispersion20d": 0.038758,
+      "spyRealizedVol20d": 0.316382,
+      "vix": 28.29,
+      "tenYearYield": 4.848,
+      "tenYear20dChange": -0.197,
+      "sectorRelative20d": {
+        "QQQ": -0.054344,
+        "SMH": -0.183795,
+        "XLF": 0.078775,
+        "XLE": -0.038295,
+        "XLV": 0.094039,
+        "XLI": 0.039124,
+        "XLU": 0.098364
+      }
+    },
+    "interpretation": {
+      "breadth": "narrow",
+      "dispersion": "high",
+      "volatility": "high"
+    }
+  },
+  "forecastSnapshotId": "2026-11-25-close-v1",
+  "plannedEntries": [
+    {
+      "ticker": "CRWD",
+      "sourceSnapshotId": "2026-11-25-close-v1",
+      "pOutperform": 0.607133,
+      "expectedExcessReturn": 0.006586,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    },
+    {
+      "ticker": "ASML",
+      "sourceSnapshotId": "2026-11-25-close-v1",
+      "pOutperform": 0.606207,
+      "expectedExcessReturn": 0.006436,
+      "status": "planned",
+      "reason": "Meets precommitted 5D entry threshold."
+    }
+  ]
+}

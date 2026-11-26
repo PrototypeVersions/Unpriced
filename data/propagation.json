@@ -1,88 +1,78 @@
 {
   "status": "live",
-  "asOf": "2026-11-24T21:44:43.112842-05:00",
-  "sessionDate": "2026-11-24",
+  "asOf": "2026-11-25T22:44:36.967853-05:00",
+  "sessionDate": "2026-11-25",
   "method": "empirical-lead-lag-v1",
   "edges": [
     {
-      "from": "ORCL",
-      "to": "IBM",
-      "lag1Correlation": 0.2252
-    },
-    {
       "from": "UNH",
       "to": "V",
-      "lag1Correlation": 0.221
+      "lag1Correlation": 0.223
     },
     {
-      "from": "UNH",
-      "to": "GOOGL",
-      "lag1Correlation": 0.206
+      "from": "ORCL",
+      "to": "IBM",
+      "lag1Correlation": 0.2205
     },
     {
       "from": "META",
       "to": "AAPL",
-      "lag1Correlation": 0.2026
+      "lag1Correlation": 0.2073
     },
     {
       "from": "MSFT",
       "to": "AMZN",
-      "lag1Correlation": 0.2012
+      "lag1Correlation": 0.2021
     },
     {
       "from": "CAT",
       "to": "UNH",
-      "lag1Correlation": 0.2005
+      "lag1Correlation": 0.2001
+    },
+    {
+      "from": "UNH",
+      "to": "GOOGL",
+      "lag1Correlation": 0.1995
     },
     {
       "from": "AMAT",
       "to": "BAC",
-      "lag1Correlation": 0.1931
-    },
-    {
-      "from": "UNH",
-      "to": "NVDA",
-      "lag1Correlation": 0.1919
-    },
-    {
-      "from": "AMAT",
-      "to": "META",
-      "lag1Correlation": 0.1858
+      "lag1Correlation": 0.1918
     },
     {
       "from": "MU",
       "to": "JNJ",
-      "lag1Correlation": 0.1835
+      "lag1Correlation": 0.1874
     },
     {
       "from": "CRM",
       "to": "CVX",
-      "lag1Correlation": 0.1828
+      "lag1Correlation": 0.1866
     },
     {
-      "from": "INTC",
-      "to": "UNH",
-      "lag1Correlation": 0.1819
+      "from": "UNH",
+      "to": "NVDA",
+      "lag1Correlation": 0.1846
     },
     {
       "from": "QCOM",
       "to": "UNH",
-      "lag1Correlation": 0.1819
-    },
-    {
-      "from": "INTC",
-      "to": "BAC",
-      "lag1Correlation": 0.1817
+      "lag1Correlation": 0.1825
     },
     {
       "from": "UNH",
       "to": "WMT",
-      "lag1Correlation": 0.1811
+      "lag1Correlation": 0.1816
     },
     {
       "from": "ASML",
       "to": "BAC",
-      "lag1Correlation": 0.181
+      "lag1Correlation": 0.1813
+    },
+    {
+      "from": "INTC",
+      "to": "BAC",
+      "lag1Correlation": 0.1808
     }
   ],
   "gaps": [],
