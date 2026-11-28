@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "2026-11-27-close-v1",
+  "status": "published-live",
+  "publishedAt": "2026-11-27T22:29:30.946625-05:00",
+  "sessionDate": "2026-11-27",
+  "informationCutoff": "2026-11-27 official NYSE close",
+  "modelVersion": "v1.0.0",
+  "ensembleWeights": {
+    "broad_logit": 0.3419117,
+    "boosted": 0.31261469,
+    "momentum_logit": 0.34547361
+  },
+  "trainingRanges": [
+    {
+      "horizon": 1,
+      "rows": 30120,
+      "start": "2023-11-27",
+      "end": "2026-11-25"
+    },
+    {
+      "horizon": 5,
+      "rows": 29960,
+      "start": "2023-11-27",
+      "end": "2026-11-19"
+    },
+    {
+      "horizon": 20,
+      "rows": 29360,
+      "start": "2023-11-27",
+      "end": "2026-10-29"
+    }
+  ],
+  "forecastDefinition": "Relative performance versus SPY from publication close to future close.",
+  "forecasts": []
+}
